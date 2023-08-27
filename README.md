@@ -15,7 +15,7 @@ COMO OS USUÁRIOS PODERÃO UTILIZÁ-LO:
 Os usuários poderão cadastrar os pets que encontraram ou que estão procurando e utilizar a galeria de fotos para facilitar as buscas. 
 
 AUTORES DO PROJETO:
-Breno 
+Breno Bastos da Silva
 Camila Carvalho
 Denis Lima da Silva
 Lorena Mafra Nascimento
