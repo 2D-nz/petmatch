@@ -22,6 +22,6 @@ Denis Lima da Silva,
 Lorena Mafra Nascimento, 
 Michael Amaral dos Santos
 
-Figma do Projeto: https://www.figma.com/file/6ZsbgqNA8fWq24nL50ivcc/Untitled?type=design&node-id=0-1&mode=design&t=0AoIsOjz7hj3Wiga-0
+
 
 
