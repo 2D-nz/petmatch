@@ -24,5 +24,5 @@ Michael Amaral dos Santos
 
 
 Imagens do Projeto;
-(/assets/Tela_usuario.svg)
+(./assets/Tela_usuario.svg)
 
