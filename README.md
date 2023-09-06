@@ -24,5 +24,6 @@ Michael Amaral dos Santos
 
 
 Imagens do Projeto;
+![Tela de Pets](./assets/Tela_Pets.svg)
 ![Tela de Usuário](./assets/Tela_usuario.svg)
-
+![Tela de Notificações](./assets/Tela_Notificacoes.svg)
