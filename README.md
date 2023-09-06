@@ -28,4 +28,6 @@ Imagens do Projeto;
 ![Tela de Usuário](./assets/Tela_usuario.svg)
 ![Tela de Notificações](./assets/Tela_Notificacoes.svg)
 ![Tela Inicial do site](./assets/Home_1.svg)
+![Tela de login](./assets/Tela_de_login.svg)
+![Tela de Cadastro](./assets/teladecadastro.svg)
 
