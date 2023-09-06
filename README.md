@@ -27,3 +27,5 @@ Imagens do Projeto;
 ![Tela de Pets](./assets/Tela_Pets.svg)
 ![Tela de Usuário](./assets/Tela_usuario.svg)
 ![Tela de Notificações](./assets/Tela_Notificacoes.svg)
+![Tela Inicial do site](./assets/Home_1.svg)
+
