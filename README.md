@@ -31,4 +31,4 @@ Imagens do Projeto;
 ![Tela de login](./assets/Tela_de_login.svg)
 ![Tela de Cadastro](./assets/teladecadastro.svg)
 ![Tela de Cadastro](./assets/Tela_Encontrados.svg).
-
+![Tela de Pesquisa](.assets/Tela_Pesquisar.svg).
