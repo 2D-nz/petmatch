@@ -1,0 +1,14 @@
+body {
+	color: red;
+}
+
+nav {
+	height: 50px;
+	background-color: orange;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+nav > div {
+	display: flex;
+}
