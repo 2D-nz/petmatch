@@ -30,5 +30,6 @@ Imagens do Projeto;
 ![Tela Inicial do site](./assets/Home_1.svg)
 ![Tela de login](./assets/Tela_de_login.svg)
 ![Tela de Cadastro](./assets/teladecadastro.svg)
-![Tela de Cadastro](./assets/PetsEncontrados.svg).
-![Tela de Pesquisa](.assets/Tela_Pesquisar.svg).
+![Tela de Cadastro](./assets/PetsEncontrados.svg)
+![Tela de Pesquisa](./assets/Tela_Pesquisar.svg)
+![Banco de dados lógico](./assets/Logico_2.png)
