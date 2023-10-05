@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,400&family=Noto+Sans:ital,wght@0,700;1,400&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    line-height: 1.5;
+    font-family: Montserrat,Arial,sans-serif;
+    
+
+}
+.text-head{
+    font-size: 1.05rem;
+    line-height: 2.25rem;
+    font-weight: 400;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 7vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.toggle-button {
+    background-color: #fa7f72;
+    color: white;
+    border: none;
+    padding: 10px 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+
+.hidden-text {
+    display: none;
+    margin-top: 20px;
+}
+
+.all-cards {
+    padding: 20px;
+    margin: 20px;
+}
+
+.all-cards h2 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    margin: 0 0 10px;
+}
+
+.all-cards p {
+    font-size: .875rem;
+    line-height: 1.25rem;
+    margin: 0;
+}
+
+.all-cards img {
+    max-width: 100%;
+    height: auto;
+   
+}
+.cachorro-img {
+    height: auto;
+    max-width: 300px;
+    padding: 0 40px;
+  }
+
+  @media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+    .cachorro-img {
+        padding: 0;
+      }
+}
