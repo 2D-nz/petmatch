@@ -17,7 +17,8 @@ nav {
 	justify-content: space-between;
 	align-items: center;
 	padding: 0 1rem;
-	background-color: var(--verde);
+	background-color: var(--laranja);
+	color: white;
 	width: 100%;
 	position: fixed;
 	top: 0;
@@ -41,6 +42,7 @@ nav > div > p:hover {
 nav > div > button {
 	height: 100%;
 	border-radius: 0;
+	background-color: var(--laranja);
 }
 nav > div > button:hover {
 	background-color: var(--laranja);
@@ -182,5 +184,10 @@ div:has(.vejaMais) {
 
 .relato{
 	height: 100px;
+
+}
+.topnav img{
+	height: 100%;
+	width: 100%;
 
 }
