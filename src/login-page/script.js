@@ -64,3 +64,7 @@ document.addEventListener("click", (e) => {
     normalHandStyle();
   }
 });
+const registerButton = document.querySelector(".button-register");
+registerButton.addEventListener("click", function () {
+    window.location.href = "/src/register-page/index.html";
+});
