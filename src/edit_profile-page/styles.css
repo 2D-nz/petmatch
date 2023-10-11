@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+:root {
+	--laranja: #ff914d;
+	--laranja-claro: #f4cd9e;
+	--verde: #385a20;
+}
+* {
+	font-family: "Inter", sans-serif;
+}
+
+.page {
+	padding-top: 5rem;
+}
+.perfil {
+	padding: 2rem;
+	display: flex;
+}
+
+.perfil div {
+	margin: 0 1rem;
+}
+
+.perfil img {
+	height: 250px;
+	width: 250px;
+}
+
+.campo {
+}

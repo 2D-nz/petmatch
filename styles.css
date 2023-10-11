@@ -5,9 +5,10 @@
 	--laranja-claro: #f4cd9e;
 	--verde: #385a20;
 }
-
+* {
+	font-family: "Inter", sans-serif;
+}
 body {
-	font-family: inter;
 	margin: 0;
 	padding: 0;
 }
@@ -168,36 +169,31 @@ div:has(.vejaMais) {
 	margin-top: 3rem;
 }
 
-.petsEncontrados{
+.petsEncontrados {
 	display: flex;
 	justify-content: center;
-
 }
-.petEncontrado{
+.petEncontrado {
 	background-color: var(--laranja);
 	width: 20rem;
 	margin: 0 1rem;
 	box-shadow: 0px 9px 10px 1px #000000;
-
-
 }
 
-.relato{
+.relato {
 	height: 100px;
-
 }
-.topnav img{
+.topnav img {
 	height: 100%;
 	width: 100%;
-
 }
 
-.nav_btn{
+.nav_btn {
 	background-color: white;
 	color: var(--laranja);
 }
 
-.nav_btn:hover{
+.nav_btn:hover {
 	background-color: var(--laranja);
 	color: white;
 }
