@@ -10,29 +10,29 @@
 </head>
 <body>
     <header>
-        <img src="/img/dog-logo.png" class="logo">
+        <img src="/images/dog-logo.png" class="logo">
         <p class="title">PetMatch</p>
     </header>
     <div class="info-container">
         <div class="cachorro-img">
-            <img src="/img/cachorro-fundo.png">
+            <img src="/images/cachorro-fundo.png">
         </div>
         <div class="text-register">
             <h3 class="new-title-register"> Encontre seu companheiro de quatro patas!<br> Registre-se agora </h3>
             <p class="tagline">
-                Com a sua conta da PetMatch você consegue cadastrar
+                Com a sua conta da PetMatch voce consegue cadastrar
                 <br>
                 o amiguinho encontrado :)
                 <br>
-                além de acompanhar seu histórico!
+                alem de acompanhar seu historico!
             </p>
-            <button size="is large" id="LoginCriarConta" class="button-register">Criar minha conta</button>
+            <button size="is large" id="LoginCriarConta" class="button-register" onclick="redirecionarParaOutraPagina()">Criar minha conta</button>
             <div id="social_media">
                 <a href="#">
-                    <img src="/img/icon-facebook.png" alt="Logo Facebook" class="face-icon">
+                    <img src="/images/icon-facebook.png" alt="Logo Facebook" class="face-icon">
                 </a>
                 <a href="#">
-                    <img src="/img/icon-google2.png" alt="Logo Google" class="google-icon">
+                    <img src="/images/icon-google.png" alt="Logo Google" class="google-icon">
                 </a>
             </div>
         </div>

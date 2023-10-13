@@ -48,4 +48,27 @@ public class UserDao {
         }
 
     }
+
+    //METODO PARA CADASTRAR USUÁRIO
+    public void registerUserWithConfirmation(User user) {
+
+        String insertSQL = "INSERT INTO USR (EMAIL,PASSWORD) VALUES (?,?)";
+
+        try {
+            Connection connection = ConnectionPoolConfig.getConnection();
+            PreparedStatement preparedStatement = connection.prepareStatement(insertSQL);
+
+            preparedStatement.setString(1, user.getEmail());
+            preparedStatement.setString(2, user.getPassword());
+
+           preparedStatement.executeUpdate();
+
+            System.out.println("success in insert command");
+
+            connection.close();
+
+        } catch (Exception e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+    }
 }
