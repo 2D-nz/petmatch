@@ -64,3 +64,6 @@ document.addEventListener("click", (e) => {
     normalHandStyle();
   }
 });
+ function redirecionarParaOutraPagina() {
+            window.location.href = "/register-page/register.jsp";
+        }

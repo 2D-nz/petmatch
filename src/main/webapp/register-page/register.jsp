@@ -14,20 +14,22 @@
         </div>
         <div class="right-login">
             <div class="card-login">
-                <h1>Cadastre aqui</h1>
-                <div class="text-field">
+              <h1>Cadastre aqui</h1>
+              <div class="text-field">
+               <form action="/register" method="post">
                     <label for="usuario">E-mail</label>
-                    <input type="text" name="E-mail" placeholder="E-mail">
+                    <input type="text" name="email" placeholder="E-mail">
                 </div>
                 <div class="text-field">
                     <label for="senha">Senha</label>
-                    <input type="password" name="senha" placeholder="Senha">
+                    <input type="password" name="password" placeholder="Senha">
                 </div>
                 <div class="text-field">
                     <label for="senha">Confirme sua senha</label>
-                    <input type="password" name="senha" placeholder="Senha">
+                    <input type="password" name="password" placeholder="Senha">
                 </div>
                 <button class="btn-login">Confirmar</button>
+               </form>
             </div>
         </div>
     </div>

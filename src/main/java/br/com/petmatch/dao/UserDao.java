@@ -13,23 +13,23 @@ public class UserDao {
 
         String SQL = "SELECT * FROM USR WHERE EMAIL = ?";
 
-        try{
+        try {
 
             Connection connection = ConnectionPoolConfig.getConnection();
 
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
 
-            preparedStatement.setString(1,user.getEmail());
+            preparedStatement.setString(1, user.getEmail());
 
             ResultSet resultSet = preparedStatement.executeQuery();
 
             System.out.println("success in select email");
 
-            while(resultSet.next()){
+            while (resultSet.next()) {
 
                 String password = resultSet.getString("password");
 
-                if(password.equals(user.getPassword())){
+                if (password.equals(user.getPassword())) {
 
                     return true;
 
@@ -40,7 +40,7 @@ public class UserDao {
 
             return false;
 
-        }catch(Exception e) {
+        } catch (Exception e) {
 
             System.out.println("Error" + e.getMessage());
 
@@ -49,4 +49,26 @@ public class UserDao {
 
     }
 
+    // METODO PARA CADASTRAR USUÁRIO
+    public void registerUserWithConfirmation(User user) {
+
+        String insertSQL = "INSERT INTO USR (EMAIL,PASSWORD) VALUES (?,?)";
+
+        try {
+            Connection connection = ConnectionPoolConfig.getConnection();
+            PreparedStatement preparedStatement = connection.prepareStatement(insertSQL);
+
+            preparedStatement.setString(1, user.getEmail());
+            preparedStatement.setString(2, user.getPassword());
+
+            preparedStatement.executeUpdate();
+
+            System.out.println("success in insert command");
+
+            connection.close();
+
+        } catch (Exception e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+    }
 }
