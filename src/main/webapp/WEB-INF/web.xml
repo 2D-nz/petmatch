@@ -20,6 +20,6 @@
     <url-pattern>/console/*</url-pattern>
   </servlet-mapping>
   <welcome-file-list>
-    <welcome-file>login-page/login.jsp</welcome-file>
+    <welcome-file>./index.jsp</welcome-file>
   </welcome-file-list>
 </web-app>

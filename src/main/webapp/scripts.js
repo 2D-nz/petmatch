@@ -1,19 +1,33 @@
+// let isLogged = false;
+// $(document).ready(function () {
+// 	if (isLogged) {
+// 	} else {
+// 		$("#login").click(function () {
+// 			window.location.href = "login-page/login.jsp";
+
+// 			console.log("olá");
+// 		});
+// 	}
+// });
+console.log("oii");
 function redirecionarParaProcurando() {
-    window.location.href = '/src/register-page/index.html';
+	window.location.href = "register-page/register.jsp";
 }
 
 function redirecionarParaEncontrados() {
-    window.location.href = 'pagina_encontrados.html';
+	window.location.href = "found-page/index.html";
 }
 
 function redirecionarParaFerramentas() {
-    window.location.href = '/src/ferramentas-page/index.html';
+	window.location.href = "ferramentas-page/index.html";
 }
 
 function redirecionarParaAnuncie() {
-    window.location.href = 'pagina_anuncie.html';
+	window.location.href = "pagina_anuncie.html";
 }
 
-function redirecionarParaLogin() {
-    window.location.href = '/src/login-page/index.html';
+function redirecionarParaLogin() {}
+
+function oi() {
+	console.log("oi");
 }

@@ -1,24 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+	<%@ page contentType="text/html; charset=UTF-8" %>
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="styles.css" />
-		 <script src="script.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
 		<title>Petmatch</title>
 	</head>
 	<body>
 		<nav class="topnav">
 			<div>
-				<img src="./src/img/dog-logo.png"/>
+				<img src="./images/dog-logo.png" />
 				<h1>Petmatch</h1>
 			</div>
 			<div>
 				<button onclick="redirecionarParaProcurando()">Procurando</button>
 				<button onclick="redirecionarParaEncontrados()">Encontrados</button>
 				<button onclick="redirecionarParaFerramentas()">Ferramentas</button>
-				<button class="nav_btn" onclick="redirecionarParaAnuncie()">Anuncie</button>
-				<button onclick="redirecionarParaLogin()">Login</button>
+				<button class="nav_btn" onclick="redirecionarParaAnuncie()">
+					Anuncie
+				</button>
+				<button id="login"><a href="login-page/login.jsp"> Login</a></button>
 			</div>
 		</nav>
 		<main>
@@ -119,23 +123,26 @@
 
 				<div class="petsEncontrados">
 					<div class="petEncontrado">
-
 						<img src="" alt="fot do dog" />
-						<h2> Nome do Cachorro </h2>
-						<p class="relato">"Eu estava procurando meu cachorro por dois dias, e não acreditei quando chegou a notificação do PetMatch..."</p>
+						<h2>Nome do Cachorro</h2>
+						<p class="relato">
+							"Eu estava procurando meu cachorro por dois dias, e não acreditei
+							quando chegou a notificação do PetMatch..."
+						</p>
 						<p>Ler mais</p>
 					</div>
 					<div class="petEncontrado">
-
 						<img src="" alt="fot do gatito" />
-						<h2> Nome do Cachorro </h2>
-						<p class="relato">"Graças ao PetMatch eu e o Mingau nos encontramo de novo"</p>
+						<h2>Nome do Cachorro</h2>
+						<p class="relato">
+							"Graças ao PetMatch eu e o Mingau nos encontramo de novo"
+						</p>
 						<p>Ler mais</p>
+					</div>
 				</div>
-			</div>
-			<div>
-				<button class="vejaMais">Veja mais</button>
-			</div>
+				<div>
+					<button class="vejaMais">Veja mais</button>
+				</div>
 			</section>
 		</main>
 
@@ -143,4 +150,5 @@
 			<p>Entre em contato conosco!</p>
 		</footer>
 	</body>
+	<script src="./scripts.js"></script>
 </html>
