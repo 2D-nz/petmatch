@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 
 * {
+    font-family: "inter";
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
@@ -94,14 +95,19 @@ img {
 }
 
 .container .container-image .image h3 {
-	font-family: "Inter", sans-serif;
 	font-size: 15px;
 	color: #000000;
 }
 
-p {
-	text-align: left !important;
+.image{
+text-align: left;
 }
+
+.button-div{
+	color: #000000;
+
+}
+
 
 @media (max-width: 768px) {
 	.container .container-image {

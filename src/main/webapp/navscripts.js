@@ -1,6 +1,7 @@
 sessionStorage.setItem("name", "Megumi Fushiguro");
 sessionStorage.setItem("isLogged", "true");
 
+console.log()
 let isLogged = sessionStorage.getItem("isLogged");
 let Name = sessionStorage.getItem("name");
 $(document).ready(function () {
