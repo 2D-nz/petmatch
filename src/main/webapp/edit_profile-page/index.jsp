@@ -22,7 +22,7 @@
 				<button class="nav_btn" onclick="redirecionarParaAnuncie()">
 					Anuncie
 				</button>
-				<button onclick="redirecionarParaLogin()">Login</button>
+				<button id="login">Login</button>
 			</div>
 		</nav>
 		<div class="page">
@@ -90,4 +90,5 @@
 		</div>
 	</body>
 	<script src="main.js"></script>
+	<script src="../navscripts.js"></script>
 </html>

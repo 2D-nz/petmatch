@@ -3,7 +3,7 @@
 <head>  
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../nav.css">
+    <link rel="stylesheet" href="../nav.css">
     <title>Document</title>
 
     <link rel="stylesheet" href="style.css">
@@ -12,15 +12,17 @@
 <body>
     <nav class="topnav">
         <div>
-            <img src="../img/dog-logo.png"/>
+            <img src="../images/dog-logo.png" />
             <h1>Petmatch</h1>
         </div>
         <div>
             <button onclick="redirecionarParaProcurando()">Procurando</button>
             <button onclick="redirecionarParaEncontrados()">Encontrados</button>
             <button onclick="redirecionarParaFerramentas()">Ferramentas</button>
-            <button class="nav_btn" onclick="redirecionarParaAnuncie()">Anuncie</button>
-            <button onclick="redirecionarParaLogin()">Login</button>
+            <button class="nav_btn" onclick="redirecionarParaAnuncie()">
+                Anuncie
+            </button>
+            <button id="login">Login</button>
         </div>
     </nav>
 
@@ -111,4 +113,5 @@
    
 
 </body>
+<script src="../navscripts.js"></script>
 </html>

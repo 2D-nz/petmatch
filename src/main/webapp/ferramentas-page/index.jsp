@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ferramentas</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="../../nav.css">
+    <link rel="stylesheet" href="../nav.css">
 
     <script src="script.js"></script>
 </head>
@@ -17,15 +17,17 @@
     </div>
     <nav class="topnav">
         <div>
-            <img src="../img/dog-logo.png"/>
+            <img src="./images/dog-logo.png" />
             <h1>Petmatch</h1>
         </div>
         <div>
             <button onclick="redirecionarParaProcurando()">Procurando</button>
             <button onclick="redirecionarParaEncontrados()">Encontrados</button>
             <button onclick="redirecionarParaFerramentas()">Ferramentas</button>
-            <button class="nav_btn" onclick="redirecionarParaAnuncie()">Anuncie</button>
-            <button onclick="redirecionarParaLogin()">Login</button>
+            <button class="nav_btn" onclick="redirecionarParaAnuncie()">
+                Anuncie
+            </button>
+            <button id="login">Login</button>
         </div>
     </nav>
     <div class="elementor-widget-container">
@@ -81,4 +83,5 @@
         </div>
     </div>
 </body>
+<script src="../navscripts.js"></script>
 </html>

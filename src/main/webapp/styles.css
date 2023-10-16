@@ -5,48 +5,17 @@
 	--laranja-claro: #f4cd9e;
 	--verde: #385a20;
 }
+
+html {
+	margin: 0;
+	padding: 0;
+}
 * {
 	font-family: "Inter", sans-serif;
 }
 body {
-	margin: 0;
-	padding: 0;
-}
-nav {
-	height: 50px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 0 1rem;
-	background-color: var(--laranja);
-	color: white;
-	width: 100%;
-	position: fixed;
-	top: 0;
-}
-
-nav > div {
-	align-items: center;
-	margin: 0 2.5rem;
-	display: flex;
-	justify-content: space-between;
-	height: 100%;
-}
-
-nav > div > p {
-	padding: 15px 2em;
-}
-
-nav > div > p:hover {
-	background-color: var(--laranja);
-}
-nav > div > button {
-	height: 100%;
-	border-radius: 0;
-	background-color: var(--laranja);
-}
-nav > div > button:hover {
-	background-color: var(--laranja);
+	margin: 0px;
+	padding: 0px;
 }
 
 a {
@@ -76,12 +45,15 @@ button:hover {
 
 main {
 	padding-top: 5rem;
+	padding-bottom: 1rem;
 	padding-left: 1rem;
 	background-color: var(--laranja-claro);
 }
 
 footer {
 	background-color: var(--verde);
+	display: flex;
+	justify-content: center;
 }
 
 .petsPerdidos {
@@ -153,9 +125,6 @@ hr {
 	border-radius: 15rem;
 }
 
-section {
-	margin: 5rem 0;
-}
 .vejaMais {
 	text-align: center;
 	background-color: var(--laranja);
@@ -182,18 +151,4 @@ div:has(.vejaMais) {
 
 .relato {
 	height: 100px;
-}
-.topnav img {
-	height: 100%;
-	width: 100%;
-}
-
-.nav_btn {
-	background-color: white;
-	color: var(--laranja);
-}
-
-.nav_btn:hover {
-	background-color: var(--laranja);
-	color: white;
 }
