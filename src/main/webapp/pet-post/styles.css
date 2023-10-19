@@ -1,0 +1,12 @@
+main {
+	display: grid;
+	place-items: center;
+}
+
+.post-container {
+	padding: 10rem 5rem;
+}
+
+.post-container img {
+	width: 40%;
+}
