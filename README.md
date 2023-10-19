@@ -4,7 +4,7 @@ NOME DO PROJETO:
 "PetMatch"
 
 DESCRIÇÃO:
-O "PetMatch?" tem como objetivo localizar pets de acordo com as características do pet perdido que foram descritas no app.
+O "PetMatch" tem como objetivo localizar pets de acordo com as características do pet perdido que foram descritas no app.
 
 FUNCIONALIDADES:
 As informações sobre os pets poderão ser inseridas após a criação do cadastro do usuário. A partir do seu perfil de usuário será possível localizar os cadastros de
