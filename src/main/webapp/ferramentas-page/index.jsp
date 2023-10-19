@@ -13,12 +13,12 @@
 <body>
    
     <div class="dog_img">
-        <img src="/src/img/Banner_Cachorro.jpg" style="float: top" class="banner-image">
+        <img src="../images/Banner_Cachorro.jpg" style="float: top" class="banner-image">
         <p> Quais ferramentas posso usar? </p>
     </div>
     <nav class="topnav">
         <div>
-            <img src="./images/dog-logo.png" />
+            <img src="../images/dog-logo.png" />
             <h1>Petmatch</h1>
         </div>
         <div>
@@ -38,7 +38,7 @@
 <div class ="all-cards">
     <div class="container">
             <div class="cachorro-perdido">
-                <img src="/src/img/Perdido.png">
+                <img src="../images/Perdido.png">
             </div>
             <div class="text-test">
                 <div class="header-card2">
@@ -59,28 +59,28 @@
                 <p style="font-size: 16px;">Você consegue o seu animalzinho pelas caracteristicas que ele contém</p>
             </div>
             <li class="list-item1">
-                <img src="/src/img/pata-de-animal.png" alt="pata" width="30px">
+                <img src="../images/pata-de-animal.png" alt="pata" width="30px">
                 <span class="List-text">Raça Golden</span>
             </li>
             <li class="list-item2">
-                <img src="/src/img/pata-de-animal.png" alt="pata" width="30px">
+                <img src="../images/pata-de-animal.png" alt="pata" width="30px">
                 <span class="List-text">Coleira</span>
             </li>   
             <li class="list-item3">
-                <img src="/src/img/pata-de-animal.png" alt="pata" width="30px">
+                <img src="../images/pata-de-animal.png" alt="pata" width="30px">
                 <span class="List-text">Dócio</span>
             </li>      
             <li class="list-item4">
-                <img src="/src/img/pata-de-animal.png" alt="pata" width="30px">
+                <img src="../images/pata-de-animal.png" alt="pata" width="30px">
                 <span class="List-text">Travesso</span>
             </li>   
             <li class="list-item5">
-                <img src="/src/img/pata-de-animal.png" alt="pata" width="30px">
+                <img src="../images/pata-de-animal.png" alt="pata" width="30px">
                 <span class="List-text">Mancha na pata esquerda</span>
             </li>   
         </ul>
         <div class="cachorro-img">
-            <img src="/src/img/golden.jpg">
+            <img src="../images/golden.jpg">
         </div>
     </div>
 </body>
