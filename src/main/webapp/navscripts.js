@@ -1,5 +1,5 @@
-sessionStorage.setItem("name", "Megumi Fushiguro");
-sessionStorage.setItem("isLogged", "true");
+sessionStorage.setItem("name", "Cleber");
+sessionStorage.setItem("isLogged", "false");
 
 console.log()
 let isLogged = sessionStorage.getItem("isLogged");
@@ -29,9 +29,6 @@ function redirecionarParaFerramentas() {
 }
 
 function redirecionarParaAnuncie() {
-	window.location.href = "pagina_anuncie.html";
+	window.location.href = "telasAnuncio/TelaAnuncio1/index.jsp";
 }
 
-function oi() {
-	console.log("oi");
-}

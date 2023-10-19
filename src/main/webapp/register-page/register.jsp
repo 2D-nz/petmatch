@@ -15,8 +15,8 @@
         <div class="right-login">
             <div class="card-login">
               <h1>Cadastre aqui</h1>
-              <div class="text-field">
                <form action="/register" method="post">
+               <div class="text-field">
                     <label for="usuario">E-mail</label>
                     <input type="text" name="email" placeholder="E-mail">
                 </div>
@@ -26,9 +26,10 @@
                 </div>
                 <div class="text-field">
                     <label for="senha">Confirme sua senha</label>
-                    <input type="password" name="password" placeholder="Senha">
+                    <input type="password" name="password-confirm" placeholder="Senha">
                 </div>
                 <button class="btn-login">Confirmar</button>
+                <span>${requestScope.error}</span>
                </form>
             </div>
         </div>

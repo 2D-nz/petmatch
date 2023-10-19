@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,79 +34,33 @@
 
 		<input type="text" placeholder="Pesquisar..." id="search-box">
 
-
-        <div class="container-image">
-         <div class="image" data-title="Gato">
-            <img src="../images/cat-1.jpg" alt="">
-            <h3>Gato</h3>
-            
-        </div>
-
-        <div class="image" data-title="Cachorro">
-            <image src="../images/Caramelo.png" alt="">
-            <h3>Caramelinho</h3>
-        </div>
-
-        <div class="image" data-title="Cachorro2">
-            <image src="../images/cat-2.jpg" alt="">
-           <h3>Outro gato</h3>
-       </div>
-
-       
-        <div class="image" data-title="Gato">
-           <img src="../images/chow_chow.jpg" alt="">
-           <h3>Chow Chow</h3>
-           
-       </div>
-
-       <div class="image" data-title="Cachorro">
-           <image src="../images/gato-deserto.jpg" alt="">
-           <h3>Mais um gato</h3>
-       </div>
-
-       <div class="image" data-title="Cachorro2">
-           <image src="../images/shitzu.jpg" alt="">
-          <h3>Shitzu</h3>
-      </div>
-
-      
-        <div class="image" data-title="Gato">
-           <img src="../images/porco.jpg" alt="">
-           <h3>Porco</h3>
-       </div>
-
-       <div class="image" data-title="Cachorro">
-           <image src="../images/gato-siames.jpg" alt="">
-           <h3>Gatinho</h3>
-       </div>
-
-       <div class="image" data-title="Cachorro2">
-           <image src="../images/golden.jpg" alt="">
-          <h3>Doguinho</h3>
-      </div>
-
-      
-        <div class="image" data-title="Gato">
-           <img src="../images/rottweiler.jpg" alt="">
-           <h3>Dogão</h3>
-           
-       </div>
-
-       <div class="image" data-title="Cachorro">
-           <image src="../images/cachorro-velhinho.jpg" alt="">
-           <h3>Idosinho</h3>
-       </div>
-
-       <div class="image" data-title="Cachorro2">
-           <image src="../images/gato-preto.jpg" alt="">
-          <h3>Advinha</h3>
-      </div>
-
-    </div>
-    </div>
-
-
-
+	<table>
+        <tr>
+            <th>ID</th>
+            <th>Especie</th>
+            <th>Situacao</th>
+            <th>genero</th>
+            <th>Actions</th>
+        </tr>
+        <c:forEach var="pet" items="${pets}">
+        <tr>
+            <td></td>
+            <td>${pet.id}</td>
+            <td>${pet.especie}</td>
+            <td>${pet.situacao}</td>
+            <td>${pet.genero}</td>
+            <td>
+                <form action="/delete-pet" method="post">
+                <input type="hidden" id="id" name="id" value="${pet.id}">
+                <button type="submit">Delete</button>
+                <span> | </span>
+                <a href="telasAnuncio/TelaAnuncio1/index.jsp?id=${pet.id}&especie=${pet.especie}&situacao=${pet.situacao}&genero=${pet.genero}">Atualizar</a>
+                </form>
+            </td>
+        </tr>
+        </c:forEach>
+    </table>
+<div>
 </body>
 <script src="../navscripts.js"></script>
 </html>
