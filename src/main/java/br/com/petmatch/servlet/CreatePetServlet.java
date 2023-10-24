@@ -30,26 +30,32 @@ public class CreatePetServlet extends HttpServlet {
         String situacao = req.getParameter("situacao");
         String especie = req.getParameter("especie");
         String genero = req.getParameter("genero");
-
-
-        Pet pet = new Pet(petId,situacao,especie,genero);
+        String nome = req.getParameter("nome");
+        String raca = req.getParameter("raca");
+        String cor = req.getParameter("cor");
+        String cordosolhos = req.getParameter("cordosolhos");
+        //Não faz parte do pet
+        String page = req.getParameter("page");
 
         PetDao petDao = new PetDao();
 
-        if(petId.isBlank()){
-            petDao.createPet(pet);
-        }else{
+        Pet pet = new Pet(petId,situacao,especie,genero,nome,raca,cor,cordosolhos);
+
+
+        int petIdNew;
+        if (petId.isBlank()) {
+            petIdNew = petDao.createPet(pet);
+            System.out.println(petIdNew);
+        } else {
+            petIdNew = Integer.parseInt(petId);
             petDao.updatePet(pet);
         }
 
-        resp.sendRedirect("/find-all-pets");
-//        resp.sendRedirect("/telasAnuncio/TelaAnuncio2/index.jsp");
+        String pageName = "TelaAnuncio" + page;
+        String teste = String.format("telasAnuncio/%s/index.jsp?id=%s&especie=%s&situacao=%s&genero=%s",pageName,petIdNew,pet.getEspecie(),pet.getSituacao(),pet.getGenero());
 
+        resp.sendRedirect(teste);
     }
-
-
-
-
 
     //Upload da imagem do pet
     private Map<String, String> uploadImage(HttpServletRequest httpServletRequest) {

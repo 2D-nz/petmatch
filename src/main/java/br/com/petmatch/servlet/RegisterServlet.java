@@ -24,7 +24,7 @@ public class RegisterServlet extends HttpServlet {
             User user = new User(email, password);
             new UserDao().registerUserWithConfirmation(user);
             System.out.println("senhas coincidem");
-            req.getRequestDispatcher("index.jsp").forward(req, resp);
+            req.getRequestDispatcher("login-page/login.jsp").forward(req, resp);
         } else {
             // Senhas não coincidem
             req.setAttribute("error", "As senhas não coincidem");

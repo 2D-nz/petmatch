@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>PÃ¡gina de anÃºncio</title>
+    <title>Página de anúncio</title>
 </head>
 <body>
 <div class="container">
@@ -14,39 +15,38 @@
     <div class="form">
         <div class="form-header">
             <div class="title">
-                <h1>AnÃºncie seu pet</h1>
+                <h1>Anúncie seu pet</h1>
             </div>
             <div class="p">
-                <p>Crie com amor o seu anÃºncio para acessar o Painel de Busca dos fofinhos, onde vocÃª terÃ¡ acesso a incrÃ­veis ferramentinhas para encontrar seus amiguinhos peludos.</p>
+                <p>Crie com amor o seu anúncio para acessar o Painel de Busca dos fofinhos, onde você terá acesso a incríveis ferramentinhas para encontrar seus amiguinhos peludos.</p>
             </div>
         </div>
         <form action="/create-pet" method="post">
             <div class="input-group">
-            <input type="hidden" name="id" id="id" value="${param.id}">
-                <label for="situacao">SituaÃ§Ã£o:</label>
+            <input type="hidden" id="id" name="id" value="${param.id}">
+                <label for="situacao">Situação:</label>
                 <select id="situacao" name="situacao" value="${param.situacao}">
                     <option value="perdido">Perdido</option>
                     <option value="tutor">Procurando tutor</option>
                 </select>
-                <label for="especie">EspÃ©cie:</label>
+                <label for="especie">Espécie:</label>
                 <select id="especie" name="especie" value="${param.especie}">
                     <option value="dog">Cachorro</option>
                     <option value="cat">Gato</option>
                 </select>
-                <label for="genero">GÃªnero:</label>
+                <label for="genero">Gênero:</label>
                 <select id="genero" name="genero" value="${param.genero}">
                     <option value="mas">Macho</option>
-                    <option value="fem">FÃªmea</option>
+                    <option value="fem">Fêmea</option>
                 </select>
             </div>
             <div class="login-button">
                 <div class="voltar">
-                    <button><a href="#">PÃ¡gina Inicial </a></button>
+                    <button><a href="#">Página Inicial </a></button>
                 </div>
                 <div class="prosseguir">
-                    <button type="submit">
-                        <a href="#">Prosseguir</a>
-                    </button>
+                        <input type="hidden" name="page" value="2">
+                        <button type="submit">Prosseguir</button>
                 </div>
             </div>
         </form>

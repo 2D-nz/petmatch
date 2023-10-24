@@ -54,7 +54,7 @@
                 <input type="hidden" id="id" name="id" value="${pet.id}">
                 <button type="submit">Delete</button>
                 <span> | </span>
-                <a href="telasAnuncio/TelaAnuncio1/index.jsp?id=${pet.id}&especie=${pet.especie}&situacao=${pet.situacao}&genero=${pet.genero}">Atualizar</a>
+                <a href="telasAnuncio/TelaAnuncio2/index.jsp?id=${pet.id}&especie=${pet.especie}&situacao=${pet.situacao}&genero=${pet.genero}">Prosseguir</a>
                 </form>
             </td>
         </tr>

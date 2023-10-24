@@ -12,31 +12,36 @@ import java.util.List;
 
 public class PetDao {
 
-    public void createPet(Pet pet) {
-
+    public int createPet(Pet pet) {
         String SQL = "INSERT INTO PET (SITUACAO, ESPECIE, GENERO) VALUES (?,?,?)";
 
         try {
-
             Connection connection = ConnectionPoolConfig.getConnection();
 
-            PreparedStatement preparedStatement = connection.prepareStatement(SQL);
+            PreparedStatement preparedStatement = connection.prepareStatement(SQL, PreparedStatement.RETURN_GENERATED_KEYS);
 
             preparedStatement.setString(1, pet.getSituacao());
             preparedStatement.setString(2, pet.getEspecie());
             preparedStatement.setString(3, pet.getGenero());
             preparedStatement.execute();
 
-            System.out.println("success in insert");
+            ResultSet generatedKeys = preparedStatement.getGeneratedKeys();
+            int newPetId = -1;
+            if (generatedKeys.next()) {
+                newPetId = generatedKeys.getInt(1);
+            }
+
+            System.out.println("success in insert, new ID: " + newPetId);
 
             connection.close();
 
+            return newPetId;
         } catch (Exception e) {
-
-            System.out.println("Error" + e.getMessage());
-
+            System.out.println("Error: " + e.getMessage());
+            return -1;
         }
     }
+
 
     public List<Pet> findAllPets() {
 
@@ -58,8 +63,12 @@ public class PetDao {
                 String especie = resultSet.getString("especie");
                 String situacao = resultSet.getString("situacao");
                 String genero = resultSet.getString("genero");
+                String nome = resultSet.getString("nome");
+                String raca = resultSet.getString("raca");
+                String cor = resultSet.getString("cor");
+                String cordosolhos = resultSet.getString("cordosolhos");
 
-                Pet pet = new Pet(petId, especie, situacao, genero);
+                Pet pet = new Pet(petId,situacao,especie,genero,nome,raca,cor,cordosolhos);
 
                 pets.add(pet);
             }
@@ -80,7 +89,7 @@ public class PetDao {
 
     public void updatePet(Pet pet) {
 
-        String SQL = "UPDATE PET SET SITUACAO = ?, ESPECIE = ?, GENERO = ? WHERE ID = ?";
+        String SQL = "UPDATE PET SET SITUACAO = ?, ESPECIE = ?, GENERO = ?, NOME = ?, RACA = ?, COR = ?, CORDOSOLHOS = ? WHERE ID = ?";
 
 
         try {
@@ -92,7 +101,11 @@ public class PetDao {
         preparedStatement.setString(1, pet.getSituacao());
         preparedStatement.setString(2, pet.getEspecie());
         preparedStatement.setString(3, pet.getGenero());
-        preparedStatement.setString(4, pet.getId());
+        preparedStatement.setString(4, pet.getNome());
+        preparedStatement.setString(5, pet.getRaca());
+        preparedStatement.setString(6, pet.getCor());
+        preparedStatement.setString(7, pet.getCordosolhos());
+        preparedStatement.setString(8, pet.getId());
         preparedStatement.execute();
 
         System.out.println("success in update");
