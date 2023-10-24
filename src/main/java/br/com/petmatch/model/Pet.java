@@ -20,12 +20,15 @@ public class Pet {
 
     //CRIADO NO METODO UPDATE
 
-
-    public Pet(String id, String situacao, String especie, String genero) {
+    public Pet(String id, String situacao, String especie, String genero, String nome, String raca, String cor, String cordosolhos) {
         this.id = id;
         this.situacao = situacao;
         this.especie = especie;
         this.genero = genero;
+        this.nome = nome;
+        this.raca = raca;
+        this.cor = cor;
+        this.cordosolhos = cordosolhos;
     }
 
     public String getId() {
