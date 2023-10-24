@@ -9,16 +9,16 @@ public class ConnectionPoolConfig {
 
     private static BasicDataSource dataSource;
 
-    private ConnectionPoolConfig(){
+    private ConnectionPoolConfig() {
         getDataSource();
     }
 
-    public static BasicDataSource getDataSource(){
+    public static BasicDataSource getDataSource() {
 
         if (dataSource == null) {
 
             dataSource = new BasicDataSource();
-            dataSource.setUrl("jdbc:h2:~/test");
+            dataSource.setUrl("jdbc:h2:file:./demodb");
             dataSource.setUsername("sa");
             dataSource.setPassword("sa");
             dataSource.setMinIdle(5);
