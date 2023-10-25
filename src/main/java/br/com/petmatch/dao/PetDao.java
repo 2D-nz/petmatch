@@ -67,8 +67,11 @@ public class PetDao {
                 String raca = resultSet.getString("raca");
                 String cor = resultSet.getString("cor");
                 String cordosolhos = resultSet.getString("cordosolhos");
+                String mensagem = resultSet.getString("mensagem");
+                String descricao = resultSet.getString("descricao");
+                String image = resultSet.getString("image");
 
-                Pet pet = new Pet(petId,situacao,especie,genero,nome,raca,cor,cordosolhos);
+                Pet pet = new Pet(petId,situacao,especie,genero,nome,raca,cor,cordosolhos,mensagem,descricao,image);
 
                 pets.add(pet);
             }
@@ -81,32 +84,56 @@ public class PetDao {
         } catch (Exception e) {
 
             System.out.println("Error" + e.getMessage());
+            System.out.println("fail in database connection");
 
             return Collections.emptyList();
 
         }
     }
 
-    public void updatePet(Pet pet) {
+    public void updatePet(Pet pet, String page) {
 
-        String SQL = "UPDATE PET SET SITUACAO = ?, ESPECIE = ?, GENERO = ?, NOME = ?, RACA = ?, COR = ?, CORDOSOLHOS = ? WHERE ID = ?";
+        String SQL;
+
+        if ("3".equals(page)) {
+            SQL = "UPDATE PET SET NOME = ?, RACA = ?, COR = ?, CORDOSOLHOS = ? WHERE ID = ?";
+        } else if ("4".equals(page)) {
+            SQL = "UPDATE PET SET MENSAGEM = ?, DESCRICAO = ? WHERE ID = ?";
+        } else if ("5".equals(page)) {
+            SQL = "UPDATE PET SET IMAGE = ? WHERE ID = ?";
+        } else if ("6".equals(page)) {
+            SQL = "UPDATE PET SET MENSAGEM = ?, DESCRICAO = ? WHERE ID = ?";
+        } else {
+            //PENSAR EM ALGUM RETORNO SE ACABAR A PAGINA
+            return;
+        }
+
 
 
         try {
-
         Connection connection = ConnectionPoolConfig.getConnection();
-
         PreparedStatement preparedStatement = connection.prepareStatement(SQL);
 
-        preparedStatement.setString(1, pet.getSituacao());
-        preparedStatement.setString(2, pet.getEspecie());
-        preparedStatement.setString(3, pet.getGenero());
-        preparedStatement.setString(4, pet.getNome());
-        preparedStatement.setString(5, pet.getRaca());
-        preparedStatement.setString(6, pet.getCor());
-        preparedStatement.setString(7, pet.getCordosolhos());
-        preparedStatement.setString(8, pet.getId());
-        preparedStatement.execute();
+            if ("3".equals(page)) {
+                preparedStatement.setString(1, pet.getNome());
+                preparedStatement.setString(2, pet.getRaca());
+                preparedStatement.setString(3, pet.getCor());
+                preparedStatement.setString(4, pet.getCordosolhos());
+                preparedStatement.setString(5, pet.getId());
+            } else if ("4".equals(page)) {
+                System.out.println("caiu na mensagem po");
+                preparedStatement.setString(1, pet.getMensagem());
+                preparedStatement.setString(2, pet.getDescricao());
+                preparedStatement.setString(3, pet.getId());
+            } else if ("5".equals(page)) {
+                preparedStatement.setString(1, pet.getImage());
+                preparedStatement.setString(2, pet.getId());
+            }else if ("6".equals(page)) {
+                //VAI SER A DATA ENDERECO E WHATSAPP
+            }
+
+            preparedStatement.execute();
+
 
         System.out.println("success in update");
 

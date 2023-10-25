@@ -10,6 +10,9 @@ public class Pet {
    private String raca;
    private String cor;
    private String cordosolhos;
+   private String mensagem;
+   private String descricao;
+   private String image;
 
 
     public Pet(String situacao, String especie, String genero) {
@@ -29,6 +32,32 @@ public class Pet {
         this.raca = raca;
         this.cor = cor;
         this.cordosolhos = cordosolhos;
+    }
+
+    public Pet(String id, String situacao, String especie, String genero, String nome, String raca, String cor, String cordosolhos, String mensagem, String descricao, String image) {
+        this.id = id;
+        this.situacao = situacao;
+        this.especie = especie;
+        this.genero = genero;
+        this.nome = nome;
+        this.raca = raca;
+        this.cor = cor;
+        this.cordosolhos = cordosolhos;
+        this.mensagem = mensagem;
+        this.descricao = descricao;
+        this.image = image;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public String getMensagem() {
+        return mensagem;
+    }
+
+    public String getDescricao() {
+        return descricao;
     }
 
     public String getId() {

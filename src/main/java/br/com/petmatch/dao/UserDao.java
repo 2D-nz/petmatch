@@ -23,8 +23,6 @@ public class UserDao {
 
             ResultSet resultSet = preparedStatement.executeQuery();
 
-            System.out.println("success in select email");
-
             while (resultSet.next()) {
 
                 String password = resultSet.getString("password");

@@ -26,6 +26,8 @@ public class CreatePetServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
+        Map<String, String> parameters = uploadImage(req);
+
         String petId = req.getParameter("id");
         String situacao = req.getParameter("situacao");
         String especie = req.getParameter("especie");
@@ -34,12 +36,15 @@ public class CreatePetServlet extends HttpServlet {
         String raca = req.getParameter("raca");
         String cor = req.getParameter("cor");
         String cordosolhos = req.getParameter("cordosolhos");
+        String mensagem = req.getParameter("mensagem");
+        String descricao = req.getParameter("descricao");
+        String image = req.getParameter("image");
         //Não faz parte do pet
         String page = req.getParameter("page");
 
         PetDao petDao = new PetDao();
 
-        Pet pet = new Pet(petId,situacao,especie,genero,nome,raca,cor,cordosolhos);
+        Pet pet = new Pet(petId,situacao,especie,genero,nome,raca,cor,cordosolhos,mensagem,descricao,image);
 
 
         int petIdNew;
@@ -48,11 +53,11 @@ public class CreatePetServlet extends HttpServlet {
             System.out.println(petIdNew);
         } else {
             petIdNew = Integer.parseInt(petId);
-            petDao.updatePet(pet);
+            petDao.updatePet(pet,page);
         }
 
         String pageName = "TelaAnuncio" + page;
-        String teste = String.format("telasAnuncio/%s/index.jsp?id=%s&especie=%s&situacao=%s&genero=%s",pageName,petIdNew,pet.getEspecie(),pet.getSituacao(),pet.getGenero());
+        String teste = String.format("telasAnuncio/%s/index.jsp?id=%s",pageName,petIdNew);
 
         resp.sendRedirect(teste);
     }
@@ -65,9 +70,9 @@ public class CreatePetServlet extends HttpServlet {
         if (isMultipartContent(httpServletRequest)) {
             try {
                 DiskFileItemFactory diskFileItemFactory = new DiskFileItemFactory();
-                List<FileItem> fileItens = new ServletFileUpload(diskFileItemFactory).parseRequest(httpServletRequest);
+                List<FileItem> fileItems = new ServletFileUpload(diskFileItemFactory).parseRequest(httpServletRequest);
 
-                for (FileItem item : fileItens) {
+                for (FileItem item : fileItems) {
                     checkFieldType(item, parameters);
                 }
 

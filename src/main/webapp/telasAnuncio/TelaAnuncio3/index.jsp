@@ -23,23 +23,12 @@
                 </div>
             <form action="/create-pet" method="post">
                 <input type="hidden" id="id" name="id" value="${param.id}">
-                <!-- Campos da TelaAnuncio1 -->
-                <input type="hidden" name="situacao" value="${param.situacao}">
-                <input type="hidden" name="especie" value="${param.especie}">
-                <input type="hidden" name="genero" value="${param.genero}">
-
-                <!-- Campos da TelaAnuncio2 -->
-                <input type="hidden" name="nome" value="${param.nome}">
-                <input type="hidden" name="raca" value="${param.raca}">
-                <input type="hidden" name="cor" value="${param.cor}">
-                <input type="hidden" name="cordosolhos" value="${param.cordosolhos}">
-                <!-- Adicione outros campos da TelaAnuncio2 aqui -->
                 <div class="input-group">
                     <div class="input-box">
-                        <label for="msg" style="height: 180px;">Mensagem do Tutor:</label>
-                        <textarea name="msg" id="msg" cols="30" rows="10" style="height: 120px;" class="placeBaixo" placeholder="Deixe sua Mensagem" required></textarea>
-                        <label for="msg2" style="height: 180px;">Descrição:</label>
-                        <textarea name="msg2" id="msg2" cols="30" rows="10" style="height: 120px;" class="placeBaixo" placeholder="Deixe sua Mensagem" required></textarea>
+                        <label for="mensagem" style="height: 180px;">Mensagem do Tutor:</label>
+                        <textarea name="mensagem" id="mensagem" cols="30" rows="10" style="height: 120px;" class="placeBaixo" placeholder="Deixe sua Mensagem" required></textarea>
+                        <label for="descricao" style="height: 180px;">Descrição:</label>
+                        <textarea name="descricao" id="msg2" cols="30" rows="10" style="height: 120px;" class="placeBaixo" placeholder="Deixe sua Mensagem" required></textarea>
                     </div>
                 </div>
                     <div class="login-button">

@@ -29,7 +29,7 @@ public class RegisterServlet extends HttpServlet {
             // Senhas não coincidem
             req.setAttribute("error", "As senhas não coincidem");
             System.out.println("senhas não coincidem ou está vazia");
-            req.getRequestDispatcher("register-page/register.jsp").forward(req, resp);
+            req.getRequestDispatcher("/register-page/register.jsp").forward(req, resp);
         }
     }
 }

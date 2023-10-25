@@ -21,12 +21,7 @@
                 </div>
             </div>
             <form action="/create-pet" method="post">
-                 <!-- Campos da TelaAnuncio1 -->
                 <input type="hidden" id="id" name="id" value="${param.id}">
-                <input type="hidden" name="situacao" value="${param.situacao}">
-                <input type="hidden" name="especie" value="${param.especie}">
-                <input type="hidden" name="genero" value="${param.genero}">
-                <!-- Campos da TelaAnuncio1 -->
                 <div class="input-box">
                     <label for="firstname">Nome:</label>
                     <input class="nome" id="nome" type="text" name="nome" placeholder="Digite o nome do seu pet" required>

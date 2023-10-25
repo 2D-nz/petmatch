@@ -41,9 +41,9 @@
     <div class="container">
         <form action="/login" method="post">
             <label for="username">Email:</label>
-            <input type="text" id="username" placeholder="Email aqui..." />
+            <input type="text" id="username" name="email" placeholder="Email aqui..." />
             <label for="password">Senha:</label>
-            <input type="password" id="password" placeholder="Senha aqui..." />
+            <input type="password" id="password" name="password" placeholder="Senha aqui..." />
             <button>Login</button>
             <span>${requestScope.message}</span>
         </form>
