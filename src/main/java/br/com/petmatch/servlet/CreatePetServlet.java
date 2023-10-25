@@ -28,23 +28,26 @@ public class CreatePetServlet extends HttpServlet {
 
         Map<String, String> parameters = uploadImage(req);
 
-        String petId = req.getParameter("id");
-        String situacao = req.getParameter("situacao");
-        String especie = req.getParameter("especie");
-        String genero = req.getParameter("genero");
-        String nome = req.getParameter("nome");
-        String raca = req.getParameter("raca");
-        String cor = req.getParameter("cor");
-        String cordosolhos = req.getParameter("cordosolhos");
-        String mensagem = req.getParameter("mensagem");
-        String descricao = req.getParameter("descricao");
-        String image = req.getParameter("image");
+        String petId = parameters.get("id");
+        String situacao = parameters.get("situacao");
+        String especie = parameters.get("especie");
+        String genero = parameters.get("genero");
+        String nome = parameters.get("nome");
+        String raca = parameters.get("raca");
+        String cor = parameters.get("cor");
+        String cordosolhos = parameters.get("cordosolhos");
+        String mensagem = parameters.get("mensagem");
+        String descricao = parameters.get("descricao");
+        String image = parameters.get("image");
+        String data = parameters.get("data");
+        String endereco = parameters.get("endereco");
+        String telefone = parameters.get("telefone");
         //Não faz parte do pet
-        String page = req.getParameter("page");
+        String page = parameters.get("page");
 
         PetDao petDao = new PetDao();
 
-        Pet pet = new Pet(petId,situacao,especie,genero,nome,raca,cor,cordosolhos,mensagem,descricao,image);
+        Pet pet = new Pet(petId,situacao,especie,genero,nome,raca,cor,cordosolhos,mensagem,descricao,image,data,endereco,telefone);
 
 
         int petIdNew;

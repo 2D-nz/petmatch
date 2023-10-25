@@ -19,6 +19,6 @@ public class DeletePetServlet  extends HttpServlet {
 
        new PetDao().deletePetbyId(petId);
 
-       resp.sendRedirect("find-all-pets");
+       resp.sendRedirect("/find-all-pets");
     }
 }

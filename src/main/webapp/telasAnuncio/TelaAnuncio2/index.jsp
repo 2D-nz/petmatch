@@ -20,7 +20,7 @@
                     <p>Crie com amor o seu anúncio para acessar o Painel de Busca dos fofinhos, onde você terá acesso a incríveis ferramentinhas para encontrar seus amiguinhos peludos.</p>
                 </div>
             </div>
-            <form action="/create-pet" method="post">
+            <form action="/create-pet" method="post" enctype="multipart/form-data">
                 <input type="hidden" id="id" name="id" value="${param.id}">
                 <div class="input-box">
                     <label for="firstname">Nome:</label>

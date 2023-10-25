@@ -60,18 +60,10 @@ public class PetDao {
             while (resultSet.next()) {
 
                 String petId = resultSet.getString("id");
-                String especie = resultSet.getString("especie");
-                String situacao = resultSet.getString("situacao");
-                String genero = resultSet.getString("genero");
                 String nome = resultSet.getString("nome");
-                String raca = resultSet.getString("raca");
-                String cor = resultSet.getString("cor");
-                String cordosolhos = resultSet.getString("cordosolhos");
-                String mensagem = resultSet.getString("mensagem");
-                String descricao = resultSet.getString("descricao");
                 String image = resultSet.getString("image");
 
-                Pet pet = new Pet(petId,situacao,especie,genero,nome,raca,cor,cordosolhos,mensagem,descricao,image);
+                Pet pet = new Pet(petId,nome,image);
 
                 pets.add(pet);
             }
@@ -102,7 +94,7 @@ public class PetDao {
         } else if ("5".equals(page)) {
             SQL = "UPDATE PET SET IMAGE = ? WHERE ID = ?";
         } else if ("6".equals(page)) {
-            SQL = "UPDATE PET SET MENSAGEM = ?, DESCRICAO = ? WHERE ID = ?";
+            SQL = "UPDATE PET SET DATA_DESAPARECIMENTO = ?, ENDERECO = ?, WHATSAPP = ? WHERE ID = ?";
         } else {
             //PENSAR EM ALGUM RETORNO SE ACABAR A PAGINA
             return;
@@ -128,8 +120,12 @@ public class PetDao {
             } else if ("5".equals(page)) {
                 preparedStatement.setString(1, pet.getImage());
                 preparedStatement.setString(2, pet.getId());
-            }else if ("6".equals(page)) {
-                //VAI SER A DATA ENDERECO E WHATSAPP
+            } else if ("6".equals(page)) {
+                System.out.println("entrou aqui 6");
+                preparedStatement.setString(1, pet.getData());
+                preparedStatement.setString(2, pet.getEndereco());
+                preparedStatement.setString(3, pet.getTelefone());
+                preparedStatement.setString(4, pet.getId());
             }
 
             preparedStatement.execute();
@@ -146,7 +142,7 @@ public class PetDao {
     }
     }
     public void deletePetbyId(String petId){
-        String SQL = "DELETE PET WHERE ID= ? ";
+        String SQL = "DELETE FROM PET WHERE ID = ?";
 
         try {
 

@@ -1,0 +1,6 @@
+2023-10-24 21:22:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "PET" not found (this database is empty); SQL statement:
+INSERT INTO PET (SITUACAO, ESPECIE, GENERO) VALUES (?,?,?) [42104-214]
+2023-10-24 21:22:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "PET" not found (this database is empty); SQL statement:
+INSERT INTO PET (SITUACAO, ESPECIE, GENERO) VALUES (?,?,?) [42104-214]

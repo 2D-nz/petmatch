@@ -21,14 +21,15 @@
                     </div>
                 </div>
             <form action="/create-pet" method="post" enctype="multipart/form-data">
+            <input type="hidden" id="id" name="id" value="${param.id}">
                 <div class="upload">
                         <label for="image">Selecione uma imagem:</label>
                         <input type="file" id="image" name="image" accept="image/*" required>
+                        <input type="hidden" name="page" value="5">
                         <input class="sent"  type="submit" value="Enviar Imagem">
                 </div>
                 <div class="login-button">
                     <button><a href="#">Voltar</a></button>
-                    <button type="submit" onclick="prosseguirParaProximaTela()"><a href="#">Prosseguir</a></button>
                 </div>
             </form>
         </div>

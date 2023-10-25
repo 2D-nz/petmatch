@@ -37,10 +37,6 @@
 	<table>
         <tr>
             <th>ID</th>
-            <th>Especie</th>
-            <th>Situacao</th>
-            <th>genero</th>
-            <th>Actions</th>
         </tr>
         <c:forEach var="pet" items="${pets}">
         <tr>
@@ -50,12 +46,12 @@
             <td>${pet.situacao}</td>
             <td>${pet.genero}</td>
             <td>
-                <form action="/delete-pet" method="post">
+            <form action="/delete-pet" method="post">
                 <input type="hidden" id="id" name="id" value="${pet.id}">
                 <button type="submit">Delete</button>
                 <span> | </span>
-                <a href="telasAnuncio/TelaAnuncio2/index.jsp?id=${pet.id}&especie=${pet.especie}&situacao=${pet.situacao}&genero=${pet.genero}">Prosseguir</a>
-                </form>
+                <a href="telasAnuncio/TelaAnuncio2/index.jsp?id=${pet.id}">Prosseguir</a>
+            </form>
             </td>
         </tr>
         </c:forEach>

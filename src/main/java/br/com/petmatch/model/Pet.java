@@ -13,6 +13,9 @@ public class Pet {
    private String mensagem;
    private String descricao;
    private String image;
+   private String data;
+   private String endereco;
+   private String telefone;
 
 
     public Pet(String situacao, String especie, String genero) {
@@ -23,18 +26,7 @@ public class Pet {
 
     //CRIADO NO METODO UPDATE
 
-    public Pet(String id, String situacao, String especie, String genero, String nome, String raca, String cor, String cordosolhos) {
-        this.id = id;
-        this.situacao = situacao;
-        this.especie = especie;
-        this.genero = genero;
-        this.nome = nome;
-        this.raca = raca;
-        this.cor = cor;
-        this.cordosolhos = cordosolhos;
-    }
-
-    public Pet(String id, String situacao, String especie, String genero, String nome, String raca, String cor, String cordosolhos, String mensagem, String descricao, String image) {
+    public Pet(String id, String situacao, String especie, String genero, String nome, String raca, String cor, String cordosolhos, String mensagem, String descricao, String image,String data, String endereco, String telefone) {
         this.id = id;
         this.situacao = situacao;
         this.especie = especie;
@@ -46,6 +38,22 @@ public class Pet {
         this.mensagem = mensagem;
         this.descricao = descricao;
         this.image = image;
+        this.data = data;
+        this.endereco = endereco;
+        this.telefone = telefone;
+
+    }
+
+    public String getData() {
+        return data;
+    }
+
+    public String getEndereco() {
+        return endereco;
+    }
+
+    public String getTelefone() {
+        return telefone;
     }
 
     public String getImage() {
@@ -81,10 +89,6 @@ public class Pet {
     //CRIADO NO METODO UPDATE
     public String getNome() {
         return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
     }
 
     public String getRaca() {

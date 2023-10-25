@@ -21,7 +21,7 @@
                     </div>
                     </div>
                 </div>
-            <form action="/create-pet" method="post">
+            <form action="/create-pet" method="post" enctype="multipart/form-data">
                 <input type="hidden" id="id" name="id" value="${param.id}">
                 <div class="input-group">
                     <div class="input-box">
