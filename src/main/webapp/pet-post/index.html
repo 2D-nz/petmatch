@@ -28,13 +28,103 @@
 
 		<main>
 			<div class="post-container">
-				<img src="../images/shitzu.jpg" alt="dog" />
-				<h1>Johnny</h1>
-				<p>Pq São Lucas</p>
-				<p>Cachorro pequeno e dócil, e de rabo torto</p>
+				<div class="image-container">
+					<img src="../images/shitzu.jpg" alt="dog" class="dog-image" />
+				</div>
+				<div>
+					<span class="dados-primarios-pet">
+						<h1>Johnny <img src="../images/icons/male-sign.svg" /></h1>
+						<p>
+							<img
+								src="../images/icons/pin-outline.svg"
+								alt="localization pin"
+								class="local-pin"
+							/>
+							Pq. São Lucas - São Paulo, SP
+						</p>
+					</span>
+					<div class="dados-pet">
+						<div>
+							<h3>Raça:</h3>
+							<p>Cachorro</p>
+						</div>
+						<div>
+							<h3>Espécie</h3>
+							<p>Maltes</p>
+						</div>
+						<div>
+							<h3>Cor dos olhos:</h3>
+							<p>Castanhos</p>
+						</div>
+						<div>
+							<h3>Pelos:</h3>
+							<p>Brancos</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="status">
+					<h2 id="status" class="procurando">Procurando</h2>
+					<p>Desaparecido em: 01/03</p>
+				</div>
+				<div class="descricao">
+					<h2>Descrição:</h2>
+					<p>Cachorro pequeno e dócil, e de rabo torto</p>
+				</div>
 			</div>
 		</main>
 	</body>
 	<script src="scripts.js"></script>
 	<script src="../navscripts.js"></script>
 </html>
+
+<!-- 
+
+<div class="post-container">
+				<div class="image-container">
+					<img src=`${pet.image}`alt="dog" class="dog-image" />
+				</div>
+				<div>
+					<span class="dados-primarios-pet">
+						<h1>${NOME} <img src=`${SEXO}` ID='sexo' /></h1>
+						<p>
+							<img
+								src="../images/icons/pin-outline.svg"
+								alt="localization pin"
+								class="local-pin"
+							/>
+							${ENDERECO}
+						</p>
+					</span>
+					<div class="dados-pet">
+						<div>
+							<h3>Raça:</h3>
+							<p>
+								${RACA}
+							</p>
+						</div>
+						<div>
+							<h3>Espécie</h3>
+							<p>${ESPECIE}</p>
+						</div>
+						<div>
+							<h3>Cor dos olhos:</h3>
+							<p>${CORDOSOLHOS}</p>
+						</div>
+						<div>
+							<h3>Pelos:</h3>
+							<p>${COR}</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="status">
+					<h2 id="status" class="procurando">Procurando</h2>
+					<p>Desaparecido em: ${DATA_DESAPARECIMENTO}</p>
+				</div>
+				<div class="descricao">
+					<h2>Descrição:</h2>
+					<p>${DESCRICAO}/p>
+				</div>
+			</div>
+-->

@@ -69,4 +69,26 @@ public class UserDao {
             System.out.println("Error: " + e.getMessage());
         }
     }
+
+    // Metodo para receber dados do usuário
+    public void getUsuario(User user) {
+        String insertSQL = "INSERT INTO USR (EMAIL,PASSWORD) VALUES (?,?)";
+
+        try {
+            Connection connection = ConnectionPoolConfig.getConnection();
+            PreparedStatement preparedStatement = connection.prepareStatement(insertSQL);
+
+            preparedStatement.setString(1, user.getEmail());
+            preparedStatement.setString(2, user.getPassword());
+
+            preparedStatement.executeUpdate();
+
+            System.out.println("success in insert command");
+
+            connection.close();
+
+        } catch (Exception e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+    }
 }

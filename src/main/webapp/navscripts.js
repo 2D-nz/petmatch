@@ -1,7 +1,7 @@
 sessionStorage.setItem("name", "Cleber");
-sessionStorage.setItem("isLogged", "false");
+sessionStorage.setItem("isLogged", "true");
 
-console.log()
+console.log();
 let isLogged = sessionStorage.getItem("isLogged");
 let Name = sessionStorage.getItem("name");
 $(document).ready(function () {
@@ -31,4 +31,3 @@ function redirecionarParaFerramentas() {
 function redirecionarParaAnuncie() {
 	window.location.href = "telasAnuncio/TelaAnuncio1/index.jsp";
 }
-
