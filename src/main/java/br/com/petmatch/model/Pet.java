@@ -18,10 +18,10 @@ public class Pet {
    private String telefone;
 
 
-    public Pet(String situacao, String especie, String genero) {
-        this.situacao = situacao;
-        this.especie = especie;
-        this.genero = genero;
+    public Pet(String id, String nome, String image) {
+        this.id = id;
+        this.nome = nome;
+        this.image = image;
     }
 
     //CRIADO NO METODO UPDATE
