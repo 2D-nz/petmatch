@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+<%@ page contentType="text/html; charset=UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../nav.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/searching-page/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
@@ -26,37 +27,22 @@
             <button id="login">Login</button>
         </div>
     </nav>
-<div class="container">
+      <div class="container">
+        <h1 class="heading"></h1>
+        <h1 class="heading"></h1>
 
-    <h1 class="heading">       </h1>
-    <h1 class="heading">       </h1>
-    
-
-		<input type="text" placeholder="Pesquisar..." id="search-box">
-
-	<table>
-        <tr>
-            <th>ID</th>
-        </tr>
         <c:forEach var="pet" items="${pets}">
-        <tr>
-            <td></td>
-            <td>${pet.id}</td>
-            <td>${pet.especie}</td>
-            <td>${pet.situacao}</td>
-            <td>${pet.genero}</td>
-            <td>
-            <form action="/delete-pet" method="post">
-                <input type="hidden" id="id" name="id" value="${pet.id}">
-                <button type="submit">Delete</button>
-                <span> | </span>
-                <a href="telasAnuncio/TelaAnuncio2/index.jsp?id=${pet.id}">Prosseguir</a>
-            </form>
-            </td>
-        </tr>
+          <div class="container-image">
+            <div class="image">
+              <a href="/details-pet?id=${pet.id}">
+              <img src="${pet.image}">
+              <h3>${pet.nome}</h3>
+              <p></p>
+            </div>
+          </div>
         </c:forEach>
-    </table>
-<div>
+      </div>
+    </body>
 </body>
 <script src="../navscripts.js"></script>
 </html>

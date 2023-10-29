@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+<%@ page contentType="text/html; charset=UTF-8" %>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/register-page/style.css">
     <title>Login</title>
 </head>
 <body>
     <div class="main-login">
         <div class="left-login">
             <h1>Faça seu cadastro para buscar ou cadastrar seu amiguinho</h1>
-            <img src="dog-animate.svg" class= "login-image" alt="Cachorro animation">
+            <img src="/register-page/dog-animate.svg" class= "login-image" alt="Cachorro animation">
         </div>
         <div class="right-login">
             <div class="card-login">

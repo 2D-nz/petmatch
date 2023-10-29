@@ -1,7 +1,6 @@
 package br.com.petmatch.model;
 
 public class Pet {
-
     private String id;
    private String situacao;
    private String especie;
@@ -18,10 +17,10 @@ public class Pet {
    private String telefone;
 
 
-    public Pet(String situacao, String especie, String genero) {
-        this.situacao = situacao;
-        this.especie = especie;
-        this.genero = genero;
+    public Pet(String id, String nome, String image) {
+        this.id = id;
+        this.nome = nome;
+        this.image = image;
     }
 
     //CRIADO NO METODO UPDATE
@@ -42,6 +41,22 @@ public class Pet {
         this.endereco = endereco;
         this.telefone = telefone;
 
+    }
+
+    public Pet(String situacao, String especie, String genero, String nome, String raca, String cor, String cordosolhos, String mensagem, String descricao, String image, String data, String endereco, String telefone) {
+        this.situacao = situacao;
+        this.especie = especie;
+        this.genero = genero;
+        this.nome = nome;
+        this.raca = raca;
+        this.cor = cor;
+        this.cordosolhos = cordosolhos;
+        this.mensagem = mensagem;
+        this.descricao = descricao;
+        this.image = image;
+        this.data = data;
+        this.endereco = endereco;
+        this.telefone = telefone;
     }
 
     public String getData() {

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+<%@ page contentType="text/html; charset=UTF-8" %>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,11 +24,10 @@
                     <div class="input-box">
                         <p>
                             <label for="mes">Data do desaparecimento:</label>
-                            <input type="data" name="data" id="data" class="date">
+                            <input type="date" name="data" id="data" class="date">
                         </p>
                         <label for="description">Endereço:</label>
                         <input id="endereco" type="text" name="endereco" class="p1" required>
-                        <label for="ite2">Telefone com WhatsApp:</label>
                         <label for="tel">Telefone com WhatsApp:</label>
                         <div class="phone-input">
                             <input type="text" name="telefone" id="telefone" title="Formato esperado: (99) 9999-9999">
@@ -40,7 +40,6 @@
                         <button><a href="#">Voltar</a></button>
                     </div>
                     <div class="prosseguir">
-                        <input type="hidden" name="page" value="6">
                         <button type="submit">Prosseguir</button>
                     </form>
                 </div>

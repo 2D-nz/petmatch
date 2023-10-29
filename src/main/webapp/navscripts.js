@@ -1,5 +1,5 @@
 sessionStorage.setItem("name", "Cleber");
-sessionStorage.setItem("isLogged", "true");
+sessionStorage.setItem("isLogged", "false");
 
 console.log();
 let isLogged = sessionStorage.getItem("isLogged");
@@ -8,7 +8,7 @@ $(document).ready(function () {
 	if (isLogged == "true") {
 		$("#login").text(Name);
 		$("#login").click(function () {
-			window.location.href = "edit_profile-page/index.html";
+			window.location.href = "edit_profile-page/index.jsp";
 		});
 	} else {
 		$("#login").click(function () {
@@ -21,11 +21,11 @@ function redirecionarParaProcurando() {
 }
 
 function redirecionarParaEncontrados() {
-	window.location.href = "found-page/index.html";
+	window.location.href = "found-page/index.jsp";
 }
 
 function redirecionarParaFerramentas() {
-	window.location.href = "ferramentas-page/index.html";
+	window.location.href = "ferramentas-page/index.jsp";
 }
 
 function redirecionarParaAnuncie() {

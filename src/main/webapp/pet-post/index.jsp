@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+<%@ page contentType="text/html; charset=UTF-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 	<head>
-		<meta charset="UTF-8" />
+		<page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="styles.css" />
+		<link rel="stylesheet" href="pet-post/styles.css" />
 		<link rel="stylesheet" href="../nav.css" />
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
@@ -27,13 +29,14 @@
 		</nav>
 
 		<main>
+		<c:forEach var="pet" items="${pets}">
 			<div class="post-container">
 				<div class="image-container">
-					<img src="../images/shitzu.jpg" alt="dog" class="dog-image" />
+					<img src="${pet.image}" alt="dog" class="dog-image" />
 				</div>
 				<div>
 					<span class="dados-primarios-pet">
-						<h1>Johnny <img src="../images/icons/male-sign.svg" /></h1>
+						<h1>${pet.nome} <img src="../images/icons/male-sign.svg" /></h1>
 						<p>
 							<img
 								src="../images/icons/pin-outline.svg"
@@ -46,85 +49,35 @@
 					<div class="dados-pet">
 						<div>
 							<h3>Raça:</h3>
-							<p>Cachorro</p>
+							<p>${pet.raca}</p>
 						</div>
 						<div>
 							<h3>Espécie</h3>
-							<p>Maltes</p>
+							<p>${pet.especie}</p>
 						</div>
 						<div>
 							<h3>Cor dos olhos:</h3>
-							<p>Castanhos</p>
+							<p>${pet.cordosolhos}</p>
 						</div>
 						<div>
-							<h3>Pelos:</h3>
-							<p>Brancos</p>
+							<h3>Cor:</h3>
+							<p>${pet.cor}</p>
 						</div>
 					</div>
 				</div>
 
 				<div class="status">
 					<h2 id="status" class="procurando">Procurando</h2>
-					<p>Desaparecido em: 01/03</p>
+					<p>${pet.situacao}</p>
 				</div>
 				<div class="descricao">
 					<h2>Descrição:</h2>
-					<p>Cachorro pequeno e dócil, e de rabo torto</p>
+					<p>${pet.descricao}</p>
 				</div>
 			</div>
 		</main>
+    </c:forEach>
 	</body>
 	<script src="scripts.js"></script>
 	<script src="../navscripts.js"></script>
 </html>
-
-<!-- 
-
-<div class="post-container">
-				<div class="image-container">
-					<img src=`${pet.image}`alt="dog" class="dog-image" />
-				</div>
-				<div>
-					<span class="dados-primarios-pet">
-						<h1>${NOME} <img src=`${SEXO}` ID='sexo' /></h1>
-						<p>
-							<img
-								src="../images/icons/pin-outline.svg"
-								alt="localization pin"
-								class="local-pin"
-							/>
-							${ENDERECO}
-						</p>
-					</span>
-					<div class="dados-pet">
-						<div>
-							<h3>Raça:</h3>
-							<p>
-								${RACA}
-							</p>
-						</div>
-						<div>
-							<h3>Espécie</h3>
-							<p>${ESPECIE}</p>
-						</div>
-						<div>
-							<h3>Cor dos olhos:</h3>
-							<p>${CORDOSOLHOS}</p>
-						</div>
-						<div>
-							<h3>Pelos:</h3>
-							<p>${COR}</p>
-						</div>
-					</div>
-				</div>
-
-				<div class="status">
-					<h2 id="status" class="procurando">Procurando</h2>
-					<p>Desaparecido em: ${DATA_DESAPARECIMENTO}</p>
-				</div>
-				<div class="descricao">
-					<h2>Descrição:</h2>
-					<p>${DESCRICAO}/p>
-				</div>
-			</div>
--->
