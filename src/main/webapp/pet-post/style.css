@@ -11,7 +11,7 @@ body {
 	flex-wrap: wrap;
 	flex: 1 1 100vw;
 	margin: 3px;
-	background-image: url('\src\main\webapp\images\dogfundo.jpg');
+	background: url("../images/dogfundo.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -32,14 +32,6 @@ content {
     display: flex;
 }
 
-header #logo {
-	display: flex;
-	flex: 0 1 200px;
-	background: #c9c9c9;
-	justify-content: center;
-	align-items: center;
-}
-
 div.cardContainer {
     border-radius: 7px;
     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
@@ -47,28 +39,10 @@ div.cardContainer {
     background-color: #fff;
     text-align: center;
     margin: 50px auto;
-    width: 320px;
+    width: 400px;
     position: relative;
     border:2px solid #fff;
-}
-
-section.top {
-    padding: 20px;
-    position: relative;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-}
-
-div.cardContainer div.bgTop {
-    position: absolute;
-    width: 99%;
-    height: 100px;
-    background-color: #D7950D;
-    top: 2px;
-    left: 2px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 50%;
+    margin-top:100px;
 }
 
 section.top img {
@@ -78,24 +52,45 @@ section.top img {
     border-radius: 50%;
     z-index: 1;
     max-width: 100%
+
 }
-section.top h2 {
-    font-weight: 600;
-    font-size: 18px;
-    letter-spacing: 1.5px;
+.contact-details {
+    display: flex;
+    justify-content: space-between;
+}
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    font-size: 10pt;
+}
+.contact-title {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-size: 10pt;
+}
+.contact-item h3{
+  margin-top: 5px;
+}
+.contact-title h3{
+  margin-top: 5px;
+}
+.line-contact{
+    margin-top: 25%;
 }
 
-section.top h3 {
-    color: #99690a;
-    font-weight: 500;
+.left {
+    flex: 1;
 }
 
-section.top h5 {
-    margin: 10px auto;
-    font-weight: lighter;
-    font-size: 13px;
-    letter-spacing: 1.2px;
-    font-style: italic;
+.right {
+    flex: 1;
+    text-align: right;
+}
+
+h3 {
+    margin: 0;
 }
 
 
@@ -106,14 +101,6 @@ section.top button {
     cursor: pointer;
     color: #E7EDF4;
     border: 1px solid #fff;
-}
-
-section.bottom {
-    padding: 10px;
-    border-top: 2px solid #d2d7dd;;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    background-color: #E7EDF4;
 }
 
 footer {
@@ -130,20 +117,35 @@ div.footerCardContainer {
     position: relative;
     border: 2px solid #fff;
 }
-
 section.top {
     padding: 20px;
     position: relative;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+    overflow: hidden;
+    height: 600px;
+}
+section.bot {
+    padding: 20px;
+    position: relative;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    height: 300px;
 }
 
-nav {
-	justify-content: center;
-	align-items: center;
-	flex: 1 1 100%;
-	height: 100px;
+footer .cardContainer .bot {
+    position: relative;
 }
+
+footer .cardContainer .bot img {
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+     width: 50%;
+}
+
 
 nav a {
 	margin: 0 3%;
@@ -151,15 +153,15 @@ nav a {
 }
 
 main {
+  background-color: #fff;
   border-radius: 7px;
   box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
   flex: 1;
   display: flex;
-  justify-content: center;
   align-items: center;
   max-width: 1000px;
   margin-left: 3%;
-  height: 945px;
+  height: 1100px;
 }
 
 
@@ -177,16 +179,6 @@ a {
 		display: block;
 	}
 
-	#openMenu {
-		margin-left: auto;
-	}
-
-	#closeMenu {
-		position: fixed;
-		right: 15px;
-		top: 15px;
-	}
-
 	nav {
 		position: fixed;
 		width: 100vw;
@@ -199,6 +191,8 @@ a {
 		display: none;
 		opacity: 0;
 		transition: 0.3s;
+		flex: 1 1 100%;
+        height: 100px;
 	}
 
 	nav a {

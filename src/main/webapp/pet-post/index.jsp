@@ -12,7 +12,7 @@
 
 		<title></title>
     </head>
-<body>
+<body style="justify-content: space-evenly;">
 	<nav class="topnav">
         <div>
             <img src="./images/dog-logo.png" />
@@ -31,7 +31,7 @@
 
 
     <c:forEach var="pet" items="${pets}">
-	<main style="margin-top: 7.2%;">
+	<main style="margin-top: 8%;">
         <div class="cardMid">
             <section class="top">
             <h3>${pet.endereco}</h3>
@@ -48,26 +48,51 @@
         <div class="cardContainer">
             <section class="top">
             <img src="${pet.image}" alt="dog" class="dog-image" />
-            <h2>${pet.nome}</h2>
-            <h3>${pet.situacao}</h3>
-            <h5>${pet.especie}</h3>
-            <h5>${pet.raca}, ${pet.cor}</h3>
-            <h5>${pet.cordosolhos}</h3>
-            <h5>${pet.genero}</h5>
+            <hr>
+            <div class="contact-details">
+                <div class="contact-title">
+                    <h3>Nome</h3>
+                    <h3>Situação</h3>
+                    <h3>Espécie</h3>
+                    <h3>Raça</h3>
+                    <h3>Cor</h3>
+                    <h3>Cor dos olhos</h3>
+                    <h3>Gênero</h3>
+                </div>
+                <div class="contact-item">
+                    <h3>${pet.nome}</h2>
+                    <h3>${pet.situacao}</h3>
+                    <h3>${pet.especie}</h3>
+                    <h3>${pet.raca}</h3>
+                    <h3>${pet.cor}</h3>
+                    <h3>${pet.cordosolhos}</h3>
+                    <h3>${pet.genero}</h5>
+                </div>
+            </div>
             </section>
         </div>
 	</aside>
 
-	<footer>
-        <div class="cardContainer">
-            <section class="top">
-                <img src="./images/dog-logo.png" />
-                <h2>Contato</h2>
-                <h3>Email</h3>
-                <h5>Telefone</h5>
-            </section>
-        </div>
-    </footer>
+<footer>
+    <div class="cardContainer">
+        <section class="bot">
+            <img src="./images/pet house.png" class="logo-img" />
+            <hr class="line-contact">
+            <h2>Contato</h2>
+            <div class="contact-details">
+                <div class="contact-title">
+                    <h3>Email</h3>
+                    <h3>Telefone</h3>
+                </div>
+                <div class="contact-item">
+                    <p>xdd</p>
+                    <p>1212121</p>
+                </div>
+            </div>
+        </section>
+    </div>
+</footer>
+
     </c:forEach>
 	<script type="text/javascript" src="assets/js/script.js"></script>
 </body>
