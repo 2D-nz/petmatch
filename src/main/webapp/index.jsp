@@ -17,8 +17,8 @@
 				<h1>Petmatch</h1>
 			</div>
 			<div>
-				<button onclick="redirecionarParaProcurando()">Procurando</button>
-				<button onclick="redirecionarParaEncontrados()">Encontrados</button>
+				<a href="lost-all-pets">Encontrados</a>
+                <a href="found-all-pets">Procurando</a>
 				<button onclick="redirecionarParaFerramentas()">Ferramentas</button>
 				<button class="nav_btn" onclick="redirecionarParaAnuncie()">
 					Anuncie

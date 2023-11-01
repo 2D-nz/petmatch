@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<%@ page contentType="text/html; charset=UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <head>
-    <meta charset="UTF-8">
+    <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
+    <meta http-equiv="Content-Type" content="text/html" charset=UTF-8>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Página de anúncio</title>
@@ -27,18 +28,18 @@
             <input type="hidden" id="id" name="id" value="${param.id}">
                 <label for="situacao">Situação:</label>
                 <select id="situacao" name="situacao" value="${param.situacao}">
-                    <option value="perdido">Perdido</option>
-                    <option value="tutor">Procurando tutor</option>
+                    <option value="Perdido">Perdido</option>
+                    <option value="Procurando tutor">Procurando tutor</option>
                 </select>
                 <label for="especie">Espécie:</label>
                 <select id="especie" name="especie" value="${param.especie}">
-                    <option value="dog">Cachorro</option>
-                    <option value="cat">Gato</option>
+                    <option value="Cachorro">Cachorro</option>
+                    <option value="Gato">Gato</option>
                 </select>
                 <label for="genero">Gênero:</label>
                 <select id="genero" name="genero" value="${param.genero}">
-                    <option value="mas">Macho</option>
-                    <option value="fem">Fêmea</option>
+                    <option value="Macho">Macho</option>
+                    <option value="Fêmea">Fêmea</option>
                 </select>
             </div>
             <div class="login-button">

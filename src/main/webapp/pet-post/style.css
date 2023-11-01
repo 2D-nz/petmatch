@@ -1,0 +1,211 @@
+@charset "UTF-8";
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	flex-wrap: wrap;
+	flex: 1 1 100vw;
+	margin: 3px;
+	background-image: url('\src\main\webapp\images\dogfundo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+header, aside, footer {
+	display: flex;
+	margin: 3px;
+	padding-top: 5rem;
+	padding-left: 1rem;
+	padding-right: 1.5rem;
+}
+
+header {
+	height: 100px;
+	flex: 1 1 100vw;
+}
+content {
+    display: flex;
+}
+
+header #logo {
+	display: flex;
+	flex: 0 1 200px;
+	background: #c9c9c9;
+	justify-content: center;
+	align-items: center;
+}
+
+div.cardContainer {
+    border-radius: 7px;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+    padding: 2px;
+    background-color: #fff;
+    text-align: center;
+    margin: 50px auto;
+    width: 320px;
+    position: relative;
+    border:2px solid #fff;
+}
+
+section.top {
+    padding: 20px;
+    position: relative;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+div.cardContainer div.bgTop {
+    position: absolute;
+    width: 99%;
+    height: 100px;
+    background-color: #D7950D;
+    top: 2px;
+    left: 2px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 50%;
+}
+
+section.top img {
+    padding: 3px;
+    background-color: #fff;
+    max-width: 152px;
+    border-radius: 50%;
+    z-index: 1;
+    max-width: 100%
+}
+section.top h2 {
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 1.5px;
+}
+
+section.top h3 {
+    color: #99690a;
+    font-weight: 500;
+}
+
+section.top h5 {
+    margin: 10px auto;
+    font-weight: lighter;
+    font-size: 13px;
+    letter-spacing: 1.2px;
+    font-style: italic;
+}
+
+
+section.top button {
+    background-color: #D7950D;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    color: #E7EDF4;
+    border: 1px solid #fff;
+}
+
+section.bottom {
+    padding: 10px;
+    border-top: 2px solid #d2d7dd;;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: #E7EDF4;
+}
+
+footer {
+    flex: 0 1 auto;
+}
+
+div.footerCardContainer {
+    padding: 2px;
+    background-color: #fff;
+    text-align: center;
+    margin: 50px auto;
+    width: 280px;
+    border-radius: 20px;
+    position: relative;
+    border: 2px solid #fff;
+}
+
+section.top {
+    padding: 20px;
+    position: relative;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+nav {
+	justify-content: center;
+	align-items: center;
+	flex: 1 1 100%;
+	height: 100px;
+}
+
+nav a {
+	margin: 0 3%;
+	font-size: 15pt;
+}
+
+main {
+  border-radius: 7px;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1000px;
+  margin-left: 3%;
+  height: 945px;
+}
+
+
+aside {
+	flex: 1 1 auto;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+@media only screen and (max-width: 717px) {
+	#openMenu, #closeMenu {
+		display: block;
+	}
+
+	#openMenu {
+		margin-left: auto;
+	}
+
+	#closeMenu {
+		position: fixed;
+		right: 15px;
+		top: 15px;
+	}
+
+	nav {
+		position: fixed;
+		width: 100vw;
+		height: 100vh;
+		background: rgba(255, 255, 255, 0.8);
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		margin: 0;
+		display: none;
+		opacity: 0;
+		transition: 0.3s;
+	}
+
+	nav a {
+		margin: 3%;
+	}
+
+	aside {
+		height: 100px;
+	}
+}
