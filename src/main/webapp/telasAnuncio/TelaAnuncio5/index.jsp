@@ -42,7 +42,7 @@
                         <button><a href="#">Voltar</a></button>
                     </div>
                     <div class="prosseguir">
-                        <button type="submit">Prosseguir</button>
+                        <button type="submit" id="submitButton" onclick="buscarCoordenadas()">Prosseguir</button>
                     </form>
                 </div>
                 </div>
@@ -50,4 +50,16 @@
         </div>
     </div>
 </body>
+<script>
+    document.getElementById('submitButton').addEventListener('click', function() {
+        // Mostrar pop-up de confirmação
+        var endereco = document.getElementById('endereco').value;
+        var confirmacao = window.confirm('Você confirmar que o endereço está correto?\n' + endereco);
+
+        // Se o usuário confirmar, enviar o formulário
+        if (confirmacao) {
+        }
+    });
+</script>
+<script src="../telasAnuncio/TelaAnuncio5/script.js"></script>
 </html>

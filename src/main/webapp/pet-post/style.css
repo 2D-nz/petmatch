@@ -19,9 +19,12 @@ body {
 header, aside, footer {
 	display: flex;
 	margin: 3px;
-	padding-top: 5rem;
+	padding-top: 1rem;
 	padding-left: 1rem;
 	padding-right: 1.5rem;
+}
+gmp-map {
+  height: 100%;
 }
 
 header {
@@ -46,12 +49,10 @@ div.cardContainer {
 }
 
 section.top img {
-    padding: 3px;
-    background-color: #fff;
-    max-width: 152px;
-    border-radius: 50%;
-    z-index: 1;
-    max-width: 100%
+
+  height: 250px;
+  overflow: hidden;
+  width: 100%;
 
 }
 .contact-details {
@@ -62,22 +63,30 @@ section.top img {
     display: flex;
     flex-direction: column;
     text-align: right;
-    font-size: 10pt;
+    font-size: 14px;
 }
 .contact-title {
     display: flex;
     flex-direction: column;
     text-align: left;
-    font-size: 10pt;
+    font-size: 14px;
 }
 .contact-item h3{
   margin-top: 5px;
+  margin-bottom:13px;
+  font-weight: 200;
 }
 .contact-title h3{
   margin-top: 5px;
+  margin-bottom:13px;
 }
-.line-contact{
-    margin-top: 25%;
+
+hr {
+    border: none;
+    height: 2px;
+    background-color: #ADD8E6;
+    margin: 25px auto 15px 20px;
+    width: 90%;
 }
 
 .left {
@@ -146,12 +155,6 @@ footer .cardContainer .bot img {
      width: 50%;
 }
 
-
-nav a {
-	margin: 0 3%;
-	font-size: 15pt;
-}
-
 main {
   background-color: #fff;
   border-radius: 7px;
@@ -173,30 +176,22 @@ a {
 	text-decoration: none;
 	color: inherit;
 }
-
+.descricao {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+    padding: 0 20px;
+}
+.titulo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    padding: 0 20px;
+}
 @media only screen and (max-width: 717px) {
 	#openMenu, #closeMenu {
 		display: block;
-	}
-
-	nav {
-		position: fixed;
-		width: 100vw;
-		height: 100vh;
-		background: rgba(255, 255, 255, 0.8);
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-		margin: 0;
-		display: none;
-		opacity: 0;
-		transition: 0.3s;
-		flex: 1 1 100%;
-        height: 100px;
-	}
-
-	nav a {
-		margin: 3%;
 	}
 
 	aside {

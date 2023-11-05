@@ -9,38 +9,31 @@
 		<link rel="stylesheet" href="/pet-post/style.css"/>
 		<link rel="stylesheet" href="../nav.css" />
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+            </script>
 
 		<title></title>
     </head>
 <body style="justify-content: space-evenly;">
-	<nav class="topnav">
-        <div>
-            <img src="./images/dog-logo.png" />
-            <h1>Petmatch</h1>
-        </div>
-        <div>
-            <button onclick="redirecionarParaProcurando()">Procurando</button>
-            <button onclick="redirecionarParaEncontrados()">Encontrados</button>
-            <button onclick="redirecionarParaFerramentas()">Ferramentas</button>
-            <button class="nav_btn" onclick="redirecionarParaAnuncie()">
-                Anuncie
-            </button>
-            <button id="login">Login</button>
-        </div>
-    </nav>
 
 
     <c:forEach var="pet" items="${pets}">
-	<main style="margin-top: 8%;">
+    <main style="margin-top: 8%;">
+    <div class="tela" style="margin-bottom: 20%;">
         <div class="cardMid">
-            <section class="top">
-            <h3>${pet.endereco}</h3>
-            <h2>${pet.descricao}</h2>
-            <h3>${pet.mensagem}</h3>
-            <label for="other_information">Outras informações:</label>
-            <h3>${pet.data}</h3>
+        <div id="map" style="width: 90%; height: 350px; margin-left:50px;"></div>
+            <hr>
+            <section class="mid">
+                <p class="titulo">Ultima local visto em:</p>
+                <h3 class="descricao">${pet.endereco}</h3>
+                <p class="titulo">Data de desaparecimento</p>
+                <h3 class="descricao">${pet.formattedDate}</h3>
+                <p class="titulo">Descrição</p>
+                <h3 class="descricao">${pet.descricao}</h2>
+                <p class="titulo">Mensagem do tutor</p>
+                <h3 class="descricao">${pet.mensagem}</h3>
             </section>
         </div>
+    </div>
     </main>
 
 <div class="content" style="margin-left: 3%;">
@@ -60,13 +53,13 @@
                     <h3>Gênero</h3>
                 </div>
                 <div class="contact-item">
-                    <h3>${pet.nome}</h2>
+                    <h3>${pet.nome}</h3>
                     <h3>${pet.situacao}</h3>
                     <h3>${pet.especie}</h3>
                     <h3>${pet.raca}</h3>
                     <h3>${pet.cor}</h3>
                     <h3>${pet.cordosolhos}</h3>
-                    <h3>${pet.genero}</h5>
+                    <h3>${pet.genero}</h3>
                 </div>
             </div>
             </section>
@@ -77,16 +70,17 @@
     <div class="cardContainer">
         <section class="bot">
             <img src="./images/pet house.png" class="logo-img" />
-            <hr class="line-contact">
-            <h2>Contato</h2>
+            <hr style="margin-top: 80px;">
+            <h2 style="margin-bottom: 15px;">Contato</h2>
             <div class="contact-details">
                 <div class="contact-title">
-                    <h3>Email</h3>
+                    <h3 style="margin-bottom: 10px;">Email</h3>
                     <h3>Telefone</h3>
                 </div>
                 <div class="contact-item">
-                    <p>xdd</p>
-                    <p>1212121</p>
+                    <h3 style="margin-bottom: 10px;">xdd</h3>
+                    <h3>1212121</h3>
+                    </div>
                 </div>
             </div>
         </section>
@@ -94,6 +88,7 @@
 </footer>
 
     </c:forEach>
-	<script type="text/javascript" src="assets/js/script.js"></script>
+	 <script src="/pet-post/scripts.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWmm6vyFNNgsEMEzKd7P3IHtCS4Say9WY&callback=initMap" async defer></script>
 </body>
 </html>

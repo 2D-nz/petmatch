@@ -59,6 +59,12 @@ public class CreatePetServlet extends HttpServlet {
             petDao.updatePet(pet,page);
         }
 
+        if ("6".equals(page)) {
+            resp.sendRedirect("tela.jsp");
+            return;
+        }
+
+
         String pageName = "TelaAnuncio" + page;
         String teste = String.format("telasAnuncio/%s/index.jsp?id=%s",pageName,petIdNew);
 
