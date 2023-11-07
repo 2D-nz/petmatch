@@ -61,5 +61,5 @@
         }
     });
 </script>
-<script src="../telasAnuncio/TelaAnuncio5/script.js"></script>
+<script src="/telasAnuncio/TelaAnuncio5/script.js"></script>
 </html>
