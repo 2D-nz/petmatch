@@ -1,6 +1,7 @@
 package br.com.petmatch.servlet;
 
 import br.com.petmatch.dao.PetDao;
+import br.com.petmatch.dao.PetLocationDAO;
 import br.com.petmatch.model.Pet;
 import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
@@ -17,6 +18,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import br.com.petmatch.model.PetLocation;
 
 import static org.apache.commons.fileupload.servlet.ServletFileUpload.isMultipartContent;
 
@@ -58,6 +60,34 @@ public class CreatePetServlet extends HttpServlet {
             petIdNew = Integer.parseInt(petId);
             petDao.updatePet(pet,page);
         }
+
+        if ("6".equals(page)) {
+            resp.sendRedirect("tela.jsp");
+            return;
+        }
+
+        String longitude = parameters.get("longitude");
+        String latitude = parameters.get("latitude");
+
+        if (longitude != null && latitude != null) {
+            PetLocation petLocation = new PetLocation();
+            petLocation.setPetId(petIdNew);
+            petLocation.setLongitude(longitude);
+            petLocation.setLatitude(latitude);
+
+            // Chame a DAO para inserir a localização no banco de dados
+            PetLocationDAO petLocationDAO = new PetLocationDAO();
+            boolean inseridoComSucesso = petLocationDAO.inserirCoordenadas(petLocation);
+
+            if (inseridoComSucesso) {
+                System.out.println("Coordenadas inseridas com sucesso.");
+            } else {
+                System.out.println("Falha ao inserir coordenadas.");
+                // Você pode adicionar tratamento de erro adicional aqui, se necessário.
+            }
+        }
+
+
 
         String pageName = "TelaAnuncio" + page;
         String teste = String.format("telasAnuncio/%s/index.jsp?id=%s",pageName,petIdNew);

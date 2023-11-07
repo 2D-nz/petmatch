@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Montserrat:ital@1&family=Roboto:wght@300&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:  #337F9C;
+}
+
+.container{
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 212);
+}
+.form-image{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 1rem;
+}
+.form-image img{
+    width: 31rem;
+}
+.form{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #337F9C;
+    padding: 3rem;
+    margin-top: 50px;
+}
+.form-header{
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    margin-top: -50px; 
+    padding-top: 10px; 
+}
+
+.p{
+    margin-top: 15px;
+    padding-top: 20px;
+}
+
+.login-button{
+    display: flex;
+    flex-direction:row; 
+    align-items: center;
+}
+.login-button button{
+    border: none;
+    margin: 10px 0;
+    width: 150px;
+    background-color: #385A20;
+    padding: 0.8rem 1rem !important;
+    border-radius: 5px;
+    cursor: pointer;
+    justify-content:space-around;
+    align-items: center;
+    color: #fff;
+    font-size: 16px;
+    margin-right:15px;
+}
+
+.voltar{
+    align-items: flex-end;
+}
+
+.login-button button:hover {
+    background-color: #8ed25e;
+}
+.login-button a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+}
+
+label{
+    color: #fff;
+}
+
+.name {
+    width: 35rem;
+    height: 40px;
+}
+
+input::placeholder {
+    font-size: medium;
+    padding-left: 5px; 
+    text-align: left;  
+}
+
+:placeholder-shown{
+    padding-left: 7px;
+}
+
+input{
+    display: block;
+    border-radius: 10px;
+    font-size: 18px;
+    border-color: #fff;
+}
+
+.form-header h1::after{
+    content: '';
+    display: block;
+    width: 5rem;
+    height: 0.3rem;
+    background-color: #fff;
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;
+}
+.input-group{
+    display: flex;
+    flex-direction: column; 
+    padding: 2rem 0;
+    color: #fff;
+}
+select{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50%;
+    text-align: start;
+    font-family: 'Inter';
+    font-size: 15px;
+    color: black;
+}
+
+select{
+    margin: 0.6rem 0;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #385A20;
+}
+
+@media screen and (max-width:1330px){
+    .form-image{
+        display: none;
+    }
+    .container{
+        width: 50%;
+    }
+    .form{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:1064px){
+    .container{
+        width: 90%;
+        height: auto;
+    }
+    .input-group{
+        flex-direction: column;
+        overflow-y: scroll;
+        flex-wrap: nowrap;
+        max-height: 10rem;
+        padding-right: 5rem;
+    }
+}

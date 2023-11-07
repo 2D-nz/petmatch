@@ -2,15 +2,17 @@
 <html lang="pt-br">
 <%@ page contentType="text/html; charset=UTF-8" %>
 <head>
-    <meta charset="UTF-8">
+    <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
+    <meta http-equiv="Content-Type" content="text/html" charset=UTF-8>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="style.css">
     <title>Página de anúncio 3</title>
 </head>
 <body>
     <div class="container">
         <div class="form-image">
-            <img src="assets/img/catdog.svg">
+            <img src="/images/catdog.svg">
         </div>
         <div class="form">
                 <div class="form-header">
@@ -40,7 +42,7 @@
                         <button><a href="#">Voltar</a></button>
                     </div>
                     <div class="prosseguir">
-                        <button type="submit">Prosseguir</button>
+                        <button type="submit" id="submitButton" onclick="buscarCoordenadas()">Prosseguir</button>
                     </form>
                 </div>
                 </div>
@@ -48,4 +50,16 @@
         </div>
     </div>
 </body>
+<script>
+    document.getElementById('submitButton').addEventListener('click', function() {
+        // Mostrar pop-up de confirmação
+        var endereco = document.getElementById('endereco').value;
+        var confirmacao = window.confirm('Você confirmar que o endereço está correto?\n' + endereco);
+
+        // Se o usuário confirmar, enviar o formulário
+        if (confirmacao) {
+        }
+    });
+</script>
+<script src="/telasAnuncio/TelaAnuncio5/script.js"></script>
 </html>

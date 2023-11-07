@@ -1,83 +1,94 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<%@ page contentType="text/html; charset=UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 	<head>
-		<page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8">
+        <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
+        <meta http-equiv="Content-Type" content="text/html" charset=UTF-8>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="pet-post/styles.css" />
+		<link rel="stylesheet" href="/pet-post/style.css"/>
 		<link rel="stylesheet" href="../nav.css" />
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+            </script>
 
 		<title></title>
-	</head>
-	<body>
-		<nav class="topnav">
-			<div>
-				<img src="../images/dog-logo.png" />
-				<h1>Petmatch</h1>
-			</div>
-			<div>
-				<button onclick="redirecionarParaProcurando()">Procurando</button>
-				<button onclick="redirecionarParaEncontrados()">Encontrados</button>
-				<button onclick="redirecionarParaFerramentas()">Ferramentas</button>
-				<button class="nav_btn" onclick="redirecionarParaAnuncie()">
-					Anuncie
-				</button>
-				<button id="login">Login</button>
-			</div>
-		</nav>
+    </head>
+<body style="justify-content: space-evenly;">
 
-		<main>
-		<c:forEach var="pet" items="${pets}">
-			<div class="post-container">
-				<div class="image-container">
-					<img src="${pet.image}" alt="dog" class="dog-image" />
-				</div>
-				<div>
-					<span class="dados-primarios-pet">
-						<h1>${pet.nome} <img src="../images/icons/male-sign.svg" /></h1>
-						<p>
-							<img
-								src="../images/icons/pin-outline.svg"
-								alt="localization pin"
-								class="local-pin"
-							/>
-							Pq. São Lucas - São Paulo, SP
-						</p>
-					</span>
-					<div class="dados-pet">
-						<div>
-							<h3>Raça:</h3>
-							<p>${pet.raca}</p>
-						</div>
-						<div>
-							<h3>Espécie</h3>
-							<p>${pet.especie}</p>
-						</div>
-						<div>
-							<h3>Cor dos olhos:</h3>
-							<p>${pet.cordosolhos}</p>
-						</div>
-						<div>
-							<h3>Cor:</h3>
-							<p>${pet.cor}</p>
-						</div>
-					</div>
-				</div>
 
-				<div class="status">
-					<h2 id="status" class="procurando">Procurando</h2>
-					<p>${pet.situacao}</p>
-				</div>
-				<div class="descricao">
-					<h2>Descrição:</h2>
-					<p>${pet.descricao}</p>
-				</div>
-			</div>
-		</main>
+    <c:forEach var="pet" items="${pets}">
+    <main style="margin-top: 8%;">
+    <div class="tela" style="margin-bottom: 20%;">
+        <div class="cardMid">
+        <div id="map" style="width: 90%; height: 350px; margin-left:50px;"></div>
+            <hr>
+            <section class="mid">
+                <p class="titulo">Ultima local visto em:</p>
+                <h3 class="descricao">${pet.endereco}</h3>
+                <p class="titulo">Data de desaparecimento</p>
+                <h3 class="descricao">${pet.formattedDate}</h3>
+                <p class="titulo">Descrição</p>
+                <h3 class="descricao">${pet.descricao}</h2>
+                <p class="titulo">Mensagem do tutor</p>
+                <h3 class="descricao">${pet.mensagem}</h3>
+            </section>
+        </div>
+    </div>
+    </main>
+
+<div class="content" style="margin-left: 3%;">
+	<aside>
+        <div class="cardContainer">
+            <section class="top">
+            <img src="${pet.image}" alt="dog" class="dog-image" />
+            <hr>
+            <div class="contact-details">
+                <div class="contact-title">
+                    <h3>Nome</h3>
+                    <h3>Situação</h3>
+                    <h3>Espécie</h3>
+                    <h3>Raça</h3>
+                    <h3>Cor</h3>
+                    <h3>Cor dos olhos</h3>
+                    <h3>Gênero</h3>
+                </div>
+                <div class="contact-item">
+                    <h3>${pet.nome}</h3>
+                    <h3>${pet.situacao}</h3>
+                    <h3>${pet.especie}</h3>
+                    <h3>${pet.raca}</h3>
+                    <h3>${pet.cor}</h3>
+                    <h3>${pet.cordosolhos}</h3>
+                    <h3>${pet.genero}</h3>
+                </div>
+            </div>
+            </section>
+        </div>
+	</aside>
+
+<footer>
+    <div class="cardContainer">
+        <section class="bot">
+            <img src="./images/pet house.png" class="logo-img" />
+            <hr style="margin-top: 80px;">
+            <h2 style="margin-bottom: 15px;">Contato</h2>
+            <div class="contact-details">
+                <div class="contact-title">
+                    <h3 style="margin-bottom: 10px;">Email</h3>
+                    <h3>Telefone</h3>
+                </div>
+                <div class="contact-item">
+                    <h3 style="margin-bottom: 10px;">xdd</h3>
+                    <h3>1212121</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</footer>
+
     </c:forEach>
-	</body>
-	<script src="scripts.js"></script>
-	<script src="../navscripts.js"></script>
+	 <script src="/pet-post/scripts.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWmm6vyFNNgsEMEzKd7P3IHtCS4Say9WY&callback=initMap" async defer></script>
+</body>
 </html>

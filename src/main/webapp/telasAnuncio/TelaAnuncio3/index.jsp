@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<%@ page contentType="text/html; charset=UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <head>
-    <meta charset="UTF-8">
+    <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
+    <meta http-equiv="Content-Type" content="text/html" charset=UTF-8>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="style.css">
     <title>Página de anúncio 3</title>
 </head>
 <body>
     <div class="container">
         <div class="form-image">
-            <img src="assets/img/catdog.svg">
+            <img src="/images/catdog.svg">
         </div>
         <div class="form">
                 <div class="form-header">

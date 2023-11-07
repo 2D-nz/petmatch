@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+<<<<<<< HEAD
 	<%@ page contentType="text/html; charset=UTF-8" %>
 	<head>
 		<%@ page language="java" contentType="text/html; charset=UTF-8"
 		pageEncoding="UTF-8"%>
+=======
+<head>
+    <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+>>>>>>> f75c23089c36f3e36f863de7a64ed29c1d2fb40d
 
 		<meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />

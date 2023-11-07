@@ -15,6 +15,7 @@ public class Pet {
    private String data;
    private String endereco;
    private String telefone;
+    private String formattedDate;
 
 
     public Pet(String id, String nome, String image) {
@@ -54,13 +55,17 @@ public class Pet {
         this.mensagem = mensagem;
         this.descricao = descricao;
         this.image = image;
-        this.data = data;
+        this.formattedDate = data;
         this.endereco = endereco;
         this.telefone = telefone;
     }
 
     public String getData() {
         return data;
+    }
+
+    public String getFormattedDate() {
+        return formattedDate;
     }
 
     public String getEndereco() {

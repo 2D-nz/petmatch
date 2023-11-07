@@ -6,8 +6,10 @@ import br.com.petmatch.model.Pet;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Date;
 import java.util.List;
 
 public class PetDao {
@@ -43,7 +45,7 @@ public class PetDao {
     }
         public List<Pet> LostPetDao() {
 
-        String SQL = "SELECT * FROM PET WHERE SITUACAO = 'perdido'";
+        String SQL = "SELECT * FROM PET WHERE SITUACAO = 'Perdido'";
 
         try {
 
@@ -84,7 +86,7 @@ public class PetDao {
 
     public List<Pet> FoundAllPets() {
 
-        String SQL =  "SELECT * FROM PET WHERE SITUACAO = 'tutor'";
+        String SQL =  "SELECT * FROM PET WHERE SITUACAO = 'Procurando tutor'";
 
         try {
 
@@ -127,20 +129,13 @@ public class PetDao {
         String SQL = String.format("SELECT * FROM PET WHERE ID = %s", petId);
 
         try {
-
             Connection connection = ConnectionPoolConfig.getConnection();
-
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
-
-
-
             ResultSet resultSet = preparedStatement.executeQuery();
-
 
             List<Pet> pets = new ArrayList<>();
 
             while (resultSet.next()) {
-
                 String situacao = resultSet.getString("situacao");
                 String especie = resultSet.getString("especie");
                 String genero = resultSet.getString("genero");
@@ -151,13 +146,18 @@ public class PetDao {
                 String mensagem = resultSet.getString("mensagem");
                 String descricao = resultSet.getString("descricao");
                 String image = resultSet.getString("image");
+
+                // Formata a data no formato "DD-MM-YYYY"
                 String data = resultSet.getString("data_desaparecimento");
+                SimpleDateFormat inputDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+                SimpleDateFormat outputDateFormat = new SimpleDateFormat("dd-MM-yyyy");
+                Date date = inputDateFormat.parse(data);
+                String formattedDate = outputDateFormat.format(date);
+
                 String endereco = resultSet.getString("endereco");
                 String telefone = resultSet.getString("whatsapp");
 
-
-
-                Pet pet = new Pet(situacao, especie, genero,nome, raca, cor, cordosolhos, mensagem, descricao, image, data, endereco, telefone);
+                Pet pet = new Pet(situacao, especie, genero, nome, raca, cor, cordosolhos, mensagem, descricao, image, formattedDate, endereco, telefone);
 
                 pets.add(pet);
             }
@@ -168,16 +168,12 @@ public class PetDao {
             return pets;
 
         } catch (Exception e) {
-
             System.out.println("Error" + e.getMessage());
             System.out.println("fail in database connection");
 
             return Collections.emptyList();
-
         }
     }
-
-
 
     public void updatePet(Pet pet, String page) {
 
@@ -192,7 +188,6 @@ public class PetDao {
         } else if ("6".equals(page)) {
             SQL = "UPDATE PET SET DATA_DESAPARECIMENTO = ?, ENDERECO = ?, WHATSAPP = ? WHERE ID = ?";
         } else {
-            //PENSAR EM ALGUM RETORNO SE ACABAR A PAGINA
             return;
         }
 
