@@ -5,13 +5,13 @@
 
     <meta http-equiv="Content-Type" content="text/html" charset=UTF-8>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="style.css">
     <title>Página de anúncio 2</title>
 </head>
 <body>
     <div class="container">
         <div class="form-image">
-            <img src="assets/img/catdog.svg">
+            <img src="/images/catdog.svg">
         </div>
         <div class="form">
             <div class="form-header">
@@ -19,7 +19,7 @@
                     <h1>Anúncie seu pet</h1>
                 </div>
                 <div class="p">
-                    <p>Crie com amor o seu anúncio para acessar o Painel de Busca dos fofinhos, onde você terá acesso a incríveis ferramentinhas para encontrar seus amiguinhos peludos.</p>
+                    <p class="p">Crie com amor o seu anúncio para acessar o Painel de Busca dos fofinhos, onde você terá acesso a incríveis ferramentinhas para encontrar seus amiguinhos peludos.</p>
                 </div>
             </div>
             <form action="/create-pet" method="post" enctype="multipart/form-data">
@@ -85,7 +85,7 @@
                 </div>
                 <div class="login-button">
                     <div class="voltar">
-                        <button><a href="#">Voltar</a></button>
+                        <button><a href="/TelaAnuncio1/index.jsp">Voltar</a></button>
                     </div>
                     <div class="prosseguir">
                             <input type="hidden" name="page" value="3">

@@ -204,9 +204,12 @@ hr{
     border: transparent;
     color:#fff;
     font-weight: bold;
-
 }
 
+.font1{
+    text-decoration:none;
+    color:#fff;
+}
 
   .a{
      text-decoration: none;
@@ -253,4 +256,3 @@ footer {
 	  max-width: 80%;
 	}
   }
-  

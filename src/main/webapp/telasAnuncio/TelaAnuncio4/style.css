@@ -13,7 +13,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background:  #fa7f72;
+    background: #337F9C;
 }
 
 .container{
@@ -39,17 +39,23 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #fa7f72;
+    background-color: #337F9C;
     padding: 3rem;
     margin-top: 50px;
 }
 .form-header{
     margin-bottom: 3rem;
-    display: flex;
+    display: block;
     justify-content: space-between;
     color: #fff;
-    margin-top: -50px; 
+    margin-top: -100px; 
     padding-top: 10px; 
+}
+
+.xis{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .p{
@@ -57,30 +63,77 @@ body{
     padding-top: 20px;
 }
 
+.upload{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin-top: 60px;
+    color: #fff;
+    font-size: medium;
+    align-items: center;
+}
+
+.upload{
+        width: 400px;
+        height: 200px;
+        background-color:#8ed25e;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 5px;
+        align-content: center;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-bottom: 80px;
+}
+.sent{
+    width: 160px;
+    height: 30px;
+    border-radius: 5px;
+    font-size: medium;
+    color: #fff;
+    background-color:#385A20; 
+    border-color: transparent;
+}
+
+
+.sent:hover {
+    background-color: #8ed25e;
+}
+
 .login-button{
     display: flex;
     flex-direction:row; 
     align-items: center;
+    margin-bottom: 0;
+    margin-top: 60px;
 }
+
 .login-button button{
     border: none;
     margin: 10px 0; 
     width: 150px;
-    height: 20%;
+    height: 40px;
     background-color: #385A20;
     padding: 0.8rem 1rem;
     border-radius: 5px;
     cursor: pointer; 
     justify-content:space-around;
     align-items: center;
-}
-.voltar{
-    align-items: flex-end;
-}
-.prosseguir{
     align-items: flex-end;
     margin-left: 20px;
 }
+
+.login-button button {
+    margin-right: 40px; /* Adiciona margem à direita do primeiro botão */
+  }
+  
+  .login-button button:last-child {
+    margin-right: 0; /* Remove a margem à direita do último botão */
+  }
+  
+
 .login-button button:hover {
     background-color: #8ed25e;
 }
@@ -88,6 +141,7 @@ body{
     text-decoration: none;
     color: #fff;
     font-size: 16px;
+    text-align: center;
 }
 .form-header h1::after{
     content: '';
@@ -99,41 +153,7 @@ body{
     position: absolute;
     border-radius: 10px;
 }
-.input-group{
-    display: flex;
-    flex-direction: column; 
-    padding: 2rem 0;
-    color: #fff;
-    margin-top: -20px;
-}
-textarea{
-    display: block;
-    border-radius: 10px;
-    width: 80%;
-    height: 45px;
-    margin-bottom: 20px;
-    font-size: 18px;
-    border-color: #fff;
-}
-.placeBaixo{
-    padding-bottom: 70px;
-    padding-left: 5px;
-    white-space: pre-line; 
-    word-wrap: break-word; 
-}
 
-input::placeholder {
-    font-size: medium;
-    padding-left: 5px; 
-    text-align: left;  
-}
-
-:placeholder-shown{
-    padding-left: 7px;
-}
-.description{
-    height: 120px;
-}
 
 @media screen and (max-width:1330px){
     .form-image{

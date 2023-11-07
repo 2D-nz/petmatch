@@ -22,8 +22,8 @@
 				<h1>Petmatch</h1>
 			</div>
 			<div class="options">
-			    <a href="lost-all-pets" class="a">Encontrados</a>
-                <a href="found-all-pets" class="a">Procurando</a>
+			    <a href="found-all-pets" class="a">Encontrados</a>
+                <a href="lost-all-pets" class="a">Procurando</a>
                 <button onclick="redirecionarParaFerramentas()">Ferramentas</button>
                 <button class="nav_btn" onclick="redirecionarParaAnuncie()">
                     Anuncie
@@ -80,7 +80,7 @@
 				</div>	
 			</section>
 			<div class="unit">
-				<button class="mais"> Veja Mais </button>
+				<button class="mais"><a href="/found-page/index.jsp" class="font1"> Veja Mais </a></button>
 		    </div>
 		    <footer>
                 <p>Fale conosco <b>(11) 4002-8922</b></p>

@@ -13,7 +13,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background:  #fa7f72;
+    background:  #337F9C;
 }
 
 .container{
@@ -39,7 +39,7 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #fa7f72;
+    background-color: #337F9C;
     padding: 3rem;
     margin-top: 50px;
 }
@@ -64,16 +64,19 @@ body{
 }
 .login-button button{
     border: none;
-    margin: 10px 0; 
+    margin: 10px 0;
     width: 150px;
-    height: 20%;
     background-color: #385A20;
-    padding: 0.8rem 1rem;
+    padding: 0.8rem 1rem !important;
     border-radius: 5px;
-    cursor: pointer; 
+    cursor: pointer;
     justify-content:space-around;
     align-items: center;
+    color: #fff !important;
+    font-size: 16px !important;
+    margin-right:16px;
 }
+
 .voltar{
     align-items: flex-end;
 }
@@ -89,7 +92,6 @@ body{
     color: #fff;
     font-size: 16px;
 }
-
 .form-header h1::after{
     content: '';
     display: block;
@@ -105,23 +107,37 @@ body{
     flex-direction: column; 
     padding: 2rem 0;
     color: #fff;
+    margin-top: -20px;
 }
-select{
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 50%;
-    text-align: start;
-    font-family: 'Inter';
-    font-size: 15px;
-    color: black;
-}
-select{
-    margin: 0.6rem 0;
-    padding: 0.8rem 1.2rem;
-    border: none;
+textarea{
+    display: block;
     border-radius: 10px;
-    box-shadow: 1px 1px 6px #385A20;
+    width: 80%;
+    height: 45px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    border-color: #fff;
 }
+.placeBaixo{
+    padding-bottom: 70px;
+    padding-left: 5px;
+    white-space: pre-line; 
+    word-wrap: break-word; 
+}
+
+input::placeholder {
+    font-size: medium;
+    padding-left: 5px; 
+    text-align: left;  
+}
+
+:placeholder-shown{
+    padding-left: 7px;
+}
+.description{
+    height: 120px;
+}
+
 @media screen and (max-width:1330px){
     .form-image{
         display: none;
