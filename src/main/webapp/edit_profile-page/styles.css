@@ -141,3 +141,8 @@ input {
 .buttons {
 	display: flex;
 }
+
+#pfp {
+	height: 200px;
+	width: 200px;
+}

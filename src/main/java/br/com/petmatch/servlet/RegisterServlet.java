@@ -16,14 +16,20 @@ public class RegisterServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String email = req.getParameter("email");
+        String nome = req.getParameter("nome");
+
         String password = req.getParameter("password");
         String passwordConfirm = req.getParameter("password-confirm");
 
-        if (email != null && !email.isEmpty() && password != null && !password.isEmpty() && password.equals(passwordConfirm)) {
+        if (email != null && !email.isEmpty() && password != null && !password.isEmpty()
+                && password.equals(passwordConfirm) && nome != null && !nome.isEmpty()) {
             // Senhas coincidem e não está null
-            User user = new User(email, password);
+            User user = new User(email, nome, password);
+            System.out.println(user);
             new UserDao().registerUserWithConfirmation(user);
             System.out.println("senhas coincidem");
+            System.out.println("oi");
+            req.setAttribute("Registrado", "true");
             req.getRequestDispatcher("login-page/login.jsp").forward(req, resp);
         } else {
             // Senhas não coincidem

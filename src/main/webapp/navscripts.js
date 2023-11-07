@@ -1,18 +1,13 @@
-sessionStorage.setItem("name", "Cleber");
-sessionStorage.setItem("isLogged", "false");
-
-console.log();
-let isLogged = sessionStorage.getItem("isLogged");
-let Name = sessionStorage.getItem("name");
+let isLogged = sessionStorage.getItem("LoggedUser");
 $(document).ready(function () {
-	if (isLogged == "true") {
-		$("#login").text(Name);
+	if (isLogged) {
+		$("#login").text(isLogged);
 		$("#login").click(function () {
 			window.location.href = "edit_profile-page/index.jsp";
 		});
 	} else {
 		$("#login").click(function () {
-			window.location.href = "login-page/login.jsp";
+			window.location.href = "/login-page/login.jsp";
 		});
 	}
 });

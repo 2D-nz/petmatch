@@ -29,15 +29,19 @@ public class LoginServlet extends HttpServlet {
 
         boolean isValidUser = new UserDao().verifyCredentials(user);
 
+        if (isValidUser) {
 
-        if(isValidUser) {
-            req.getSession().setAttribute("loggedUser", email);
+            User usuario = new UserDao().getUsuario(user.getEmail());
+            req.setAttribute("user", usuario);
+            req.getSession().setAttribute("loggedUser", usuario);
+            req.setAttribute("Registrado", null);
 
-            resp.sendRedirect("/find-all-pets");
-        }else {
-            req.setAttribute( "message", "Invalid credentials!");
+            resp.sendRedirect("/edit_profile-page/index.jsp");
 
-            req.getRequestDispatcher( "login-page/login.jsp").forward(req, resp);
+        } else {
+            req.setAttribute("message", "Invalid credentials!");
+
+            req.getRequestDispatcher("login-page/login.jsp").forward(req, resp);
 
         }
     }
