@@ -2,37 +2,22 @@
 <html lang="pt-br">
 <head>
     <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-
     <meta http-equiv="Content-Type" content="text/html" charset=UTF-8>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ferramentas</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link rel="stylesheet" href="../nav.css">
+    <%@ include file="/navBar.jsp"%>
+
 
     <script src="script.js"></script>
 </head>
 <body>
-   
     <div class="dog_img">
         <img src="../images/Banner_Cachorro.jpg" style="float: top" class="banner-image">
         <p> Quais ferramentas posso usar? </p>
     </div>
-    <nav class="topnav">
-        <div>
-            <img src="../images/dog-logo.png" />
-            <h1>Petmatch</h1>
-        </div>
-        <div>
-            <button onclick="redirecionarParaProcurando()">Procurando</button>
-            <button onclick="redirecionarParaEncontrados()">Encontrados</button>
-            <button onclick="redirecionarParaFerramentas()">Ferramentas</button>
-            <button class="nav_btn" onclick="redirecionarParaAnuncie()">
-                Anuncie
-            </button>
-            <button id="login">Login</button>
-        </div>
-    </nav>
     <div class="elementor-widget-container">
         <style>
         .elementor-widget-text-editor.elementor-drop-cap-view-stacked .elementor-drop-cap{background-color:#69727d;color:#fff}.elementor-widget-text-editor.elementor-drop-cap-view-framed .elementor-drop-cap{color:#69727d;border:3px solid;background-color:transparent}.elementor-widget-text-editor:not(.elementor-drop-cap-view-default) .elementor-drop-cap{margin-top:8px}.elementor-widget-text-editor:not(.elementor-drop-cap-view-default) .elementor-drop-cap-letter{width:1em;height:1em}.elementor-widget-text-editor .elementor-drop-cap{float:left;text-align:center;line-height:1;font-size:50px}.elementor-widget-text-editor .elementor-drop-cap-letter{display:inline-block}</style>				Aqui<strong> você consegue ver</strong> sobre <span style="color: #f29100;"><strong>as ferramentas</strong></span> que temos para achar seu animalzinho						</div>
