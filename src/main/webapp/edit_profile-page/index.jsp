@@ -13,28 +13,7 @@
 		</head>
 
 		<body>
-			<nav class="topnav">
-				<div>
-					<img src="../images/dog-logo.png" />
-					<h1>Petmatch</h1>
-				</div>
-				<div>
-					<button onclick="redirecionarParaProcurando()">Procurando</button>
-					<button onclick="redirecionarParaEncontrados()">Encontrados</button>
-					<button onclick="redirecionarParaFerramentas()">Ferramentas</button>
-					<button class="nav_btn" onclick="redirecionarParaAnuncie()">
-						Anuncie
-					</button>
-					<c:if test="${sessionScope.loggedUser != null}">
-						<button id="login">${loggedUser.nome} </button>
-					</c:if>
-					<c:if test="${sessionScope.loggedUser == null}">
 
-						<button id="login">Login</button>
-					</c:if>
-
-				</div>
-			</nav>
 			<div class="page">
 				<form action="/updateUser" method="post">
 
