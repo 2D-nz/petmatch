@@ -26,6 +26,13 @@ header, aside, footer {
 gmp-map {
   height: 100%;
 }
+.mapa{
+width: 55rem;
+height: 350px;
+margin-left:50px;
+margin-top: -15%;
+margin-bottom: 20px;
+}
 
 header {
 	height: 100px;

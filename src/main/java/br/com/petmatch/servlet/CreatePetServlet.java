@@ -61,13 +61,9 @@ public class CreatePetServlet extends HttpServlet {
             petDao.updatePet(pet,page);
         }
 
-        if ("6".equals(page)) {
-            resp.sendRedirect("tela.jsp");
-            return;
-        }
-
         String longitude = parameters.get("longitude");
         String latitude = parameters.get("latitude");
+
 
         if (longitude != null && latitude != null) {
             PetLocation petLocation = new PetLocation();
@@ -75,7 +71,6 @@ public class CreatePetServlet extends HttpServlet {
             petLocation.setLongitude(longitude);
             petLocation.setLatitude(latitude);
 
-            // Chame a DAO para inserir a localização no banco de dados
             PetLocationDAO petLocationDAO = new PetLocationDAO();
             boolean inseridoComSucesso = petLocationDAO.inserirCoordenadas(petLocation);
 
@@ -83,8 +78,12 @@ public class CreatePetServlet extends HttpServlet {
                 System.out.println("Coordenadas inseridas com sucesso.");
             } else {
                 System.out.println("Falha ao inserir coordenadas.");
-                // Você pode adicionar tratamento de erro adicional aqui, se necessário.
             }
+        }
+
+        if ("6".equals(page)) {
+            resp.sendRedirect("tela.jsp");
+            return;
         }
 
 
