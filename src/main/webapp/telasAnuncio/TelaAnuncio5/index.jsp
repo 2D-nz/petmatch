@@ -29,7 +29,7 @@
                             <input type="date" name="data" id="data" class="date">
                         </p>
                         <label for="description">Endereço:</label>
-                        <input id="endereco" type="text" name "endereco" class="p1" required>
+                        <input id="endereco" type="text" name="endereco" class="p1" required autocomplete="address">
                         <input type="hidden" id="latitude" name="latitude" value="${latitude}">
                         <input type="hidden" id="longitude" name="longitude" value="${longitude}">
                         <label onclick="buscarCoordenadas()">Buscar Coordenadas</label>

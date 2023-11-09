@@ -10,27 +10,10 @@
 		<script src="tela.js" defer></script>
 		<script src="navscripts.js" defer></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
+        <%@ include file="/navBar.jsp"%>
 		<title>Petmatch</title>
 	</head>
 	<body>
-		<nav class="topnav">
-			<div>
-			   <a href="/tela.jsp">
-				<img class="logo" src="/images/dog-logo.png"/>
-			   </a>
-				<h1>Petmatch</h1>
-			</div>
-			<div class="options">
-			    <a href="found-all-pets" class="a">Encontrados</a>
-                <a href="lost-all-pets" class="a">Procurando</a>
-                <button onclick="redirecionarParaFerramentas()">Ferramentas</button>
-                <button class="nav_btn" onclick="redirecionarParaAnuncie()">
-                    Anuncie
-                </button>
-                <button id="login">Login</button>
-			</div>
-		</nav>
 		<main>
 			<header>
 				<h1 class="text1">Perdeu seu pet? <br />Nós te ajudamos a achar!</h1>
@@ -41,12 +24,18 @@
 				<div class="banner">
 					<img src="/images/Banner2.png" alt="imagens de cachorros" class="img">
                     <section class="buttons">
-                        <button class="btn1" onclick="redirecionarParaProcurando()">
-                            <img src="/images/pata.png" class="pet">
-                            Procuro um PET
+                        <button class="btn1">
+                            <a href="/lost-all-pets" class="a">
+                                <img src="/images/pata.png" class="pet">
+                                Procuro um PET
+                            </a>
                         </button>
-                        <button class="btn2"> <img src="/images/bsc.png" class="dono">
-                            Procuro um DONO</button>
+                        <button class="btn2">
+                            <a href="/lost-all-pets" class="a">
+                                <img src="/images/bsc.png" class="dono">
+                                Procuro um DONO
+                            </a>
+                        </button>
                     </section>
 				</div>
 			</header>

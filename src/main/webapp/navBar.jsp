@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 		<link rel="stylesheet" href="nav.css" />
-		<script src="navscripts.js" defer></script>
+
         <style>
             /* Estilos da barra de navegação */
             .topnav {
@@ -64,13 +64,11 @@
     			<h1>Petmatch</h1>
     		</div>
     		<div class="options">
-                <a href="found-all-pets" class="a">Encontrados</a>
-                <a href="lost-all-pets" class="a">Procurando</a>
-                <button onclick="redirecionarParaFerramentas()">Ferramentas</button>
-                <button class="nav_btn" onclick="redirecionarParaAnuncie()">
-                  Anuncie
-                </button>
-                <button id="login">Login</button>
+                <a href="/found-all-pets" class="a">Encontrados</a>
+                <a href="/lost-all-pets" class="a">Procurando</a>
+                <a href="/ferramentas-page/index.jsp" class="a">Ferramentas</a>
+                <a href="/telasAnuncio/TelaAnuncio1/index.jsp" class="a"> Anuncie </a>
+                <a href="/login-page/login.jsp" class="a">Login </a>
             </div>
     	</nav>
 	</body>
