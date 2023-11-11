@@ -2,7 +2,7 @@
 
 :root {
 	--laranja: #ff914d;
-	--laranja-claro: #f4cd9e;
+	--laranja-claro: #337f9c;
 	--verde: #385a20;
 }
 * {
@@ -21,7 +21,7 @@
 	grid-template-columns: 1fr 1fr;
 	place-items: center;
 	gap: 1rem;
-	background-color: var(--laranja-claro);
+	background-color: #337f9c;
 	box-shadow: 9px 5px 10px 1px #000000;
 }
 
@@ -97,7 +97,7 @@ h2 {
 input[type="text"],
 input[type="number"],
 #email {
-	background-color: var(--laranja);
+	background-color: white;
 	height: 2rem;
 	width: 100%;
 }
