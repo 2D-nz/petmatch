@@ -3,7 +3,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <head>
     <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-
+    <%@ include file="/navBar.jsp"%>
     <meta http-equiv="Content-Type" content="text/html" charset=UTF-8>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -13,21 +13,7 @@
 </head>
 
 <body>
-    <nav class="topnav">
-        <div>
-            <img src="./images/dog-logo.png" />
-            <h1>Petmatch</h1>
-        </div>
-        <div>
-            <a href="lost-all-pets">Encontrados</a>
-            <a href="found-all-pets">Procurando</a>
-            <button onclick="redirecionarParaFerramentas()">Ferramentas</button>
-            <button class="nav_btn" onclick="redirecionarParaAnuncie()">
-                Anuncie
-            </button>
-            <button id="login">Login</button>
-        </div>
-    </nav>
+
       <div class="container">
         <h1 class="heading"></h1>
         <h1 class="heading"></h1>

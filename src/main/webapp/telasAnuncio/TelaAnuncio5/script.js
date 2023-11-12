@@ -3,6 +3,7 @@ function buscarCoordenadas() {
     var enderecoFormatado = encodeURIComponent(endereco); // Formata o endereço corretamente
     var url = 'https://' + 'geocode.maps.co/search?q=' + enderecoFormatado;
 
+
     fetch(url)
         .then(response => response.json())
         .then(data => {
@@ -13,6 +14,13 @@ function buscarCoordenadas() {
                         var latitude = result.lat;
                         var longitude = result.lon;
                         console.log(`Latitude: ${latitude}, Longitude: ${longitude}`);
+
+                        document.getElementById('latitude').value = latitude;
+                        document.getElementById('longitude').value = longitude;
+
+                        console.log("esta caindo aqui")
+
+                        document.getElementById('submitButton').removeAttribute('disabled');
                     } else {
                         console.error('Objeto de resultado inválido:', result);
                     }

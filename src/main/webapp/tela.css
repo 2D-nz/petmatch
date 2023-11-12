@@ -187,7 +187,7 @@ h2 {
 	justify-content: center;
 	background-color: #337f9c;
 	height: 90px;
-	width: 1400px;
+	width: 100%;
 }
 
 hr {
@@ -223,7 +223,7 @@ footer {
 	display: flex;
 	justify-content: center;
 	margin-top: 30px;
-	width: 1400px;
+	width: 100%;
 	color: #fff;
 }
 

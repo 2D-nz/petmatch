@@ -20,10 +20,10 @@
     <main style="margin-top: 8%;">
     <div class="tela" style="margin-bottom: 20%;">
         <div class="cardMid">
-        <div id="map" style="width: 90%; height: 350px; margin-left:50px;"></div>
-            <hr>
+        <div id="map" class="mapa"></div>
             <section class="mid">
                 <p class="titulo">Ultima local visto em:</p>
+                <hr>
                 <h3 class="descricao">${pet.endereco}</h3>
                 <p class="titulo">Data de desaparecimento</p>
                 <h3 class="descricao">${pet.formattedDate}</h3>
@@ -89,6 +89,37 @@
 
     </c:forEach>
 	 <script src="/pet-post/scripts.js"></script>
+	  <script>
+             function initMap() {
+                 var latitude = <%= request.getAttribute("latitude") %>;
+                 var longitude = <%= request.getAttribute("longitude") %>;
+
+                 // Verifique se a latitude e longitude não são nulos
+                 if (latitude != null && longitude != null) {
+                     // Centro do mapa
+                     var mapCenter = { lat: parseFloat(latitude), lng: parseFloat(longitude) };
+
+                     // Opções do mapa
+                     var mapOptions = {
+                         zoom: 16,
+                         center: mapCenter
+                     };
+
+                     var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+                     var marker = new google.maps.Marker({
+                         position: mapCenter,
+                         map: map,
+                         title: 'Localização do pet'
+                     });
+                 } else {
+                     // Caso as coordenadas sejam nulas, você pode exibir uma mensagem ou ação alternativa.
+                     // Por exemplo:
+                     var mapContainer = document.getElementById('map');
+                     mapContainer.innerHTML = "Coordenadas não encontradas.";
+                 }
+             }
+         </script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWmm6vyFNNgsEMEzKd7P3IHtCS4Say9WY&callback=initMap" async defer></script>
 </body>
 </html>

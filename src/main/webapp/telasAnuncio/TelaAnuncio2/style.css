@@ -126,9 +126,14 @@ input{
     position: absolute;
     border-radius: 10px;
 }
+.nome{
+    padding: 0.6rem 2.5rem;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #385A20;
+}
 .input-group{
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     padding: 2rem 0;
     color: #fff;
 }
