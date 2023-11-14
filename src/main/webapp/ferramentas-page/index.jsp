@@ -16,46 +16,53 @@
 </head>
 
 <body>
-    <header>
+    <%@ include file="/navBar.jsp" %>
 
-        <h1>Ferramentas</h1>
-        <h3>Como utilizar nosso site para ajudar um pet a voltar para casa?</h3>
+        <header>
 
-
-    </header>
-    <section class="perdidos">
+            <h2>Ferramentas</h2>
+            <h3>Como utilizar nosso site para ajudar um pet a voltar para casa?</h3>
 
 
-        <img src="../images/Perdido.png" class="poster" />
-        <div>
+        </header>
 
-            <h2>Se você perdeu seu pet... <img class="icon" src="../images/sadog.png" /></h2>
-
-
-            <h1><a href="#">Anuncie</a> seu pet! </h1>
-            <p>Aqui você consegue criar um anúncio com seu pet </p>
-            <p>Nossos anúncios incluem mapa de localização, dados para contato com o Dono, e um gerador de panfletos,
-                tudo
-                para facilitar alguém encontrar o seu pet e entrar em contato com você o mais rápido possível</p>
-
-        </div>
-    </section>
+        <section class="perdidos">
 
 
-    <section class="encontrados">
-        <div>
+            <img src="../images/Perdido.png" class="poster" />
+            <div>
 
-            <h2>Se você encontrou um pet... <img class="icon" src="../images/foundog.png" alt=""></h2>
-            <h1>vá em <a href="#"> Encontrados</a> </h1>
-            <p>Na seção de Pets encontrados, nós temos todos os Pets que foram registrados em nosso site, e também como
-                procurar o anuncio desse pet para que você consiga notificar o dono </p>
-        </div>
-
-        <img src="../images/pet house.png" class="poster" alt="">
+                <h2>Se você perdeu seu pet... <img class="icon" src="../images/sadog.png" /></h2>
 
 
+                <h1><a href="/telasAnuncio/TelaAnuncio1/index.jsp">Anuncie </a> seu pet! </h1>
+                <p>Aqui você consegue criar um anúncio com seu pet </p>
+                <p>Nossos anúncios incluem mapa de localização, dados para contato com o Dono, e um gerador de
+                    panfletos,
+                    tudo
+                    para facilitar alguém encontrar o seu pet e entrar em contato com você o mais rápido possível
+                </p>
 
-    </section>
+            </div>
+        </section>
+
+
+        <section class="encontrados">
+            <div>
+
+                <h2>Se você encontrou um pet... <img class="icon" src="../images/foundog.png" alt=""></h2>
+                <h1>vá em <a href="/lost-all-pets"> Procurando</a> </h1>
+                <p>Na seção de Pets que estão a procura, nós temos todos os Pets que foram registrados em nosso site, e
+                    também
+                    como
+                    encontrar o anuncio desse pet para que você consiga notificar o dono </p>
+            </div>
+
+            <img src="../images/pet house.png" class="poster" alt="">
+
+
+
+        </section>
 
 
 </body>

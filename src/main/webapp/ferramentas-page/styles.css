@@ -10,6 +10,8 @@
 
 a {
 	all: unset;
+	color: red;
+	cursor: pointer;
 }
 body {
 	margin: 0;
@@ -26,7 +28,7 @@ header {
 	padding-left: 1rem;
 }
 section {
-	padding: 1rem 2rem;
+	padding: 1rem 5rem;
 }
 .perdidos {
 	display: flex;
@@ -41,4 +43,8 @@ section {
 	height: 50px;
 	margin: 0;
 	padding: 0;
+}
+
+header {
+	padding-top: 5rem;
 }
