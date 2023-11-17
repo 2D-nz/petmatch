@@ -94,6 +94,7 @@ public class UserDao {
 
             while (resultSet.next()) {
 
+                usuario.setId(resultSet.getString("id"));
                 usuario.setNome(resultSet.getString("login"));
                 usuario.setTelefone(resultSet.getString("telefone"));
                 usuario.setFoto(resultSet.getString("foto"));

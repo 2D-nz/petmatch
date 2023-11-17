@@ -25,6 +25,7 @@
                 </div>
             <form action="/create-pet" method="post" enctype="multipart/form-data">
             <input type="hidden" id="id" name="id" value="${param.id}">
+            <input type="hidden" id="user_id" name="user_id" value="${sessionScope.loggedUser.getId()}">
                 <div class="upload">
                         <label for="image">Selecione uma imagem:</label>
                         <input type="file" id="image" name="image" accept="image/*" required>

@@ -15,6 +15,7 @@ public class UpdateUserServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String id = req.getParameter("id");
         String email = req.getParameter("email");
         String nome = req.getParameter("nome");
         String cidade = req.getParameter("cidade");
@@ -22,7 +23,7 @@ public class UpdateUserServlet extends HttpServlet {
         String foto = req.getParameter("foto");
         String telefone = req.getParameter("telefone");
 
-        User usuario = new User(email, nome, foto, telefone, bairro, cidade);
+        User usuario = new User(id,email, nome, foto, telefone, bairro, cidade);
         System.out.println("na SERVLET");
         System.out.println(usuario);
         new UserDao().updateUser(usuario);

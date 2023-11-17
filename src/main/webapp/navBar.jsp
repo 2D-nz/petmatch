@@ -77,8 +77,8 @@
                 <a href="/ferramentas-page/index.jsp" class="a">Ferramentas</a>
                 <a href="/telasAnuncio/TelaAnuncio1/index.jsp" class="a"> Anuncie </a>
                 <c:if test="${sessionScope.loggedUser != null}">
+                    <a href="/pets-by-user" class="a">Meus Pets</a>
                     <a href="/edit_profile-page/index.jsp" class="a"> ${loggedUser.nome} </a>
-
                 </c:if>
                 <c:if test="${sessionScope.loggedUser == null}">
 

@@ -25,6 +25,7 @@
         <form action="/create-pet" method="post" enctype="multipart/form-data">
             <div class="input-group">
             <input type="hidden" id="id" name="id" value="${param.id}">
+            <input type="hidden" id="user_id" name="user_id" value="${sessionScope.loggedUser.getId()}">
                 <label for="situacao">Situação:</label>
                 <select id="situacao" name="situacao" value="${param.situacao}">
                     <option value="Perdido">Perdido</option>

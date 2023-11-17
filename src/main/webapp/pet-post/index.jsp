@@ -114,7 +114,6 @@
                      });
                  } else {
                      // Caso as coordenadas sejam nulas, você pode exibir uma mensagem ou ação alternativa.
-                     // Por exemplo:
                      var mapContainer = document.getElementById('map');
                      mapContainer.innerHTML = "Coordenadas não encontradas.";
                  }

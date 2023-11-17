@@ -23,6 +23,7 @@
             <form action="/create-pet" method="post" enctype="multipart/form-data">
                 <div class="input-group">
                     <input type="hidden" id="id" name="id" value="${param.id}">
+                    <input type="hidden" id="user_id" name="user_id" value="${sessionScope.loggedUser.getId()}">
                     <div class="input-box">
                         <p>
                             <label for="mes">Data do desaparecimento:</label>

@@ -15,7 +15,7 @@ import java.util.List;
 public class PetDao {
 
     public int createPet(Pet pet) {
-        String SQL = "INSERT INTO PET (SITUACAO, ESPECIE, GENERO) VALUES (?,?,?)";
+        String SQL = "INSERT INTO PET (SITUACAO, ESPECIE, GENERO, USER_ID) VALUES (?,?,?,?)";
 
         try {
             Connection connection = ConnectionPoolConfig.getConnection();
@@ -25,6 +25,7 @@ public class PetDao {
             preparedStatement.setString(1, pet.getSituacao());
             preparedStatement.setString(2, pet.getEspecie());
             preparedStatement.setString(3, pet.getGenero());
+            preparedStatement.setInt(4, pet.getUserid());
             preparedStatement.execute();
 
             ResultSet generatedKeys = preparedStatement.getGeneratedKeys();
@@ -45,7 +46,7 @@ public class PetDao {
     }
         public List<Pet> LostPetDao() {
 
-        String SQL = "SELECT * FROM PET WHERE SITUACAO = 'Perdido'";
+            String SQL = "SELECT * FROM PET WHERE SITUACAO = 'Perdido'";
 
         try {
 
@@ -86,13 +87,59 @@ public class PetDao {
 
     public List<Pet> FoundAllPets() {
 
-        String SQL =  "SELECT * FROM PET WHERE SITUACAO = 'Procurando tutor'";
+
+        String SQL = "SELECT * FROM PET WHERE SITUACAO = 'Procurando tutor'";
+
+
+        System.out.println(SQL);
+
 
         try {
 
             Connection connection = ConnectionPoolConfig.getConnection();
 
             PreparedStatement preparedStatement = connection.prepareStatement(SQL);
+
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            List<Pet> pets = new ArrayList<>();
+
+            while (resultSet.next()) {
+
+                String petId = resultSet.getString("id");
+                String nome = resultSet.getString("nome");
+                String image = resultSet.getString("image");
+
+                Pet pet = new Pet(petId,nome,image);
+
+                pets.add(pet);
+            }
+            System.out.println("success in select");
+
+            connection.close();
+
+            return pets;
+
+        } catch (Exception e) {
+
+            System.out.println("Error" + e.getMessage());
+            System.out.println("fail in database connection");
+
+            return Collections.emptyList();
+
+        }
+    }
+
+    public List<Pet> PetDaobyUserId(int user_id) {
+
+        String SQL = "SELECT * FROM PET WHERE USER_ID = ?";
+
+        try {
+
+            Connection connection = ConnectionPoolConfig.getConnection();
+
+            PreparedStatement preparedStatement = connection.prepareStatement(SQL);
+            preparedStatement.setInt(1, user_id);
 
             ResultSet resultSet = preparedStatement.executeQuery();
 

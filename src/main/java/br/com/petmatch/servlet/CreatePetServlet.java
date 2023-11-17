@@ -44,12 +44,13 @@ public class CreatePetServlet extends HttpServlet {
         String data = parameters.get("data");
         String endereco = parameters.get("endereco");
         String telefone = parameters.get("telefone");
+        Integer user_id = Integer.valueOf(parameters.get("user_id"));
         //Não faz parte do pet
         String page = parameters.get("page");
 
         PetDao petDao = new PetDao();
 
-        Pet pet = new Pet(petId,situacao,especie,genero,nome,raca,cor,cordosolhos,mensagem,descricao,image,data,endereco,telefone);
+        Pet pet = new Pet(user_id,petId,situacao,especie,genero,nome,raca,cor,cordosolhos,mensagem,descricao,image,data,endereco,telefone);
 
 
         int petIdNew;

@@ -9,13 +9,16 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 @WebServlet("/found-all-pets")
 public class FoundPetServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
         List<Pet> foundPets = new PetDao().FoundAllPets();
+        System.out.println(foundPets);
         req.setAttribute("pets", foundPets);
         req.getRequestDispatcher("found-page/index.jsp").forward(req, resp);
     }

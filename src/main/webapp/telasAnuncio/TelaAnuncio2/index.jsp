@@ -24,6 +24,7 @@
             </div>
             <form action="/create-pet" method="post" enctype="multipart/form-data">
                 <input type="hidden" id="id" name="id" value="${param.id}">
+                <input type="hidden" id="user_id" name="user_id" value="${sessionScope.loggedUser.getId()}">
                 <div class="input-box">
                     <label for="firstname">Nome:</label>
                     <input class="nome" id="nome" type="text" name="nome" placeholder="Digite o nome do seu pet" required>

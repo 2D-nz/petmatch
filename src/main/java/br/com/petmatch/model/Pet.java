@@ -16,6 +16,7 @@ public class Pet {
    private String endereco;
    private String telefone;
     private String formattedDate;
+    private int user_id;
 
 
     public Pet(String id, String nome, String image) {
@@ -26,7 +27,7 @@ public class Pet {
 
     //CRIADO NO METODO UPDATE
 
-    public Pet(String id, String situacao, String especie, String genero, String nome, String raca, String cor, String cordosolhos, String mensagem, String descricao, String image,String data, String endereco, String telefone) {
+    public Pet(int user_id,String id, String situacao, String especie, String genero, String nome, String raca, String cor, String cordosolhos, String mensagem, String descricao, String image,String data, String endereco, String telefone) {
         this.id = id;
         this.situacao = situacao;
         this.especie = especie;
@@ -41,6 +42,7 @@ public class Pet {
         this.data = data;
         this.endereco = endereco;
         this.telefone = telefone;
+        this.user_id = user_id;
 
     }
 
@@ -60,6 +62,9 @@ public class Pet {
         this.telefone = telefone;
     }
 
+    public int getUserid() {
+        return user_id;
+    }
     public String getData() {
         return data;
     }
