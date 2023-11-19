@@ -238,8 +238,6 @@ public class PetDao {
             return;
         }
 
-
-
         try {
         Connection connection = ConnectionPoolConfig.getConnection();
         PreparedStatement preparedStatement = connection.prepareStatement(SQL);
@@ -251,7 +249,6 @@ public class PetDao {
                 preparedStatement.setString(4, pet.getCordosolhos());
                 preparedStatement.setString(5, pet.getId());
             } else if ("4".equals(page)) {
-                System.out.println("caiu na mensagem po");
                 preparedStatement.setString(1, pet.getMensagem());
                 preparedStatement.setString(2, pet.getDescricao());
                 preparedStatement.setString(3, pet.getId());
@@ -259,7 +256,6 @@ public class PetDao {
                 preparedStatement.setString(1, pet.getImage());
                 preparedStatement.setString(2, pet.getId());
             } else if ("6".equals(page)) {
-                System.out.println("entrou aqui 6");
                 preparedStatement.setString(1, pet.getData());
                 preparedStatement.setString(2, pet.getEndereco());
                 preparedStatement.setString(3, pet.getTelefone());

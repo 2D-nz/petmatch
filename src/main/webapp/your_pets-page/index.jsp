@@ -23,6 +23,10 @@
               <a href="/details-pet?id=${pet.id}">Ver detalhes</a>
                <img src="${pet.image}" data-pet-id="${pet.id}">
                 <h3>${pet.nome}</h3>
+                <form action="/delete-pet" method="post">
+                    <input type="hidden" id="id" name="id" value="${pet.id}">
+                    <button type="submit">Delete</button>
+                </form>
               <p></p>
             </div>
           </div>

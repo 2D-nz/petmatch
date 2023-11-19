@@ -75,10 +75,16 @@
                 <a href="/found-all-pets" class="a">Encontrados</a>
                 <a href="/lost-all-pets" class="a">Procurando</a>
                 <a href="/ferramentas-page/index.jsp" class="a">Ferramentas</a>
-                <a href="/telasAnuncio/TelaAnuncio1/index.jsp" class="a"> Anuncie </a>
+                <a id="anuncieLink" href="/telasAnuncio/TelaAnuncio1/index.jsp" class="a"> Anuncie </a>
                 <c:if test="${sessionScope.loggedUser != null}">
-                    <a href="/pets-by-user" class="a">Meus Pets</a>
-                    <a href="/edit_profile-page/index.jsp" class="a"> ${loggedUser.nome} </a>
+                    <div class="dropdown">
+                        <a href="#" class="dropbtn">${loggedUser.nome}</a>
+                        <div class="dropdown-content">
+                            <a href="/pets-by-user">Meus Pets</a>
+                            <a href="/edit_profile-page/index.jsp">Editar Perfil</a>
+                            <a href="/logout">Deslogar</a>
+                        </div>
+                    </div>
                 </c:if>
                 <c:if test="${sessionScope.loggedUser == null}">
 
@@ -87,7 +93,38 @@
 
             </div>
         </nav>
-    </body>
-    <script src="navscripts.js" defer></script>
 
+    <dialog id="loginDialog">
+            <p>Você precisa estar cadastrado para anunciar. Deseja fazer login agora?</p>
+            <button id="loginDialogYes">Sim</button>
+            <button id="loginDialogNo">Não</button>
+    </dialog>
+
+    <script src="navscripts.js" defer></script>
+   <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var anuncieLink = document.getElementById("anuncieLink");
+            var loginDialog = document.getElementById("loginDialog");
+            var loginDialogYes = document.getElementById("loginDialogYes");
+            var loginDialogNo = document.getElementById("loginDialogNo");
+
+            anuncieLink.addEventListener("click", function (event) {
+                //usuário não está logado
+                var isUserNotLogged = <c:out value="${sessionScope.loggedUser == null}" />;
+                if (isUserNotLogged) {
+                    event.preventDefault();
+                    loginDialog.showModal();
+                }
+            });
+
+            loginDialogYes.addEventListener("click", function () {
+                window.location.href = "/login-page/login.jsp";
+            });
+
+            loginDialogNo.addEventListener("click", function () {
+                loginDialog.close();
+            });
+        });
+    </script>
+    </body>
 </html>
