@@ -30,10 +30,9 @@
                             <input type="date" name="data" id="data" class="date">
                         </p>
                         <label for="description">Endereço:</label>
-                        <input id="endereco" type="text" name="endereco" class="p1" required autocomplete="address">
+                        <input id="endereco" type="text" name="endereco" class="p1" required>
                         <input type="hidden" id="latitude" name="latitude" value="${latitude}">
                         <input type="hidden" id="longitude" name="longitude" value="${longitude}">
-                        <label onclick="buscarCoordenadas()">Buscar Coordenadas</label>
                         <label for="tel">Telefone com WhatsApp:</label>
                         <div class="phone-input">
                             <input type="text" name="telefone" id="telefone" title="Formato esperado: (99) 9999-9999">
@@ -46,7 +45,7 @@
                         <button><a href="#">Voltar</a></button>
                     </div>
                     <div class="prosseguir">
-                        <button disabled type="submit" id="submitButton">Prosseguir</button>
+                        <button type="submit" id="submitButton">Prosseguir</button>
                     </div>
                 </div>
             </form>

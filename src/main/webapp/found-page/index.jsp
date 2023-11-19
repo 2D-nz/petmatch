@@ -20,7 +20,7 @@
         <c:forEach var="pet" items="${pets}">
           <div class="container-image">
             <div class="image">
-              <a href="/details-pet?id=${pet.id}">Ver detalhes</a>
+             <a href="/details-pet?id=${pet.id}">
                <img src="${pet.image}" data-pet-id="${pet.id}">
                 <h3>${pet.nome}</h3>
               <p></p>

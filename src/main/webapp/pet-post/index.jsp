@@ -23,8 +23,8 @@
         <div id="map" class="mapa"></div>
             <section class="mid">
                 <p class="titulo">Ultima local visto em:</p>
-                <hr>
                 <h3 class="descricao">${pet.endereco}</h3>
+                <hr>
                 <p class="titulo">Data de desaparecimento</p>
                 <h3 class="descricao">${pet.formattedDate}</h3>
                 <p class="titulo">Descrição</p>
