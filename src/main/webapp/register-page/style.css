@@ -10,7 +10,7 @@ body *{
 .main-login{
     width: 100vw;
     height: 100vh;
-    background-color: #F4CD9E;
+    background-color: #337F9C;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,9 +45,9 @@ body *{
     align-items: center;
     flex-direction: column; 
     padding: 30px 35px;
-    background:#F4CD9E;
+    background: #337F9C;
     border-radius: 20px;
-    box-shadow: 0px 10px 40px #e2993f;
+    box-shadow: 0px 10px 40px #D9E4DD;
 }
 .card-login > h1{
     color: #ffffff;

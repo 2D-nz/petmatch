@@ -46,30 +46,29 @@
              <div class="container-slider">
                 <button id="prev-button"> <img src="/images/arrow.png" alt=""></button>
                 <div class="imagens">
-                   <img src="/images/teste1.jpg" class="slider on">
+                   <img src="/images/princess.png" class="slider on">
                    <img src="/images/teste2.jpg" class="slider">
                    <img src="/images/teste3.jpg" class="slider">
                 </div>
              </div>
              <div class="container-slider">
                 <div class="imagens">
-                   <img src="/images/teste1.jpg" class="slider on">
-                   <img src="/images/teste2.jpg" class="slider">
-                   <img src="/images/teste3.jpg" class="slider">
-                   <img src="/images/dog-logo.png" class="slider">
+                   <img src="/images/kitty.jpg" class="slider on">
+                   <img src="/images/dogRosa.png" class="slider">
+                   <img src="/images/dogsAzuis.png" class="slider">
                 </div>
              </div>
              <div class="container-slider">
                 <div class="imagens">
-                   <img src="/images/teste1.jpg" class="slider on">
-                   <img src="/images/teste2.jpg" class="slider">
-                   <img src="/images/teste3.jpg" class="slider">
+                   <img src="/images/dogOculis.png" class="slider on">
+                   <img src="/images/dogIntel.png" class="slider">
+                   <img src="/images/dogNiver.jpg" class="slider">
                 </div>
                 <button id="next-button"> <img src="/images/arrow.png" alt=""></button>
              </div>
           </section>
           <div class="unit">
-             <button class="mais"><a href="/found-page/index.jsp" class="font1"> Veja Mais </a></button>
+             <button class="mais"><a href="/ferramentas-page/index.jsp" class="font1"> Veja Mais </a></button>
            </div>
            <footer>
                 <p>Fale conosco <b>(11) 4002-8922</b></p>
