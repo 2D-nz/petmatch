@@ -1,125 +1,118 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 
 * {
-	box-sizing: border-box;
-	padding: 0;
-	margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
 body {
-	background-color: #fa7f72;
+    background-color: #ffffff;
+    font-family: "Inter", sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
 .container {
-	padding: 25px 10%;
-	text-align: center;
+    padding: 25px 10%;
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    color: #ffffff;
+    width: 100%;
 }
 
 .container .heading {
-	font-size: 30px;
-	padding-bottom: 25px;
-	color: #fff;
+    font-size: 30px;
+    padding-bottom: 25px;
+    color: #fff;
 }
 
 :root {
-	--fundodanav: #ecdbbc;
-	--salmao: #fa7f72;
-	--tentativas: #eb9c6a;
+    --fundodanav: #ecdbbc;
+    --salmao: #fa7f72;
+    --tentativas: #eb9c6a;
 }
 
-body {
-	font-family: "Inter", "sans-serif";
-	box-sizing: border-box;
-	padding: 0;
-	margin: 0;
-}
 button {
-	padding: 0.25rem 1rem;
-	border-radius: 0.25rem;
-	border: none;
-	background-color: var(--salmao);
-	color: white;
-	transition: all ease-in 0.1s;
+    padding: 0.25rem 1rem;
+    border-radius: 0.25rem;
+    border: none;
+    background-color: var(--salmao);
+    color: white;
+    transition: all ease-in 0.1s;
 }
 
 button:hover {
-	background-color: var(--laranja-claro);
-	color: white;
-	box-shadow: 5px 7px 10px 1px #ffffff;
+    background-color: var(--laranja-claro);
+    color: white;
+    box-shadow: 5px 7px 10px 1px #ffffff;
 }
 
-body {
-	background-color: #e8e8e8;
+.container img {
+    width: 70px;
+    height: 70px;
+    vertical-align: middle;
 }
 
-.container {
-	font-family: "Inter", sans-serif;
-	color: #ffffff;
-	width: 100%;
-}
 .container-image {
-  display: inline-block;
-  vertical-align: top;
-  margin: 10px;
-}
-img {
-	width: 70px;
-	height: 70px;
-	vertical-align: middle;
+    display: inline-block;
+    vertical-align: top;
+    margin: 10px;
 }
 
 .container .container-image {
-	gap: 20px;
-	padding: 30px;
+    gap: 20px;
+    padding: 30px;
 }
 
 .container .container-image .image {
-	width: 350px;
-	border-radius: 20px;
-	border: 1px solid #f4cd9e;
-	cursor: pointer;
-	box-shadow: 0 5px 10 px rgba(0, 0, 0, 0.1);
-	background-color: #fa7f72;
-	padding: 15px;
-	animation: fadeIn 0.2s linear;
+    width: 350px;
+    border-radius: 20px;
+    border: 1px solid #f4cd9e;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    background-color: #337f9c;
+    padding: 15px;
+    animation: fadeIn 0.2s linear;
 }
 
 .container .container-image .image img {
-	width: 100%;
-	height: 250px;
-	margin-bottom: 10px;
-	border-radius: 5px;
+    width: 100%;
+    height: 250px;
+    margin-bottom: 10px;
+    border-radius: 5px;
 }
 
 .container .container-image .image img:hover {
-	transform: scale(1.2);
+    transform: scale(1.2);
 }
 
 .container .container-image .image h3 {
-	font-family: "Inter", sans-serif;
-	font-size: 15px;
-	color: #000000;
+        font-size: 20px;
+        font-family: 'Dosis', 'Helvetica', 'Arial', sans-serif;
 }
 
 p {
-	text-align: left !important;
+    text-align: left !important;
 }
 
 @media (max-width: 768px) {
-	.container .container-image {
-		padding: 25px 20px;
-	}
+    .container .container-image {
+        padding: 25px 20px;
+    }
 
-	.container .container-image .image {
-		width: 100%;
-	}
+    .container .container-image .image {
+        width: 100%;
+    }
 }
-@media (max-width: 450px) {
-	.container .container-image {
-		padding: 25px 20 px;
-	}
 
-	.container .container-image .image {
-		width: 100%;
-	}
+@media (max-width: 450px) {
+    .container .container-image {
+        padding: 25px 20px;
+    }
+
+    .container .container-image .image {
+        width: 100%;
+    }
 }

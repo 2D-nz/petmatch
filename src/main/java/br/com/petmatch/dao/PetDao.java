@@ -328,5 +328,25 @@ public class PetDao {
             System.out.println("Error: " + e.getMessage());
         }
     }
+    public void updateStatus(String status, String id) {
+        String insertSQL = "UPDATE PET SET SITUACAO = ? WHERE ID = ?";
+
+        try {
+            Connection connection = ConnectionPoolConfig.getConnection();
+            PreparedStatement preparedStatement = connection.prepareStatement(insertSQL);
+
+            preparedStatement.setString(1, status);
+            preparedStatement.setString(2, id);
+
+            preparedStatement.executeUpdate();
+
+            System.out.println("success in insert command");
+
+            connection.close();
+
+        } catch (Exception e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+    }
 
 }

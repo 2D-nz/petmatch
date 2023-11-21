@@ -102,11 +102,7 @@ public class UserDao {
                 usuario.setCidade(resultSet.getString("cidade"));
 
             }
-
-            System.out.println(resultSet.toString());
-
             connection.close();
-            System.out.println(usuario.toString());
             System.out.println(usuario.getNome());
             System.out.println(usuario.getCidade());
             return usuario;
@@ -119,18 +115,20 @@ public class UserDao {
     }
 
     public void updateUser(User user) {
-        String insertSQL = "Update USR SET telefone = (?), bairro = (?), cidade = (?) WHERE email = (?)";
-        System.out.println(user);
+        String insertSQL = "UPDATE USR SET TELEFONE = (?), CIDADE = (?), BAIRRO = (?), FOTO = (?) WHERE EMAIL= ?";
         try {
             Connection connection = ConnectionPoolConfig.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(insertSQL);
 
             preparedStatement.setString(1, user.getTelefone());
-            preparedStatement.setString(2, user.getBairro());
-            preparedStatement.setString(3, user.getCidade());
-            preparedStatement.setString(4, user.getEmail());
+            preparedStatement.setString(2, user.getCidade());
+            preparedStatement.setString(3, user.getBairro());
+            preparedStatement.setString(4, user.getFoto());
+            preparedStatement.setString(5, user.getEmail());
 
             preparedStatement.executeUpdate();
+
+            System.out.println(user.getEmail());
 
             System.out.println("success in insert command");
 

@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../nav.css">
     <link rel="stylesheet" href="/searching-page/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <%@ include file="/navBar.jsp" %>
 </head>
 
 <body>

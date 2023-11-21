@@ -1,7 +1,3 @@
-<%
-    String petId = request.getParameter("id");
-%>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -17,11 +13,12 @@
 
 <body>
     <div class="container">
-        <div class="form-image">
-            <img src="assets/img//undraw_shopping_re_3wst.svg" alt="">
-        </div>
-        <form action="/update-pet" method="post">
-        <input type="hidden" name="id" value="<%= petId %>">
+    <div class="form-image">
+        <img src="assets/img//undraw_shopping_re_3wst.svg" alt="">
+    </div>
+    <form action="/update-pet" method="post" enctype="multipart/form-data">
+    <input type="hidden" id="id" name="id" value="${param.id}">
+
         <div class="form">
                 <div class="form-header">
                     <div class="title">
@@ -32,6 +29,12 @@
                 <div class="input-box">
                     <label for="nome">Nome:</label>
                     <input type="nome" name="nome" id="nome">
+                </div>
+
+
+                <div class="upload">
+                        <label for="image">Selecione uma imagem:</label>
+                        <input type="file" id="image" name="image" accept="image/*" required>
                 </div>
 
                 <div class="input-group">
@@ -146,7 +149,7 @@
                 <div class="continue-button">
                     <button type="submit">Atualizar</button>
                 </div>
-        </form>
+    </form>
         </div>
     </div>
 </body>

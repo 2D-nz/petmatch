@@ -110,7 +110,7 @@ public class CreatePetServlet extends HttpServlet {
                 }
 
             } catch (Exception e) {
-                parameters.put("image", "img/default.jpg");
+                parameters.put("image", "./images/default.jpg");
 
             }
             return parameters;
