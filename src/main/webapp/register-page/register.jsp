@@ -36,8 +36,18 @@
 							<label for="senha">Confirme sua senha</label>
 							<input type="password" name="password-confirm" placeholder="Senha" />
 						</div>
+						<c:if test="${not empty requestScope.error}">
+                            <span class="error-message" id="error-message">${requestScope.error}</span>
+                            <script>
+                                setTimeout(function() {
+                                    var errorMessage = document.getElementById("error-message");
+                                    if (errorMessage) {
+                                        errorMessage.style.display = "none";
+                                    }
+                                }, 3000);
+                            </script>
+                        </c:if>
 						<button class="btn-login">Confirmar</button>
-						<span>${requestScope.error}</span>
 					</form>
 				</div>
 			</div>

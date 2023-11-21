@@ -23,9 +23,11 @@
               <a href="/details-pet?id=${pet.id}">
                <img src="${pet.image}" data-pet-id="${pet.id}">
                 <h3>${pet.nome}</h3>
+                <a href="/edit_pet/index.jsp?id=${pet.id}" class="edit-button">Editar</a>
                 <form action="/delete-pet" method="post">
                     <input type="hidden" id="id" name="id" value="${pet.id}">
                     <button type="submit">Delete</button>
+                    <a href="/edit_pet/index.jsp?id=${pet.id}">
                 </form>
               <p></p>
             </div>

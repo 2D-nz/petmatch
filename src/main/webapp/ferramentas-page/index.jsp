@@ -29,7 +29,7 @@
         <section class="perdidos">
 
 
-            <img src="../images/Perdido.png" class="poster" />
+            <img src="../images/pet.jpg" class="poster" />
             <div>
 
                 <h2>Se você perdeu seu pet... <img class="icon" src="../images/sadog.png" /></h2>

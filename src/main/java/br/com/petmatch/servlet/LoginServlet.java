@@ -39,7 +39,7 @@ public class LoginServlet extends HttpServlet {
             resp.sendRedirect("/edit_profile-page/index.jsp");
 
         } else {
-            req.setAttribute("message", "Invalid credentials!");
+            req.setAttribute("message", "Usuário ou senha inválidos!");
 
             req.getRequestDispatcher("login-page/login.jsp").forward(req, resp);
 

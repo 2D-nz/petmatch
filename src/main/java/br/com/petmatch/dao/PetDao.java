@@ -297,4 +297,36 @@ public class PetDao {
 
         }
     }
+
+    public void updatePetbyId(Pet pet) {
+        String SQL = "UPDATE PET SET SITUACAO = ?, ESPECIE = ?, GENERO = ?, NOME = ?, RACA = ?, COR = ?, CORDOSOLHOS = ?, MENSAGEM = ?, DESCRICAO = ?, IMAGE = ?, DATA_DESAPARECIMENTO = ?, WHATSAPP = ? WHERE ID = ?";
+
+        try {
+            Connection connection = ConnectionPoolConfig.getConnection();
+            PreparedStatement preparedStatement = connection.prepareStatement(SQL);
+
+            preparedStatement.setString(1, pet.getSituacao());
+            preparedStatement.setString(2, pet.getEspecie());
+            preparedStatement.setString(3, pet.getGenero());
+            preparedStatement.setString(4, pet.getNome());
+            preparedStatement.setString(5, pet.getRaca());
+            preparedStatement.setString(6, pet.getCor());
+            preparedStatement.setString(7, pet.getCordosolhos());
+            preparedStatement.setString(8, pet.getMensagem());
+            preparedStatement.setString(9, pet.getDescricao());
+            preparedStatement.setString(10, pet.getImage());
+            preparedStatement.setString(11, pet.getData());
+            preparedStatement.setString(12, pet.getTelefone());
+            preparedStatement.setString(13, pet.getId());
+
+            preparedStatement.execute();
+
+            System.out.println("Success in updating pet with ID: " + pet.getId());
+
+            connection.close();
+        } catch (Exception e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+    }
+
 }

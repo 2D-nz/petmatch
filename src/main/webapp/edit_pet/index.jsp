@@ -1,3 +1,7 @@
+<%
+    String petId = request.getParameter("id");
+%>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -16,12 +20,18 @@
         <div class="form-image">
             <img src="assets/img//undraw_shopping_re_3wst.svg" alt="">
         </div>
+        <form action="/update-pet" method="post">
+        <input type="hidden" name="id" value="<%= petId %>">
         <div class="form">
-            <form action="#">
                 <div class="form-header">
                     <div class="title">
                         <h1>Atualize seu Pet</h1>
                     </div>
+                </div>
+
+                <div class="input-box">
+                    <label for="nome">Nome:</label>
+                    <input type="nome" name="nome" id="nome">
                 </div>
 
                 <div class="input-group">
@@ -131,13 +141,12 @@
                         <label for="tel">Telefone com WhatsApp:</label>
                         <input type="text" name="telefone" id="telefone" title="Formato esperado: (99) 9999-9999">
                     </div>
-
                 </div>
 
                 <div class="continue-button">
-                    <button><a href="#">Atualizar</a> </button>
+                    <button type="submit">Atualizar</button>
                 </div>
-            </form>
+        </form>
         </div>
     </div>
 </body>

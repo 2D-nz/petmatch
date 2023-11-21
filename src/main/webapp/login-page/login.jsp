@@ -35,14 +35,6 @@
                     </p>
                     <button size="is large" id="LoginCriarConta" class="button-register"
                         onclick="redirecionarParaOutraPagina()">Criar minha conta</button>
-                    <div id="social_media">
-                        <a href="#">
-                            <img src="/images/icon-facebook.png" alt="Logo Facebook" class="face-icon">
-                        </a>
-                        <a href="#">
-                            <img src="/images/icon-google.png" alt="Logo Google" class="google-icon">
-                        </a>
-                    </div>
                 </div>
             </div>
             <c:if test="req.getAttribute('Registrado').equals('true')">
@@ -59,7 +51,17 @@
                     <label for="password">Senha:</label>
                     <input type="password" id="password" name="password" placeholder="Senha aqui..." />
                     <button>Login</button>
-                    <span>${requestScope.message}</span>
+                    <c:if test="${not empty requestScope.message}">
+                            <span class="error-message" id="error-message">${requestScope.message}</span>
+                            <script>
+                                setTimeout(function() {
+                                    var errorMessage = document.getElementById("error-message");
+                                    if (errorMessage) {
+                                        errorMessage.style.display = "none";
+                                    }
+                                }, 3000);
+                            </script>
+                    </c:if>
                 </form>
                 <div class="ear-l"></div>
                 <div class="ear-r"></div>

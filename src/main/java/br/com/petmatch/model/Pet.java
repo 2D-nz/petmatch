@@ -62,6 +62,23 @@ public class Pet {
         this.telefone = telefone;
     }
 
+    public Pet(String id, String situacao, String especie, String genero, String nome, String raca, String cor, String cordosolhos, String mensagem, String descricao, String image, String data, String endereco, String telefone) {
+        this.id = id;
+        this.situacao = situacao;
+        this.especie = especie;
+        this.genero = genero;
+        this.nome = nome;
+        this.raca = raca;
+        this.cor = cor;
+        this.cordosolhos = cordosolhos;
+        this.mensagem = mensagem;
+        this.descricao = descricao;
+        this.image = image;
+        this.data = data;
+        this.endereco = endereco;
+        this.telefone = telefone;
+    }
+
     public int getUserid() {
         return user_id;
     }

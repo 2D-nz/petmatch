@@ -1,7 +1,7 @@
 package br.com.petmatch.servlet;
 
-import br.com.petmatch.dao.UserDao;
-import br.com.petmatch.model.User;
+import br.com.petmatch.dao.PetDao;
+import br.com.petmatch.model.Pet;
 import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
@@ -20,26 +20,37 @@ import java.util.Map;
 
 import static org.apache.commons.fileupload.servlet.ServletFileUpload.isMultipartContent;
 
-@WebServlet("/updateUser")
-public class UpdateUserServlet extends HttpServlet {
+@WebServlet("/update-pet")
+public class UpdatePetServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String id = req.getParameter("id");
-        String email = req.getParameter("email");
+
+        String petId = req.getParameter("id");
+        String situacao = req.getParameter("situacao");
+        String especie = req.getParameter("especie");
+        String genero = req.getParameter("genero");
         String nome = req.getParameter("nome");
-        String cidade = req.getParameter("cidade");
-        String bairro = req.getParameter("bairro");
+        String raca = req.getParameter("raca");
+        String cor = req.getParameter("cor");
+        String cordosolhos = req.getParameter("cordosolhos");
+        String mensagem = req.getParameter("mensagem");
+        String descricao = req.getParameter("descricao");
         String image = req.getParameter("image");
+        String data = req.getParameter("data");
+        String endereco = req.getParameter("endereco");
         String telefone = req.getParameter("telefone");
 
-        User usuario = new User(id,email, nome, image, telefone, bairro, cidade);
-        System.out.println("na SERVLET");
-        System.out.println(usuario);
-        new UserDao().updateUser(usuario);
+        PetDao petDao = new PetDao();
 
+        System.out.println(petId);
+
+        Pet pet = new Pet(petId, situacao, especie, genero, nome, raca, cor, cordosolhos, mensagem, descricao, image, data, endereco, telefone);
+
+        petDao.updatePetbyId(pet);
+
+        resp.sendRedirect("/your_pets-page/index.jsp");
     }
-
 
     //Upload da imagem do pet
     private Map<String, String> uploadImage(HttpServletRequest httpServletRequest) {
