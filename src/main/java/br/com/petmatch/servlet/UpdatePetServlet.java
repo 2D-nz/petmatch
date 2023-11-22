@@ -51,7 +51,7 @@ public class UpdatePetServlet extends HttpServlet {
 
         petDao.updatePetbyId(pet);
 
-        resp.sendRedirect("/your_pets-page/index.jsp");
+        resp.sendRedirect("/pets-by-user");
     }
 
     //Upload da imagem do pet

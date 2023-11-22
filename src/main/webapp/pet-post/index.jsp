@@ -70,15 +70,13 @@
         <section class="bot">
             <img src="./images/pet house.png" class="logo-img" />
             <hr style="margin-top: 80px;">
-            <h2 style="margin-bottom: 15px;">Contato</h2>
+            <h2 style="margin-bottom: 15px;">Contate o dono</h2>
             <div class="contact-details">
                 <div class="contact-title">
-                    <h3 style="margin-bottom: 10px;">Email</h3>
                     <h3>Telefone</h3>
                 </div>
                 <div class="contact-item">
-                    <h3 style="margin-bottom: 10px;">xdd</h3>
-                    <h3>1212121</h3>
+                    <h3>${pet.telefone}</h3>
                     </div>
                 </div>
             </div>
