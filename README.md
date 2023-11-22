@@ -22,18 +22,20 @@ Lorena Mafra Nascimento,
 Michael Amaral dos Santos.
 
 Imagens do Projeto:
-![Tela Inicial](./assets/login-tela.png)
-![Tela Inicial](./assets/registrar.png)
+![Tela Login](./assets/login-tela.png)
+![Tela Registro](./assets/registrar.png)
 ![Tela Inicial](./assets/tela-inicial1.png)
 ![Tela Inicial](./assets/tela-inicial2.png)
-![Tela Inicial](./assets/telaanuncio3.png)
-![Tela Inicial](./assets/telaanuncio4.png)
-![Tela Inicial](./assets/telaanuncio5.png)
-![Tela Inicial](./assets/editar.png)
-![Tela Inicial](./assets/ferramentas.png)
-![Tela Inicial](./assets/perdidos.png)
-![Tela Inicial](./assets/meus-pets.png)
-![Tela Inicial](./assets/Lógico.png)
+![Tela Anuncio](./assets/telaanuncio1.png)
+![Tela Anuncio](./assets/telaanuncio2.png)
+![Tela Anuncio](./assets/telaanuncio3.png)
+![Tela Anuncio](./assets/telaanuncio4.png)
+![Tela Anuncio](./assets/telaanuncio5.png)
+![Tela Editar](./assets/editar.png)
+![Tela Ferramentas](./assets/ferramentas.png)
+![Tela Perdidos](./assets/perdidos.png)
+![Tela Meus Pets](./assets/meus-pets.png)
+![Modelo Logico](./assets/Lógico.png)
 
 
 INSIRA NO H2 OS SEGUINTES COMANDOS SQL:
