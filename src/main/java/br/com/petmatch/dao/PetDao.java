@@ -329,4 +329,60 @@ public class PetDao {
         }
     }
 
+    public List<Pet> findPetsByName(String petName) {
+        String SQL = "SELECT * FROM PET WHERE UPPER(NOME) LIKE UPPER(?)";
+
+        try {
+            Connection connection = ConnectionPoolConfig.getConnection();
+            PreparedStatement preparedStatement = connection.prepareStatement(SQL);
+
+            // Configurar o parâmetro com o nome do pet (incluindo '%')
+            preparedStatement.setString(1, "%" + petName + "%");
+
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            List<Pet> pets = new ArrayList<>();
+
+            while (resultSet.next()) {
+                String petId = resultSet.getString("id");
+                String nome = resultSet.getString("nome");
+                String image = resultSet.getString("image");
+
+                Pet pet = new Pet(petId, nome, image);
+                pets.add(pet);
+            }
+
+            System.out.println("success in select by name");
+
+            connection.close();
+
+            return pets;
+        } catch (Exception e) {
+            System.out.println("Error" + e.getMessage());
+            System.out.println("fail in database connection");
+
+            return Collections.emptyList();
+        }
+    }
+
+    public void updateStatus(String id) {
+        String insertSQL = "UPDATE PET SET SITUACAO = 'Procurando tutor' WHERE ID = ?";
+
+        try {
+            Connection connection = ConnectionPoolConfig.getConnection();
+            PreparedStatement preparedStatement = connection.prepareStatement(insertSQL);
+
+            preparedStatement.setString(1, id);
+
+            preparedStatement.executeUpdate();
+
+            System.out.println("pet encontrado");
+
+            connection.close();
+
+        } catch (Exception e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+    }
+
 }
