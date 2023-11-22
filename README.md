@@ -22,11 +22,10 @@ Lorena Mafra Nascimento,
 Michael Amaral dos Santos.
 
 Imagens do Projeto:
-![Tela Inicial](./assets/teladecadastro.png)
+![Tela Inicial](./assets/login-tela.png)
+![Tela Inicial](./assets/registrar.png)
 ![Tela Inicial](./assets/telainicial1.png)
 ![Tela Inicial](./assets/telainicial2.png)
-![Tela Inicial](./assets/telaanuncio1.png)
-![Tela Inicial](./assets/telaanuncio2.png)
 ![Tela Inicial](./assets/telaanuncio3.png)
 ![Tela Inicial](./assets/telaanuncio4.png)
 ![Tela Inicial](./assets/telaanuncio5.png)
