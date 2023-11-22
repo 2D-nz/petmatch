@@ -30,10 +30,9 @@
                         <label for="image">Selecione uma imagem:</label>
                         <input type="file" id="image" name="image" accept="image/*" required>
                         <input type="hidden" name="page" value="5">
-                        <input class="sent"  type="submit" value="Enviar Imagem">
                 </div>
                 <div class="login-button">
-                    <button><a href="#">Voltar</a></button>
+                    <input class="sent"  type="submit" value="Enviar Imagem">
                 </div>
             </form>
         </div>

@@ -2,6 +2,7 @@
 <html lang="pt-br">
 
 <head>
+   <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
    <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
    <meta http-equiv="Content-Type" content="text/html" charset=UTF-8>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -43,9 +44,6 @@
                 </select>
             </div>
             <div class="login-button">
-                <div class="voltar">
-                    <button><a href="/tela.jsp">Página Inicial </a></button>
-                </div>
                 <div class="prosseguir">
                         <input type="hidden" name="page" value="2">
                         <button class="prosseguir" type="submit">Prosseguir</button>

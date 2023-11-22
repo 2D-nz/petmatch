@@ -3,10 +3,12 @@ package br.com.petmatch.dao;
 import br.com.petmatch.config.ConnectionPoolConfig;
 import br.com.petmatch.model.Pet;
 import br.com.petmatch.model.User;
+import javax.servlet.http.HttpServletRequest;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLOutput;
 
 import javax.naming.spi.DirStateFactory.Result;
 
@@ -119,6 +121,7 @@ public class UserDao {
         try {
             Connection connection = ConnectionPoolConfig.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(insertSQL);
+
 
             preparedStatement.setString(1, user.getTelefone());
             preparedStatement.setString(2, user.getCidade());

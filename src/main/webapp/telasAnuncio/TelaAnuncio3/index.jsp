@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <head>
     <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
@@ -35,9 +34,6 @@
                     </div>
                 </div>
                     <div class="login-button">
-                    <div class="voltar">
-                        <button><a href="#">Voltar</a></button>
-                    </div>
                     <div class="prosseguir">
                             <input type="hidden" name="page" value="4">
                             <button type="submit">Prosseguir</button>

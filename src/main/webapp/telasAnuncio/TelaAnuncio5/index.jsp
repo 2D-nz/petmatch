@@ -41,9 +41,6 @@
                     </div>
                 </div>
                 <div class="login-button">
-                    <div class="voltar">
-                        <button><a href="#">Voltar</a></button>
-                    </div>
                     <div class="prosseguir">
                         <button type="submit" id="submitButton">Prosseguir</button>
                     </div>

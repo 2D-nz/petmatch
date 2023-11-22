@@ -12,26 +12,14 @@
                 <link rel="stylesheet" href="nav.css" />
 
                 <style>
-                    @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
-
-                    :root {
-                        --laranja: #ff914d;
-                        --laranja-claro: #f4cd9e;
-                        --verde: #385a20;
-                        --salmao: #fa7f72;
-                    }
-
-                    * {
-                        font-family: "Inter", "Sans-serif";
-                    }
-
-                    nav {
-                        height: 50px;
+                    /* Estilos da barra de navegação */
+                    .topnav {
+                        height: 60px !important;
                         display: flex;
                         justify-content: space-between;
                         align-items: center;
                         padding: 0 1rem;
-                        background-color: var(--salmao);
+                        background-color: #337F9C !important;
                         color: white;
                         width: 100%;
                         position: fixed;
@@ -39,7 +27,7 @@
                         left: 0;
                     }
 
-                    nav>div {
+                    .topnav>div {
                         align-items: center;
                         margin: 0 2.5rem;
                         display: flex;
@@ -47,70 +35,65 @@
                         height: 100%;
                     }
 
-                    nav>div>p {
-                        padding: 15px 2em;
+                    .topnav>div>a {
+                        text-decoration: none;
+                        color: #fff;
+                        margin-right: 20px;
                     }
 
-                    nav>div>p:hover {
-                        background-color: var(--verde);
-                    }
-
-                    nav>div>button {
+                    .topnav>div>button {
                         height: 100%;
                         border-radius: 0;
                         transition: all ease-in 0.1s;
-
                         border: 0;
-                        background-color: var(--salmao);
+                        color: #fff;
+                        background-color: #337F9C !important;
                     }
 
                     .topnav>div>button:hover {
-                        background-color: var(--verde) !important;
+                        background-color: #D9E4DD !important;
                         box-shadow: 5px 7px 10px 1px #000000;
                     }
 
-                    .topnav img {
-                        width: 100%;
-                        height: 100%;
+                    a {
+                        all: unset;
+                        cursor: pointer;
                     }
-
-                    .nav_btn {
-                        background-color: white;
-                        color: var(--laranja);
-                    }
-
-                    .nav_btn:hover {
-                        background-color: var(--laranja-claro);
-                    }
-
                     .dropdown {
-                        position: relative;
-                        display: block;
+                      position: relative;
+                      display: inline-block;
+                    }
+                    .dropbtn {
+                      background-color: #337F9C;
+                      color: white;
+                      padding: 10px 15px;
+                      font-size: 16px;
+                      border: none;
+                      cursor: pointer;
                     }
 
                     .dropdown-content {
-                        display: none;
-                        position: absolute;
-                        background-color: #f9f9f9;
-                        min-width: 160px;
-                        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-                        z-index: 1;
-                        right: 0;
+                      display: none;
+                      position: absolute;
+                      background-color: #f9f9f9;
+                      min-width: 160px;
+                      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                      z-index: 1;
                     }
 
                     .dropdown-content a {
-                        color: black;
-                        padding: 12px 16px;
-                        text-decoration: none;
-                        display: block;
+                      color: black;
+                      padding: 12px 16px;
+                      text-decoration: none;
+                      display: block;
                     }
 
                     .dropdown-content a:hover {
-                        background-color: #f1f1f1;
+                      background-color: #D9E4DD;
                     }
 
                     .dropdown:hover .dropdown-content {
-                        display: block;
+                      display: block;
                     }
                 </style>
     </head>
@@ -147,38 +130,37 @@
             </div>
         </nav>
 
-        <dialog id="loginDialog" class="DialogCont">
+    <dialog id="loginDialog">
             <p>Você precisa estar cadastrado para anunciar. Deseja fazer login agora?</p>
-            <button class="buttonDialog" id="loginDialogYes">Sim</button>
-            <button class="buttonDialog" id="loginDialogNo">Não</button>
-        </dialog>
+            <button id="loginDialogYes">Sim</button>
+            <button id="loginDialogNo">Não</button>
+    </dialog>
 
-        <script src="navscripts.js" defer></script>
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                var anuncieLink = document.getElementById("anuncieLink");
-                var loginDialog = document.getElementById("loginDialog");
-                var loginDialogYes = document.getElementById("loginDialogYes");
-                var loginDialogNo = document.getElementById("loginDialogNo");
+    <script src="navscripts.js" defer></script>
+   <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var anuncieLink = document.getElementById("anuncieLink");
+            var loginDialog = document.getElementById("loginDialog");
+            var loginDialogYes = document.getElementById("loginDialogYes");
+            var loginDialogNo = document.getElementById("loginDialogNo");
 
-                anuncieLink.addEventListener("click", function (event) {
-                    //usuário não está logado
-                    var isUserNotLogged = <c: out value="${sessionScope.loggedUser == null}" />;
-                    if (isUserNotLogged) {
-                        event.preventDefault();
-                        loginDialog.showModal();
-                    }
-                });
-
-                loginDialogYes.addEventListener("click", function () {
-                    window.location.href = "/login-page/login.jsp";
-                });
-
-                loginDialogNo.addEventListener("click", function () {
-                    loginDialog.close();
-                });
+            anuncieLink.addEventListener("click", function (event) {
+                //usuário não está logado
+                var isUserNotLogged = <c:out value="${sessionScope.loggedUser == null}" />;
+                if (isUserNotLogged) {
+                    event.preventDefault();
+                    loginDialog.showModal();
+                }
             });
-        </script>
-    </body>
 
+            loginDialogYes.addEventListener("click", function () {
+                window.location.href = "/login-page/login.jsp";
+            });
+
+            loginDialogNo.addEventListener("click", function () {
+                loginDialog.close();
+            });
+        });
+    </script>
+    </body>
 </html>

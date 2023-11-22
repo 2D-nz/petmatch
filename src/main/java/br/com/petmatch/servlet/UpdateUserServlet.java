@@ -26,6 +26,7 @@ public class UpdateUserServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
+
         Map<String, String> parameters = uploadImage(req);
 
         String id = parameters.get("id");
@@ -36,17 +37,25 @@ public class UpdateUserServlet extends HttpServlet {
         String image = parameters.get("image");
         String telefone = parameters.get("telefone");
 
-        User usuario = new User(id, email, nome, image, telefone, bairro, cidade);
+
+        if(!image.contains(".jpg")&&!image.contains(".png")){
+            User teste = new UserDao().getUsuario(email);
+            image = teste.getFoto();
+            System.out.println("caiu aqui");
+        }
+
+        User usuario = new User(id,email, nome, image, telefone, bairro, cidade);
         System.out.println(nome);
         new UserDao().updateUser(usuario);
         User usernew = new UserDao().getUsuario(email);
         req.getSession().setAttribute("loggedUser", usernew);
 
-        resp.sendRedirect("/pets-by-user");
+        resp.sendRedirect("/edit_profile-page/index.jsp");
 
     }
 
-    // Upload da imagem do pet
+
+    //Upload da imagem do pet
     private Map<String, String> uploadImage(HttpServletRequest httpServletRequest) {
 
         HashMap<String, String> parameters = new HashMap<>();

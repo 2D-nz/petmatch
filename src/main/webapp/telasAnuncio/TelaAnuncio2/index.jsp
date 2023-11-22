@@ -86,9 +86,6 @@
                 </div>
 
                 <div class="login-button">
-                    <div class="voltar">
-                        <button><a href="/TelaAnuncio1/index.jsp">Voltar</a></button>
-                    </div>
                     <div class="prosseguir">
                             <input type="hidden" name="page" value="3">
                             <button type="submit">Prosseguir</button>

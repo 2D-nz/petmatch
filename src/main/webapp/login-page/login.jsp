@@ -16,7 +16,9 @@
         <body>
 
             <header>
-                <img src="/images/dog-logo.png" class="logo">
+                <a href="/tela.jsp">
+                    <img src="/images/dog-logo.png" class="logo" alt="Logo do cachorro">
+                </a>
                 <p class="title">PetMatch</p>
             </header>
             <div class="info-container">
