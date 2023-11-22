@@ -16,35 +16,32 @@
   <body>
 
     <div class="container">
-
-
       <h1 class="heading"></h1>
       <h1 class="heading"></h1>
 
+      <div class="search-container">
+        <form action="/Searching-All-Pets" method="post">
+          <input type="text" id="petNome" name="petNome" placeholder="Nome do Pet">
+          <button type="submit" onclick="">Pesquisar</button>
+      </div>
 
       <c:forEach var="pet" items="${pets}">
-        <a href="/details-pet?id=${pet.id}">
-
-          <div class="container-pet">
-
-            <div class="container-image">
-
-
-              <div class="image">
-                <img src="${pet.image}">
-              </div>
-
-            </div>
-
-            <h3>${pet.nome}</h3>
-
+        <div class="container-image">
+          <div class="image">
+            <a href="/details-pet?id=${pet.id}">
+              <img src="${pet.image}" data-pet-id="${pet.id}">
+              <h3>${pet.nome}</h3>
+              <p></p>
           </div>
-        </a>
-      </c:forEach>
 
+          <h3>${pet.nome}</h3>
+
+        </div>
+      </c:forEach>
     </div>
   </body>
   </body>
   <script src="../navscripts.js"></script>
+  <script src="/searching-page/script.js"></script>
 
 </html>
