@@ -16,16 +16,13 @@
         <body>
 
             <header>
-            <a href="/tela.jsp">
                 <img src="/images/dog-logo.png" class="logo">
-            </a>
                 <p class="title">PetMatch</p>
             </header>
             <div class="info-container">
                 <div class="cachorro-img">
                     <img src="/images/cachorro-fundo.png">
                 </div>
-
                 <div class="text-register">
                     <h3 class="new-title-register"> Encontre seu companheiro de quatro patas!<br> Registre-se agora
                     </h3>
