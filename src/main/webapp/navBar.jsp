@@ -54,7 +54,38 @@
                         background-color: #D9E4DD !important;
                         box-shadow: 5px 7px 10px 1px #000000;
                     }
-
+                    .dropdown{
+                        position:relative;
+                        display:inline-block
+                    }
+                    .dropbtn {
+                        background-color: #337F9C;
+                        color: white;
+                        padding: 10px 15px;
+                        font-size: 16px;
+                        border:none;
+                        cursor:pointer;
+                   }
+                   .dropdown-content{
+                        display:none;
+                        position: absolute;
+                        background-color: #f9f9f9;
+                        min-width: 160px;
+                        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                        z-index: 1;
+                    }
+                    .dropdown-content a{
+                        color: black;
+                        padding: 12px 16px;
+                        text-decoration: none;
+                        display: block;
+                    }
+                    .dropdown-content a:hover{
+                        background-color: #D9E4DD;
+                    }
+                    .dropdown:hover .dropdown-content{
+                        display:block;
+                    }
                     a {
                         all: unset;
                         cursor: pointer;
@@ -63,12 +94,18 @@
                           border-radius: 10px !important ;
                           background-color: #337F9C !important;
                           color: #ffffff !important;
+                          margin: auto !important;
+                          padding: 2em !important;
                       }
 
                       .buttonDialog{
                        border-radius: 5px;
                        color: #ffffff;
                        background-color: #385a20;
+                       margin:0em !important;
+                       height: 30px;
+                       width: 40px;
+                       margin-top: 10px !important;
                       }
                 </style>
     </head>

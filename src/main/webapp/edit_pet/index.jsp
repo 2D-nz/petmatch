@@ -31,12 +31,6 @@
                     <input type="nome" name="nome" id="nome">
                 </div>
 
-
-                <div class="upload">
-                        <label for="image">Selecione uma imagem:</label>
-                        <input type="file" id="image" name="image" accept="image/*" required>
-                </div>
-
                 <div class="input-group">
                     <div class="input-box">
                         <label for="situacao">Situação:</label>
@@ -124,12 +118,12 @@
 
 
                     <div class="input-box">
-                        <label for="mensagem" style="height: 180px;">Mensagem do Tutor:</label>
+                        <label for="mensagem" style="height: 50px;">Mensagem do Tutor:</label>
                         <textarea name="mensagem" id="mensagem" cols="30" rows="10" style="height: 120px;" class="placeBaixo" placeholder="Deixe sua Mensagem" required></textarea>
                     </div>
 
                     <div class="input-box">
-                        <label for="descricao" style="height: 180px;">Descrição:</label>
+                        <label for="descricao" style="height: 50px;">Descrição:</label>
                         <textarea name="descricao" id="msg2" cols="30" rows="10" style="height: 120px;" class="placeBaixo" placeholder="Deixe sua Mensagem" required></textarea>
                     </div>
 
@@ -144,6 +138,10 @@
                         <label for="tel">Telefone com WhatsApp:</label>
                         <input type="text" name="telefone" id="telefone" title="Formato esperado: (99) 9999-9999">
                     </div>
+                 <div class="upload">
+                    <label for="image">Selecione uma imagem:</label>
+                    <input type="file" id="image" name="image" accept="image/*" required>
+                 </div>
                 </div>
 
                 <div class="continue-button">

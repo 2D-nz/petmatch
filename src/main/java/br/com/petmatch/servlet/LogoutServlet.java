@@ -14,7 +14,7 @@ public class LogoutServlet extends HttpServlet {
 
         req.getSession().invalidate();
 
-        req.setAttribute("message", "Success on logout");
+        req.setAttribute("message", "Você foi desconectado!");
 
         req.getRequestDispatcher("/login-page/login.jsp").forward(req, resp);
     }

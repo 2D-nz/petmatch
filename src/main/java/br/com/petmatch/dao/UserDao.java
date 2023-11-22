@@ -115,7 +115,7 @@ public class UserDao {
     }
 
     public void updateUser(User user) {
-        String insertSQL = "UPDATE USR SET TELEFONE = (?), CIDADE = (?), BAIRRO = (?), FOTO = (?) WHERE EMAIL= ?";
+        String insertSQL = "UPDATE USR SET TELEFONE = (?), CIDADE = (?), BAIRRO = (?), FOTO = (?), LOGIN =(?) WHERE EMAIL= ?";
         try {
             Connection connection = ConnectionPoolConfig.getConnection();
             PreparedStatement preparedStatement = connection.prepareStatement(insertSQL);
@@ -124,7 +124,8 @@ public class UserDao {
             preparedStatement.setString(2, user.getCidade());
             preparedStatement.setString(3, user.getBairro());
             preparedStatement.setString(4, user.getFoto());
-            preparedStatement.setString(5, user.getEmail());
+            preparedStatement.setString(5,user.getNome());
+            preparedStatement.setString(6, user.getEmail());
 
             preparedStatement.executeUpdate();
 

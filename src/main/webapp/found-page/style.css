@@ -31,21 +31,6 @@ body {
     --tentativas: #eb9c6a;
 }
 
-button {
-    padding: 0.25rem 1rem;
-    border-radius: 0.25rem;
-    border: none;
-    background-color: var(--salmao);
-    color: white;
-    transition: all ease-in 0.1s;
-}
-
-button:hover {
-    background-color: var(--laranja-claro);
-    color: black;
-    box-shadow: 5px 7px 10px 1px #000000;
-}
-
 .container img {
     display: inline-block;
     width: 70px;

@@ -38,9 +38,12 @@ public class UpdateUserServlet extends HttpServlet {
         String telefone = parameters.get("telefone");
 
         User usuario = new User(id,email, nome, image, telefone, bairro, cidade);
-        System.out.println("na SERVLET UPDATEUSER");
-        System.out.println(usuario);
+        System.out.println(nome);
         new UserDao().updateUser(usuario);
+        User usernew = new UserDao().getUsuario(email);
+        req.getSession().setAttribute("loggedUser", usernew);
+
+        resp.sendRedirect("/edit_profile-page/index.jsp");
 
     }
 

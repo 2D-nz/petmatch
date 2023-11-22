@@ -28,27 +28,6 @@ body {
     color: #fff;
 }
 
-:root {
-    --fundodanav: #ecdbbc;
-    --salmao: #fa7f72;
-    --tentativas: #eb9c6a;
-}
-
-button {
-    padding: 0.25rem 1rem;
-    border-radius: 0.25rem;
-    border: none;
-    background-color: var(--salmao);
-    color: white;
-    transition: all ease-in 0.1s;
-}
-
-button:hover {
-    background-color: var(--laranja-claro);
-    color: white;
-    box-shadow: 5px 7px 10px 1px #ffffff;
-}
-
 .container img {
     width: 70px;
     height: 70px;
