@@ -9,6 +9,9 @@
 	font-family: "Inter", sans-serif;
 }
 
+body {
+	color: white;
+}
 .page {
 	padding-top: 5rem;
 	display: grid;
@@ -21,7 +24,7 @@
 	grid-template-columns: 1fr 1fr;
 	place-items: center;
 	gap: 1rem;
-	background-color: #337f9c;
+	background-color: var(--laranja-claro);
 	box-shadow: 9px 5px 10px 1px #000000;
 }
 
@@ -53,7 +56,7 @@ input::-webkit-inner-spin-button {
 
 input {
 	border: 0;
-	font-size: 20px;
+	font-size: 16px;
 	margin: 0px;
 }
 .number {
@@ -90,10 +93,6 @@ h2 {
 	font-style: bold;
 }
 
-.endereco {
-	margin-top: 1rem;
-}
-
 input[type="text"],
 input[type="number"],
 #email {
@@ -107,6 +106,26 @@ input[type="number"],
 		grid-template-columns: 1fr;
 		text-align: center;
 	}
+}
+.pfpContainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 5rem;
+}
+
+.pfpContainer div:has(button) button {
+	border: none;
+	outline: none;
+	background-color: var(--verde);
+	padding: 0.5rem;
+	color: white;
+}
+.pfpContainer div:has(button) button:hover {
+	background-color: white;
+	color: var(--verde);
+	cursor: pointer;
 }
 
 #pencil {
@@ -130,10 +149,6 @@ input {
 	vertical-align: center;
 }
 
-.opaco {
-	filter: brightness(0.5);
-}
-
 #name {
 	background-color: none;
 }
@@ -145,4 +160,7 @@ input {
 #pfp {
 	height: 200px;
 	width: 200px;
+}
+.endereco {
+	margin-top: 1rem;
 }

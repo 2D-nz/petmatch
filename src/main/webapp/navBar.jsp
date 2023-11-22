@@ -12,14 +12,26 @@
                 <link rel="stylesheet" href="nav.css" />
 
                 <style>
-                    /* Estilos da barra de navegação */
-                    .topnav {
-                        height: 60px !important;
+                    @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+                    :root {
+                        --laranja: #ff914d;
+                        --laranja-claro: #f4cd9e;
+                        --verde: #385a20;
+                        --salmao: #fa7f72;
+                    }
+
+                    * {
+                        font-family: "Inter", "Sans-serif";
+                    }
+
+                    nav {
+                        height: 50px;
                         display: flex;
                         justify-content: space-between;
                         align-items: center;
                         padding: 0 1rem;
-                        background-color: #337F9C !important;
+                        background-color: var(--salmao);
                         color: white;
                         width: 100%;
                         position: fixed;
@@ -27,7 +39,7 @@
                         left: 0;
                     }
 
-                    .topnav>div {
+                    nav>div {
                         align-items: center;
                         margin: 0 2.5rem;
                         display: flex;
@@ -35,78 +47,71 @@
                         height: 100%;
                     }
 
-                    .topnav>div>a {
-                        text-decoration: none;
-                        color: #fff;
-                        margin-right: 20px;
+                    nav>div>p {
+                        padding: 15px 2em;
                     }
 
-                    .topnav>div>button {
+                    nav>div>p:hover {
+                        background-color: var(--verde);
+                    }
+
+                    nav>div>button {
                         height: 100%;
                         border-radius: 0;
                         transition: all ease-in 0.1s;
+
                         border: 0;
-                        color: #fff;
-                        background-color: #337F9C !important;
+                        background-color: var(--salmao);
                     }
 
                     .topnav>div>button:hover {
-                        background-color: #D9E4DD !important;
+                        background-color: var(--verde) !important;
                         box-shadow: 5px 7px 10px 1px #000000;
                     }
-                    .dropdown{
-                        position:relative;
-                        display:inline-block
+
+                    .topnav img {
+                        width: 100%;
+                        height: 100%;
                     }
-                    .dropbtn {
-                        background-color: #337F9C;
-                        color: white;
-                        padding: 10px 15px;
-                        font-size: 16px;
-                        border:none;
-                        cursor:pointer;
-                   }
-                   .dropdown-content{
-                        display:none;
+
+                    .nav_btn {
+                        background-color: white;
+                        color: var(--laranja);
+                    }
+
+                    .nav_btn:hover {
+                        background-color: var(--laranja-claro);
+                    }
+
+                    .dropdown {
+                        position: relative;
+                        display: block;
+                    }
+
+                    .dropdown-content {
+                        display: none;
                         position: absolute;
                         background-color: #f9f9f9;
                         min-width: 160px;
                         box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
                         z-index: 1;
+                        right: 0;
                     }
-                    .dropdown-content a{
+
+                    .dropdown-content a {
                         color: black;
                         padding: 12px 16px;
                         text-decoration: none;
                         display: block;
                     }
-                    .dropdown-content a:hover{
-                        background-color: #D9E4DD;
-                    }
-                    .dropdown:hover .dropdown-content{
-                        display:block;
-                    }
-                    a {
-                        all: unset;
-                        cursor: pointer;
-                    }
-                    .DialogCont{
-                          border-radius: 10px !important ;
-                          background-color: #337F9C !important;
-                          color: #ffffff !important;
-                          margin: auto !important;
-                          padding: 2em !important;
-                      }
 
-                      .buttonDialog{
-                       border-radius: 5px;
-                       color: #ffffff;
-                       background-color: #385a20;
-                       margin:0em !important;
-                       height: 30px;
-                       width: 40px;
-                       margin-top: 10px !important;
-                      }
+                    .dropdown-content a:hover {
+                        background-color: #f1f1f1;
+                    }
+
+                    .dropdown:hover .dropdown-content {
+                        display: block;
+                    }
                 </style>
     </head>
 
@@ -142,37 +147,38 @@
             </div>
         </nav>
 
-    <dialog id="loginDialog" class="DialogCont">
+        <dialog id="loginDialog" class="DialogCont">
             <p>Você precisa estar cadastrado para anunciar. Deseja fazer login agora?</p>
             <button class="buttonDialog" id="loginDialogYes">Sim</button>
             <button class="buttonDialog" id="loginDialogNo">Não</button>
-    </dialog>
+        </dialog>
 
-    <script src="navscripts.js" defer></script>
-   <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            var anuncieLink = document.getElementById("anuncieLink");
-            var loginDialog = document.getElementById("loginDialog");
-            var loginDialogYes = document.getElementById("loginDialogYes");
-            var loginDialogNo = document.getElementById("loginDialogNo");
+        <script src="navscripts.js" defer></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                var anuncieLink = document.getElementById("anuncieLink");
+                var loginDialog = document.getElementById("loginDialog");
+                var loginDialogYes = document.getElementById("loginDialogYes");
+                var loginDialogNo = document.getElementById("loginDialogNo");
 
-            anuncieLink.addEventListener("click", function (event) {
-                //usuário não está logado
-                var isUserNotLogged = <c:out value="${sessionScope.loggedUser == null}" />;
-                if (isUserNotLogged) {
-                    event.preventDefault();
-                    loginDialog.showModal();
-                }
+                anuncieLink.addEventListener("click", function (event) {
+                    //usuário não está logado
+                    var isUserNotLogged = <c: out value="${sessionScope.loggedUser == null}" />;
+                    if (isUserNotLogged) {
+                        event.preventDefault();
+                        loginDialog.showModal();
+                    }
+                });
+
+                loginDialogYes.addEventListener("click", function () {
+                    window.location.href = "/login-page/login.jsp";
+                });
+
+                loginDialogNo.addEventListener("click", function () {
+                    loginDialog.close();
+                });
             });
-
-            loginDialogYes.addEventListener("click", function () {
-                window.location.href = "/login-page/login.jsp";
-            });
-
-            loginDialogNo.addEventListener("click", function () {
-                loginDialog.close();
-            });
-        });
-    </script>
+        </script>
     </body>
+
 </html>

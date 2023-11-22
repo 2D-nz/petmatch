@@ -1,28 +1,30 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <%@ page contentType="text/html; charset=UTF-8" %>
-	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-		<%@ include file="/navBar.jsp" %>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+        <%@ include file="/navBar.jsp" %>
 
-			<head>
-				<meta charset="UTF-8" />
-				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-				<title>Editar perfil</title>
-				<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-				<link rel="stylesheet" href="./styles.css" />
-			</head>
+            <head>
+                <meta charset="UTF-8" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <title>Editar perfil</title>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+                <link rel="stylesheet" href="./styles.css" />
+            </head>
 
-			<body>
+            <body>
 
-				<div class="page">
-					<form action="/updateUser" method="post" enctype="multipart/form-data">
+                <div class="page">
+                    <form action="/updateUser" method="post" enctype="multipart/form-data">
 
-						<div class="perfil">
-						<input type="hidden" name="userId" value="${loggedUser.id}"/>
+                        <div class="perfil">
+                            <input type="hidden" name="userId" value="${loggedUser.id}" />
                             <div class="pfp">
-                                    <label for="image"><img src="../images/pencil.png" alt="pencil" id="pencil" /></label>
-                                    <img src="../${loggedUser.foto}">
-                                    <input type="file" id="image" name="image" accept="image/*" required style="display: none;">
+
+                                <img src="../${loggedUser.foto}">
+                                <input type="file" id="image" name="image" accept="image/*" required
+                                    style="display: none;">
+                                <label for="image"><img src="../images/pencil.png" alt="pencil" id="pencil" /></label>
                             </div>
                             <div>
                                 <div>
@@ -69,11 +71,12 @@
                             <button>Cancelar</button>
                         </div>
 
-					</form>
+                    </form>
 
-				</div>
-				</div>
-			</body>
-			<script src="main.js"></script>
-			<script src="../navscripts.js"></script>
+                </div>
+                </div>
+            </body>
+            <script src="main.js"></script>
+            <script src="../navscripts.js"></script>
+
 </html>
