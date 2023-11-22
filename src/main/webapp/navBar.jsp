@@ -95,6 +95,23 @@
                     .dropdown:hover .dropdown-content {
                       display: block;
                     }
+                    .DialogCont{
+                      border-radius: 10px !important ;
+                      background-color: #337F9C !important;
+                      color: #ffffff !important;
+                      margin: auto !important;
+                      padding: 2em !important;
+                  }
+
+                  .buttonDialog{
+                   border-radius: 5px;
+                   color: #ffffff;
+                   background-color: #385a20;
+                   margin:0em !important;
+                   height: 30px;
+                   width: 40px;
+                   margin-top: 10px !important;
+                  }
                 </style>
     </head>
 
@@ -130,11 +147,11 @@
             </div>
         </nav>
 
-    <dialog id="loginDialog">
-            <p>Você precisa estar cadastrado para anunciar. Deseja fazer login agora?</p>
-            <button id="loginDialogYes">Sim</button>
-            <button id="loginDialogNo">Não</button>
-    </dialog>
+    <dialog id="loginDialog" class="DialogCont">
+                <p>Você precisa estar cadastrado para anunciar. Deseja fazer login agora?</p>
+                <button class="buttonDialog" id="loginDialogYes">Sim</button>
+                <button class="buttonDialog" id="loginDialogNo">Não</button>
+        </dialog>
 
     <script src="navscripts.js" defer></script>
    <script>
