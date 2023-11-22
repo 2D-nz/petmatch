@@ -19,7 +19,7 @@
 			<div class="right-login">
 				<div class="card-login">
 					<h1>Cadastre aqui</h1>
-					<form action="/register" method="post">
+					<form name="formregistro" action="/register" method="post" onsubmit="return validaEmail(this.email.value)">
 						<div class="text-field">
 							<label for="usuario">E-mail</label>
 							<input type="text" name="email" placeholder="E-mail" />
@@ -52,6 +52,7 @@
 				</div>
 			</div>
 		</div>
+		<script src="/register-page/script.js"></script>
 	</body>
 
 </html>

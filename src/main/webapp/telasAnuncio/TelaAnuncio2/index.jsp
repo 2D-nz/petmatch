@@ -16,7 +16,7 @@
         <div class="form">
             <div class="form-header">
                 <div class="title">
-                    <h1>Anúncie seu pet</h1>
+                    <h1>Anuncie seu pet</h1>
                 </div>
                 <div class="p">
                     <p class="p">Crie com amor o seu anúncio para acessar o Painel de Busca dos fofinhos, onde você terá acesso a incríveis ferramentinhas para encontrar seus amiguinhos peludos.</p>

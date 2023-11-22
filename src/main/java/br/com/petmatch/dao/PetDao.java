@@ -367,7 +367,7 @@ public class PetDao {
     }
 
     public void updateStatus(String id) {
-        String insertSQL = "UPDATE PET SET SITUACAO = 'Procurando tutor' WHERE ID = ?";
+        String insertSQL = "UPDATE PET SET SITUACAO = 'encontrado' WHERE ID = ?";
 
         try {
             Connection connection = ConnectionPoolConfig.getConnection();

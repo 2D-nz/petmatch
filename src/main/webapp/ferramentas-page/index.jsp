@@ -49,7 +49,7 @@
             <div>
 
                 <h2>Se você encontrou um pet... <img class="icon" src="../images/foundog.png" alt=""></h2>
-                <h1>vá em <a href="/lost-all-pets"> Procurando</a> </h1>
+                <h1>vá em <a href="/lost-all-pets">Perdido</a> </h1>
                 <p>Na seção de Pets que estão a procura, nós temos todos os Pets que foram registrados em nosso site, e
                     também
                     como

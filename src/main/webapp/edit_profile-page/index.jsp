@@ -74,6 +74,6 @@
 				</div>
 				</div>
 			</body>
-			<script src="main.js"></script>
+
 			<script src="../navscripts.js"></script>
 </html>

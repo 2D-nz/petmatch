@@ -45,27 +45,35 @@
           <div class="buttons">
 
             <button class="btt">
+                     <a href="/edit_pet/index.jsp?id=${pet.id}" class="edit-button">Editar</a>
+                   </button>
 
-              <a href="/edit_pet/index.jsp?id=${pet.id}" class="edit-button">Editar</a>
-            </button>
+                   <form action="/delete-pet" method="post" class="btt">
+                     <input type="hidden" id="id" name="id" value="${pet.id}">
+                     <button type="submit">Delete</button>
+                     <a href="/edit_pet/index.jsp?id=${pet.id}"></a>
+                   </form>
 
-            <form action="/delete-pet" method="post" class="btt">
-              <input type="hidden" id="id" name="id" value="${pet.id}">
-              <button type="submit">Delete</button>
-              <a href="/edit_pet/index.jsp?id=${pet.id}">
-            </form>
-          </div>
-
-          <c:if test="${pet.situacao == 'encontrado'}">
-             <div style="background-color: #338f33; padding: 10px;">
-                     <p style="color: #ffffff; margin: 0;">ENCONTRADO</p>
                  </div>
-          </c:if>
 
-      </div>
-      </c:forEach>
+                 <c:if test="${pet.situacao == 'encontrado'}">
+                   <div style="background-color: #338f33; padding: 10px;">
+                     <p style="color: #ffffff; margin: 0;">ENCONTRADO</p>
+                   </div>
+                 </c:if>
+                   <p></p>
+                   <p></p>
+                 <c:if test="${pet.situacao ne 'encontrado'}">
+                   <form action='/updateSituacao' method="post">
+                     <input type="hidden" name="id" value="${pet.id}">
+                     <button type="submit" class="encontrou-btn">Encontrou seu pet?</button>
+                   </form>
+                 </c:if>
 
-      </div>
+               </div>
+             </c:forEach>
+
+           </div>
 
 
   </body>

@@ -17,7 +17,7 @@
         <div class="form">
             <div class="form-header">
                 <div class="title">
-                    <h1>Anúncie seu pet</h1>
+                    <h1>Anuncie seu pet</h1>
                 </div>
             </div>
             <form action="/create-pet" method="post" enctype="multipart/form-data">

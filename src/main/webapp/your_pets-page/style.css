@@ -47,8 +47,17 @@ body {
 	color: white;
 }
 
-.container-pet:hover {
-	transform: scale(1.2);
+.encontrou-btn {
+  background-color: #008000;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 2px solid #008000;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.encontrou-btn:hover {
+  color: #337f9c;
 }
 
 .image {
