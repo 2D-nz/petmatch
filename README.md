@@ -44,7 +44,7 @@ Imagens do Projeto v1:
 ![Tela de Cadastro](./assets/teladecadastro.svg)
 ![Tela de Cadastro](./assets/PetsEncontrados.svg)
 ![Tela de Pesquisa](./assets/Tela_Pesquisar.svg)
-![Banco de dados lógico](./assets/Logico_2.png)
+![Banco de dados lógico](./assets/Lógico.png)
 
 
 INSIRA NO H2 OS SEGUINTES COMANDOS SQL:
