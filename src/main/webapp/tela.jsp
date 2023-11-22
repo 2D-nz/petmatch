@@ -30,7 +30,7 @@
                             </a>
                         </button>
                         <button class="btn2">
-                            <a href="/lost-all-pets" class="a">
+                            <a href="/found-all-pets" class="a">
                                 <img src="/images/bsc.png" class="dono">
                                 Procuro um DONO
                             </a>

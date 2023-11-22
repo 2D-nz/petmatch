@@ -150,8 +150,9 @@ public class PetDao {
                 String petId = resultSet.getString("id");
                 String nome = resultSet.getString("nome");
                 String image = resultSet.getString("image");
+                String situacao = resultSet.getString("situacao");
 
-                Pet pet = new Pet(petId,nome,image);
+                Pet pet = new Pet(petId,nome,image,situacao);
 
                 pets.add(pet);
             }

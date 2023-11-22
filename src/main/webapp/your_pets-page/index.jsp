@@ -56,6 +56,12 @@
             </form>
           </div>
 
+          <c:if test="${pet.situacao == 'encontrado'}">
+             <div style="background-color: #338f33; padding: 10px;">
+                     <p style="color: #ffffff; margin: 0;">ENCONTRADO</p>
+                 </div>
+          </c:if>
+
       </div>
       </c:forEach>
 

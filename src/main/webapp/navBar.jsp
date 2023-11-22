@@ -108,8 +108,8 @@
                 <h1>Petmatch</h1>
             </div>
             <div class="options">
-                <a href="/found-all-pets" class="a">Encontrados</a>
-                <a href="/lost-all-pets" class="a">Procurando</a>
+                <a href="/found-all-pets" class="a">Procurando Tutor</a>
+                <a href="/lost-all-pets" class="a">Perdido</a>
                 <a href="/ferramentas-page/index.jsp" class="a">Ferramentas</a>
                 <a id="anuncieLink" href="/telasAnuncio/TelaAnuncio1/index.jsp" class="a"> Anuncie </a>
                 <c:if test="${sessionScope.loggedUser != null}">

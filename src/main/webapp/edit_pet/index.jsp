@@ -14,7 +14,7 @@
 <body>
     <div class="container">
     <div class="form-image">
-        <img src="assets/img//undraw_shopping_re_3wst.svg" alt="">
+        <img src="assets/img//cachorro.svg" alt="">
     </div>
     <form action="/update-pet" method="post" enctype="multipart/form-data">
     <input type="hidden" id="id" name="id" value="${param.id}">

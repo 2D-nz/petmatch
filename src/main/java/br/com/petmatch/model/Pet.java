@@ -79,6 +79,13 @@ public class Pet {
         this.telefone = telefone;
     }
 
+    public Pet(String petId, String nome, String image, String situacao) {
+        this.id = petId;
+        this.nome = nome;
+        this.image = image;
+        this.situacao = situacao;
+    }
+
     public int getUserid() {
         return user_id;
     }

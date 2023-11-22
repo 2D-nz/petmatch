@@ -26,7 +26,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fde3a7d7;
+    background-color: #337f9c;
     padding: 1rem;
 }
 
@@ -98,6 +98,14 @@ body {
 }
 
 .input-box input {
+    margin: 0.6rem 0;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #0000001c;
+    font-size: 0.8rem;
+}
+.input-box select{
     margin: 0.6rem 0;
     padding: 0.8rem 1.2rem;
     border: none;
