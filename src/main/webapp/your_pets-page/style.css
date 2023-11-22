@@ -1,31 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
 
-* {
-    font-family: "inter";
+html {
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
 }
 
 body {
-	background-color: #fa7f72;
+	font-family: "Inter", sans-serif;
+	font-size: 15px;
+	color: #000000;
 }
 
 .container {
-	padding: 25px 10%;
+	padding-top: 5rem;
 	text-align: center;
-}
-
-.container .heading {
-	font-size: 30px;
-	padding-bottom: 25px;
-	color: #fff;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
 }
 
 :root {
-	--fundodanav: #ecdbbc;
-	--salmao: #fa7f72;
-	--tentativas: #eb9c6a;
+	--verde: #385a20;
+	--azul: #337f9c;
 }
 
 body {
@@ -34,89 +31,65 @@ body {
 	padding: 0;
 	margin: 0;
 }
-button {
-	padding: 0.25rem 1rem;
-	border-radius: 0.25rem;
-	border: none;
-	background-color: var(--salmao);
-	color: white;
-	transition: all ease-in 0.1s;
-}
-
-button:hover {
-	background-color: var(--laranja-claro);
-	color: black;
-	box-shadow: 5px 7px 10px 1px #000000;
-}
 
 body {
 	background-color: #e8e8e8;
 }
 
-.container {
-	font-family: "Inter", sans-serif;
-	color: #ffffff;
-	width: 100%;
-}
-img {
-	display: inline-block;
-	width: 70px;
-	height: 70px;
-	vertical-align: middle;
-}
-
-.container .container-image {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: 20px;
-	padding: 30px;
+.container-pet {
+	width: 300px;
+	min-width: 200px;
+	height: 350px;
+	max-height: 400px;
+	margin: 3rem;
+	background-color: var(--azul);
+	transition: all 0.2s ease-in-out;
+	color: white;
 }
 
-.container .container-image .image {
-	width: 350px;
-	border-radius: 20px;
-	border: 1px solid #f4cd9e;
-	cursor: pointer;
-	box-shadow: 0 5px 10 px rgba(0, 0, 0, 0.1);
-	background-color: #fa7f72;
-	padding: 15px;
-	animation: fadeIn 0.2s linear;
-}
-
-.container .container-image .image img {
-	width: 100%;
-	height: 250px;
-	margin-bottom: 10px;
-	border-radius: 5px;
-}
-
-.container .container-image .image img:hover {
+.container-pet:hover {
 	transform: scale(1.2);
 }
 
-.container .container-image .image h3 {
-	font-size: 15px;
-	color: #000000;
+.image {
+	width: 100%;
 }
 
-.image{
-text-align: left;
+.container-image {
+	display: grid;
+	place-items: center;
 }
 
-.button-div{
-	color: #000000;
-
+.image img {
+	width: 100%;
+	height: 250px;
 }
-
-.title-page{
+button {
+	all: unset;
+}
+.buttons {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	vertical-align: center;
 	text-align: center;
 }
 
+.btt {
+	border: none;
+	height: 40px;
+	width: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.btt:hover {
+	background-color: white;
+	color: var(--azul);
+}
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
 	.container .container-image {
-		display: grid;
-		grid-template-columns: repeat(1, 1fr);
 		padding: 25px 20px;
 	}
 
@@ -126,12 +99,10 @@ text-align: left;
 }
 @media (max-width: 450px) {
 	.container .container-image {
-		display: grid;
-		grid-template-columns: repeat(1, 1fr);
 		padding: 25px 20 px;
 	}
 
 	.container .container-image .image {
 		width: 100%;
 	}
-}
+} */

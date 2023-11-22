@@ -17,7 +17,7 @@ public class UpdateSituacaoServlet extends HttpServlet {
 
         PetDao petDao = new PetDao();
 
-        petDao.updateStatus(status, id);
+
         request.getRequestDispatcher("found-page/index.jsp").forward(request, response);
 
         }

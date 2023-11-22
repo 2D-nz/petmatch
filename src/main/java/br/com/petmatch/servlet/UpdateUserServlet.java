@@ -37,7 +37,7 @@ public class UpdateUserServlet extends HttpServlet {
         System.out.println("na SERVLET");
         System.out.println(usuario);
         new UserDao().updateUser(usuario);
-
+        resp.sendRedirect("/pets-by-user");
     }
 
 
