@@ -326,6 +326,7 @@
     left: 1.12em;
     box-shadow: 0.87em 0.37em #ffffff, -0.87em 0.37em #ffffff;
   }
+
   @media screen and (max-width: 500px) {
     .text-register{
       font-size: 14px;

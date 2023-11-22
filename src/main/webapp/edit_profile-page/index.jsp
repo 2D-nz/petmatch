@@ -16,29 +16,16 @@
 			<body>
 
 				<div class="page">
-					<form action="/updateUser" method="post">
+					<form action="/updateUser" method="post" enctype="multipart/form-data">
 
 						<div class="perfil">
+                        <input type="hidden" name="userId" value="${loggedUser.id}"/>
 							<div class="pfp">
 
-
-								<c:if test="${loggedUser.foto.equals('')}">
-									<img src="../images/emptyprofile.png">
-									<label for="image">
-										<label for="image"><img src="../images/pencil.png" alt="pencil"
-												id="pencil" /></label>
-									</label>
-									<input type="file" id="image" name="image" accept="image/*" required>
-
-								</c:if>
-
-								<c:if test="${loggedUser.foto.equals('') == false}">
 									<label for="image"><img src="../images/pencil.png" alt="pencil"
 											id="pencil" /></label>
 									<img src="${loggedUser.foto}">
 									<input type="file" id="image" name="image" accept="image/*" required>
-									x
-								</c:if>
 
 							</div>
 							<div>

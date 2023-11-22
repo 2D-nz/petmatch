@@ -59,6 +59,17 @@
                         all: unset;
                         cursor: pointer;
                     }
+                    .DialogCont{
+                          border-radius: 10px !important ;
+                          background-color: #337F9C !important;
+                          color: #ffffff !important;
+                      }
+
+                      .buttonDialog{
+                       border-radius: 5px;
+                       color: #ffffff;
+                       background-color: #385a20;
+                      }
                 </style>
     </head>
 
@@ -94,10 +105,10 @@
             </div>
         </nav>
 
-    <dialog id="loginDialog">
+    <dialog id="loginDialog" class="DialogCont">
             <p>Você precisa estar cadastrado para anunciar. Deseja fazer login agora?</p>
-            <button id="loginDialogYes">Sim</button>
-            <button id="loginDialogNo">Não</button>
+            <button class="buttonDialog" id="loginDialogYes">Sim</button>
+            <button class="buttonDialog" id="loginDialogNo">Não</button>
     </dialog>
 
     <script src="navscripts.js" defer></script>

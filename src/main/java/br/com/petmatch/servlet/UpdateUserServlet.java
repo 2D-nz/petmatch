@@ -25,16 +25,20 @@ public class UpdateUserServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String id = req.getParameter("id");
-        String email = req.getParameter("email");
-        String nome = req.getParameter("nome");
-        String cidade = req.getParameter("cidade");
-        String bairro = req.getParameter("bairro");
-        String image = req.getParameter("image");
-        String telefone = req.getParameter("telefone");
+
+
+        Map<String, String> parameters = uploadImage(req);
+
+        String id = parameters.get("id");
+        String email = parameters.get("email");
+        String nome = parameters.get("nome");
+        String cidade = parameters.get("cidade");
+        String bairro = parameters.get("bairro");
+        String image = parameters.get("image");
+        String telefone = parameters.get("telefone");
 
         User usuario = new User(id,email, nome, image, telefone, bairro, cidade);
-        System.out.println("na SERVLET");
+        System.out.println("na SERVLET UPDATEUSER");
         System.out.println(usuario);
         new UserDao().updateUser(usuario);
         resp.sendRedirect("/pets-by-user");
@@ -44,7 +48,7 @@ public class UpdateUserServlet extends HttpServlet {
     //Upload da imagem do pet
     private Map<String, String> uploadImage(HttpServletRequest httpServletRequest) {
 
-        Map<String, String> parameters = new HashMap<>();
+        HashMap<String, String> parameters = new HashMap<>();
 
         if (isMultipartContent(httpServletRequest)) {
             try {
